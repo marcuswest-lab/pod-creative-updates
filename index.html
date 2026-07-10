@@ -26,6 +26,13 @@ table.wr th{background:var(--surf2);color:#fff;padding:8px 12px;border:1px solid
 table.wr td{padding:6px 12px;border:1px solid var(--line);text-align:center;white-space:nowrap;color:var(--txt)}
 table.wr td:first-child{text-align:left;font-weight:700}
 table.wr tr.blend td{background:var(--surf2);font-weight:700}
+table.wr td.cli a{color:var(--acc)}
+table.wr td .sub{color:var(--mut);font-size:11px;font-weight:400}
+table.wr td.plc{background:#13202f;font-weight:700;border-left:2px solid var(--line)}
+table.wr th:nth-child(9),table.wr th:nth-child(10){background:#123049}
+.notes-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:12px}
+.note-client{background:var(--surf);border:1px solid var(--line);border-radius:10px;padding:10px 14px;font-size:13px}
+.note-client ul{margin:6px 0 0;padding-left:18px}.note-client li{margin:3px 0}
 .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(420px,1fr));gap:16px}
 .card{background:var(--surf);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
 .card-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:12px}
@@ -55,57 +62,15 @@ table.wr tr.blend td{background:var(--surf2);font-weight:700}
 <main><section class="week" id="week-0" >
   <h2>Summary</h2>
   <div class="summary"><p>We’re pretty good on batches atm</p></div>
-  <div class="wr-wrap"><h2>Creative Win Rates</h2><table class="wr"><thead><tr><th>Client</th><th>Type</th><th>Win rate</th><th>W / F / L</th><th>Testing</th><th>Avg $/Winner</th><th>Top Winner</th><th>Avg Top-3 Winners</th></tr></thead><tbody><tr class=""><td>TCC</td><td>Static</td><td>36.0%</td><td>9 / 1 / 15</td><td>8</td><td>$23,486</td><td>$183,526</td><td>$65,122</td></tr><tr class=""><td></td><td>Video</td><td>21.7%</td><td>20 / 10 / 62</td><td>28</td><td>$14,839</td><td>$38,181</td><td>$36,507</td></tr><tr class="blend"><td></td><td>Blended</td><td>24.8%</td><td>29 / 11 / 77</td><td>36</td><td>$17,523</td><td>$183,526</td><td>$86,033</td></tr><tr class=""><td>CEO Lawyer</td><td>Static</td><td>17.8%</td><td>8 / 6 / 31</td><td>33</td><td>$6,556</td><td>$16,403</td><td>$12,037</td></tr><tr class=""><td></td><td>Video</td><td>9.2%</td><td>7 / 9 / 60</td><td>14</td><td>$3,199</td><td>$11,062</td><td>$5,353</td></tr><tr class="blend"><td></td><td>Blended</td><td>12.4%</td><td>15 / 15 / 91</td><td>47</td><td>$4,989</td><td>$16,403</td><td>$12,692</td></tr><tr class=""><td>VAM</td><td>Static</td><td>4.8%</td><td>17 / 12 / 325</td><td>219</td><td>$28,901</td><td>$316,357</td><td>$131,065</td></tr><tr class=""><td></td><td>Video</td><td>4.8%</td><td>9 / 4 / 176</td><td>37</td><td>$27,686</td><td>$206,162</td><td>$80,170</td></tr><tr class="blend"><td></td><td>Blended</td><td>4.8%</td><td>26 / 16 / 501</td><td>256</td><td>$28,480</td><td>$316,357</td><td>$192,004</td></tr><tr class=""><td>NSR</td><td>Static</td><td>3.2%</td><td>1 / 0 / 30</td><td>2</td><td>$3,140</td><td>$3,140</td><td>$3,140</td></tr><tr class=""><td></td><td>Video</td><td>0.0%</td><td>0 / 0 / 23</td><td>10</td><td>—</td><td>—</td><td>—</td></tr><tr class="blend"><td></td><td>Blended</td><td>1.9%</td><td>1 / 0 / 53</td><td>12</td><td>$3,140</td><td>$3,140</td><td>$3,140</td></tr><tr class=""><td>Case Source</td><td>Static</td><td>6.0%</td><td>9 / 17 / 124</td><td>105</td><td>$9,658</td><td>$41,617</td><td>$20,684</td></tr><tr class=""><td></td><td>Video</td><td>5.7%</td><td>7 / 17 / 98</td><td>15</td><td>$4,579</td><td>$8,892</td><td>$7,534</td></tr><tr class="blend"><td></td><td>Blended</td><td>5.9%</td><td>16 / 34 / 222</td><td>120</td><td>$7,436</td><td>$41,617</td><td>$21,120</td></tr><tr class=""><td>Nurse Coach</td><td>Static</td><td>2.5%</td><td>1 / 7 / 32</td><td>38</td><td>$2,767</td><td>$2,767</td><td>$2,767</td></tr><tr class=""><td></td><td>Video</td><td>5.0%</td><td>2 / 13 / 25</td><td>11</td><td>$3,110</td><td>$4,388</td><td>$3,110</td></tr><tr class="blend"><td></td><td>Blended</td><td>3.8%</td><td>3 / 20 / 57</td><td>49</td><td>$2,996</td><td>$4,388</td><td>$2,996</td></tr><tr class=""><td>Dan Henry</td><td>Static</td><td>0.0%</td><td>0 / 3 / 18</td><td>20</td><td>—</td><td>—</td><td>—</td></tr><tr class=""><td></td><td>Video</td><td>14.3%</td><td>3 / 3 / 15</td><td>32</td><td>$16,956</td><td>$42,001</td><td>$16,956</td></tr><tr class="blend"><td></td><td>Blended</td><td>7.1%</td><td>3 / 6 / 33</td><td>52</td><td>$16,956</td><td>$42,001</td><td>$16,956</td></tr><tr class=""><td>Quintessa</td><td>Static</td><td>0.0%</td><td>0 / 0 / 3</td><td>57</td><td>—</td><td>—</td><td>—</td></tr><tr class=""><td></td><td>Video</td><td>0.0%</td><td>0 / 0 / 2</td><td>8</td><td>—</td><td>—</td><td>—</td></tr><tr class="blend"><td></td><td>Blended</td><td>0.0%</td><td>0 / 0 / 5</td><td>65</td><td>—</td><td>—</td><td>—</td></tr></tbody></table></div>
-  <h2>Client Pipelines</h2>
-  <div class="cards"><div class="card">
-  <div class="card-head"><h3>Nurse Coach</h3><div class="links"><a class="lnk" href="https://marcuswest-lab.github.io/nursecoach-creative-dashboard/" target="_blank" rel="noopener">Creative Dashboard ↗</a></div></div>
-  <div class="funnel"><div class="pl-cols"><div class="pl"><div class="pl-h">Ready to launch</div><div class="pl-row tot"><span class="k">Total</span><span class="v">16<span class="sub"> batches · 40 ads</span></span></div><div class="pl-row"><span class="k">Videos</span><span class="v">1<span class="sub"> batch · 5 ads</span></span></div><div class="pl-row"><span class="k">Statics</span><span class="v">15<span class="sub"> batches · 35 ads</span></span></div></div><div class="pl"><span class="pl-h">In Production</span> <span class="none">None</span></div></div></div>
-</div><div class="card">
-  <div class="card-head"><h3>TCC</h3><div class="links"><a class="lnk" href="https://marcuswest-lab.github.io/tcc-creative-dashboard/" target="_blank" rel="noopener">Creative Dashboard ↗</a><a class="lnk" href="https://docs.google.com/spreadsheets/d/1a0a5HyeTO18IGtvBvvy-Bk25pNAIvHl9pP3psO6qfOk/edit?gid=0#gid=0" target="_blank" rel="noopener">Ready to launch &amp; In Production ↗</a></div></div>
-  
-</div><div class="card">
-  <div class="card-head"><h3>VAM</h3><div class="links"><a class="lnk" href="https://marcuswest-lab.github.io/vam-creative-dashboard/" target="_blank" rel="noopener">Creative Dashboard ↗</a></div></div>
-  <div class="funnel"><div class="funnel-name">VAM Funnel</div><div class="pl-cols"><div class="pl"><div class="pl-h">Ready to launch</div><div class="pl-row tot"><span class="k">Total</span><span class="v">19<span class="sub"> batches · 104 ads</span></span></div><div class="pl-row"><span class="k">Videos</span><span class="v">10<span class="sub"> batches · 50 ads</span></span></div><div class="pl-row"><span class="k">Statics</span><span class="v">9<span class="sub"> batches · 54 ads</span></span></div></div><div class="pl"><div class="pl-h">In Production</div><div class="pl-row tot"><span class="k">Total</span><span class="v">5<span class="sub"> batches · 30 ads</span></span></div><div class="pl-row"><span class="k">Videos</span><span class="v">4<span class="sub"> batches · 20 ads</span></span></div><div class="pl-row"><span class="k">Statics</span><span class="v">1<span class="sub"> batch · 10 ads</span></span></div></div></div></div><div class="funnel"><div class="funnel-name">NSR Funnel</div><div class="pl-cols"><div class="pl"><div class="pl-h">Ready to launch</div><div class="pl-row tot"><span class="k">Total</span><span class="v">17<span class="sub"> batches · 94 ads</span></span></div><div class="pl-row"><span class="k">Videos</span><span class="v">5<span class="sub"> batches · 23 ads</span></span></div><div class="pl-row"><span class="k">Statics</span><span class="v">12<span class="sub"> batches · 71 ads</span></span></div></div><div class="pl"><div class="pl-h">In Production</div><div class="pl-row tot"><span class="k">Total</span><span class="v">2<span class="sub"> batches · 15 ads</span></span></div><div class="pl-row"><span class="k">Videos</span><span class="v">1<span class="sub"> batch · 5 ads</span></span></div><div class="pl-row"><span class="k">Statics</span><span class="v">1<span class="sub"> batch · 10 ads</span></span></div></div></div></div>
-</div><div class="card">
-  <div class="card-head"><h3>Case Source</h3><div class="links"><a class="lnk" href="https://marcuswest-lab.github.io/casesource-creative-dashboard/" target="_blank" rel="noopener">Creative Dashboard ↗</a></div></div>
-  <div class="funnel"><div class="pl-cols"><div class="pl"><div class="pl-h">Ready to launch</div><div class="pl-row tot"><span class="k">Total</span><span class="v">13<span class="sub"> batches · 75 ads</span></span></div><div class="pl-row"><span class="k">Videos</span><span class="v">7<span class="sub"> batches · 35 ads</span></span></div><div class="pl-row"><span class="k">Statics</span><span class="v">6<span class="sub"> batches · 40 ads</span></span></div></div><div class="pl"><div class="pl-h">In Production</div><div class="pl-row tot"><span class="k">Total</span><span class="v">2<span class="sub"> batches · 15 ads</span></span></div><div class="pl-row"><span class="k">Videos</span><span class="v">2<span class="sub"> batches · 15 ads</span></span></div><div class="pl-row"><span class="k">Statics</span><span class="v">0<span class="sub"> batches · 0 ads</span></span></div></div></div></div>
-</div><div class="card">
-  <div class="card-head"><h3>Dan Henry</h3><div class="links"><a class="lnk" href="https://marcuswest-lab.github.io/danhenry-creative-dashboard/" target="_blank" rel="noopener">Creative Dashboard ↗</a></div></div>
-  <div class="funnel"><div class="funnel-name">MDW Funnel</div><div class="pl-cols"><div class="pl"><div class="pl-h">Ready to launch</div><div class="pl-row tot"><span class="k">Total</span><span class="v">1<span class="sub"> batch · 12 ads</span></span></div><div class="pl-row"><span class="k">Videos</span><span class="v">1<span class="sub"> batch · 12 ads</span></span></div><div class="pl-row"><span class="k">Statics</span><span class="v">0<span class="sub"> batches · 0 ads</span></span></div></div><div class="pl"><div class="pl-h">In Production</div><div class="pl-row tot"><span class="k">Total</span><span class="v">1<span class="sub"> batch · 25 ads</span></span></div><div class="pl-row"><span class="k">Videos</span><span class="v">0<span class="sub"> batches · 0 ads</span></span></div><div class="pl-row"><span class="k">Statics</span><span class="v">1<span class="sub"> batch · 25 ads</span></span></div></div></div></div>
-</div><div class="card">
-  <div class="card-head"><h3>CEO Lawyer</h3><div class="links"><a class="lnk" href="https://marcuswest-lab.github.io/ceolawyer-creative-dashboard/" target="_blank" rel="noopener">Creative Dashboard ↗</a></div></div>
-  <div class="funnel"><div class="pl-cols"><div class="pl"><div class="pl-h">Ready to launch</div><div class="pl-row tot"><span class="k">Total</span><span class="v">1<span class="sub"> batch · 1 ads</span></span></div><div class="pl-row"><span class="k">Videos</span><span class="v">1<span class="sub"> batch · 1 ads</span></span></div><div class="pl-row"><span class="k">Statics</span><span class="v">0<span class="sub"> batches · 0 ads</span></span></div></div><div class="pl"><span class="pl-h">In Production</span> <span class="none">None</span></div></div></div>
-</div></div>
+  <div class="wr-wrap"><h2>Creative Win Rates + Pipelines</h2><table class="wr big"><thead><tr><th>Client</th><th>Type</th><th>Win rate</th><th>W / F / L</th><th>Testing</th><th>Avg $/Winner</th><th>Top Winner</th><th>Avg Top-3 Winners</th><th>Ready to Launch</th><th>In Production</th></tr></thead><tbody><tr class=""><td rowspan="3" class="cli"><a href="https://marcuswest-lab.github.io/tcc-creative-dashboard/" target="_blank" rel="noopener">TCC ↗</a></td><td>Static</td><td>36.0%</td><td>9 / 1 / 15</td><td>8</td><td>$23,486</td><td>$183,526</td><td>$65,122</td><td class="plc">—</td><td class="plc">—</td></tr><tr class=""><td>Video</td><td>21.7%</td><td>20 / 10 / 62</td><td>28</td><td>$14,839</td><td>$38,181</td><td>$36,507</td><td class="plc">—</td><td class="plc">—</td></tr><tr class="blend"><td>Blended</td><td>24.8%</td><td>29 / 11 / 77</td><td>36</td><td>$17,523</td><td>$183,526</td><td>$86,033</td><td class="plc"><a href="https://docs.google.com/spreadsheets/d/1a0a5HyeTO18IGtvBvvy-Bk25pNAIvHl9pP3psO6qfOk/edit?gid=0#gid=0" target="_blank" rel="noopener">sheet ↗</a></td><td class="plc"></td></tr><tr class=""><td rowspan="3" class="cli"><a href="https://marcuswest-lab.github.io/ceolawyer-creative-dashboard/" target="_blank" rel="noopener">CEO Lawyer ↗</a></td><td>Static</td><td>17.8%</td><td>8 / 6 / 31</td><td>33</td><td>$6,556</td><td>$16,403</td><td>$12,037</td><td class="plc">0</td><td class="plc">0</td></tr><tr class=""><td>Video</td><td>9.2%</td><td>7 / 9 / 60</td><td>14</td><td>$3,199</td><td>$11,062</td><td>$5,353</td><td class="plc">1<span class="sub"> · 1 ads</span></td><td class="plc">0</td></tr><tr class="blend"><td>Blended</td><td>12.4%</td><td>15 / 15 / 91</td><td>47</td><td>$4,989</td><td>$16,403</td><td>$12,692</td><td class="plc">1<span class="sub"> · 1 ads</span></td><td class="plc">0</td></tr><tr class=""><td rowspan="3" class="cli"><a href="https://marcuswest-lab.github.io/vam-creative-dashboard/" target="_blank" rel="noopener">VAM ↗</a></td><td>Static</td><td>4.8%</td><td>17 / 12 / 325</td><td>219</td><td>$28,901</td><td>$316,357</td><td>$131,065</td><td class="plc">9<span class="sub"> · 54 ads</span></td><td class="plc">1<span class="sub"> · 10 ads</span></td></tr><tr class=""><td>Video</td><td>4.8%</td><td>9 / 4 / 176</td><td>37</td><td>$27,686</td><td>$206,162</td><td>$80,170</td><td class="plc">10<span class="sub"> · 50 ads</span></td><td class="plc">4<span class="sub"> · 20 ads</span></td></tr><tr class="blend"><td>Blended</td><td>4.8%</td><td>26 / 16 / 501</td><td>256</td><td>$28,480</td><td>$316,357</td><td>$192,004</td><td class="plc">19<span class="sub"> · 104 ads</span></td><td class="plc">5<span class="sub"> · 30 ads</span></td></tr><tr class=""><td rowspan="3" class="cli"><a href="https://marcuswest-lab.github.io/vam-creative-dashboard/" target="_blank" rel="noopener">NSR ↗</a></td><td>Static</td><td>3.2%</td><td>1 / 0 / 30</td><td>2</td><td>$3,140</td><td>$3,140</td><td>$3,140</td><td class="plc">12<span class="sub"> · 71 ads</span></td><td class="plc">1<span class="sub"> · 10 ads</span></td></tr><tr class=""><td>Video</td><td>0.0%</td><td>0 / 0 / 23</td><td>10</td><td>—</td><td>—</td><td>—</td><td class="plc">5<span class="sub"> · 23 ads</span></td><td class="plc">1<span class="sub"> · 5 ads</span></td></tr><tr class="blend"><td>Blended</td><td>1.9%</td><td>1 / 0 / 53</td><td>12</td><td>$3,140</td><td>$3,140</td><td>$3,140</td><td class="plc">17<span class="sub"> · 94 ads</span></td><td class="plc">2<span class="sub"> · 15 ads</span></td></tr><tr class=""><td rowspan="3" class="cli"><a href="https://marcuswest-lab.github.io/casesource-creative-dashboard/" target="_blank" rel="noopener">Case Source ↗</a></td><td>Static</td><td>6.0%</td><td>9 / 17 / 124</td><td>105</td><td>$9,658</td><td>$41,617</td><td>$20,684</td><td class="plc">6<span class="sub"> · 40 ads</span></td><td class="plc">0</td></tr><tr class=""><td>Video</td><td>5.7%</td><td>7 / 17 / 98</td><td>15</td><td>$4,579</td><td>$8,892</td><td>$7,534</td><td class="plc">7<span class="sub"> · 35 ads</span></td><td class="plc">2<span class="sub"> · 15 ads</span></td></tr><tr class="blend"><td>Blended</td><td>5.9%</td><td>16 / 34 / 222</td><td>120</td><td>$7,436</td><td>$41,617</td><td>$21,120</td><td class="plc">13<span class="sub"> · 75 ads</span></td><td class="plc">2<span class="sub"> · 15 ads</span></td></tr><tr class=""><td rowspan="3" class="cli"><a href="https://marcuswest-lab.github.io/nursecoach-creative-dashboard/" target="_blank" rel="noopener">Nurse Coach ↗</a></td><td>Static</td><td>2.5%</td><td>1 / 7 / 32</td><td>38</td><td>$2,767</td><td>$2,767</td><td>$2,767</td><td class="plc">15<span class="sub"> · 35 ads</span></td><td class="plc">0</td></tr><tr class=""><td>Video</td><td>5.0%</td><td>2 / 13 / 25</td><td>11</td><td>$3,110</td><td>$4,388</td><td>$3,110</td><td class="plc">1<span class="sub"> · 5 ads</span></td><td class="plc">0</td></tr><tr class="blend"><td>Blended</td><td>3.8%</td><td>3 / 20 / 57</td><td>49</td><td>$2,996</td><td>$4,388</td><td>$2,996</td><td class="plc">16<span class="sub"> · 40 ads</span></td><td class="plc">0</td></tr><tr class=""><td rowspan="3" class="cli"><a href="https://marcuswest-lab.github.io/danhenry-creative-dashboard/" target="_blank" rel="noopener">Dan Henry ↗</a></td><td>Static</td><td>0.0%</td><td>0 / 3 / 18</td><td>20</td><td>—</td><td>—</td><td>—</td><td class="plc">0</td><td class="plc">1<span class="sub"> · 25 ads</span></td></tr><tr class=""><td>Video</td><td>14.3%</td><td>3 / 3 / 15</td><td>32</td><td>$16,956</td><td>$42,001</td><td>$16,956</td><td class="plc">1<span class="sub"> · 12 ads</span></td><td class="plc">0</td></tr><tr class="blend"><td>Blended</td><td>7.1%</td><td>3 / 6 / 33</td><td>52</td><td>$16,956</td><td>$42,001</td><td>$16,956</td><td class="plc">1<span class="sub"> · 12 ads</span></td><td class="plc">1<span class="sub"> · 25 ads</span></td></tr><tr class=""><td rowspan="3" class="cli"><a href="https://marcuswest-lab.github.io/quintessa-creative-dashboard/" target="_blank" rel="noopener">Quintessa ↗</a></td><td>Static</td><td>0.0%</td><td>0 / 0 / 3</td><td>57</td><td>—</td><td>—</td><td>—</td><td class="plc">—</td><td class="plc">—</td></tr><tr class=""><td>Video</td><td>0.0%</td><td>0 / 0 / 2</td><td>8</td><td>—</td><td>—</td><td>—</td><td class="plc">—</td><td class="plc">—</td></tr><tr class="blend"><td>Blended</td><td>0.0%</td><td>0 / 0 / 5</td><td>65</td><td>—</td><td>—</td><td>—</td><td class="plc">—</td><td class="plc">—</td></tr></tbody></table></div>
 </section><section class="week" id="week-1" hidden>
   <h2>Summary</h2>
   <div class="summary"><p>Need more CEO Lawyer creatives</p><p>Need some more MDW ads for Dan Henry (1-2 more batches)</p></div>
-  <div class="wr-wrap"><h2>Creative Win Rates</h2><table class="wr"><thead><tr><th>Client</th><th>Type</th><th>Win rate</th><th>W / F / L</th><th>Testing</th></tr></thead><tbody><tr class=""><td>TCC</td><td>Static</td><td>36.0%</td><td>9 / 1 / 15</td><td>8</td></tr><tr class=""><td></td><td>Video</td><td>23.9%</td><td>22 / 8 / 62</td><td>28</td></tr><tr class="blend"><td></td><td>Blended</td><td>26.5%</td><td>31 / 9 / 77</td><td>36</td></tr><tr class=""><td>CEO Lawyer</td><td>Static</td><td>18.2%</td><td>8 / 6 / 30</td><td>34</td></tr><tr class=""><td></td><td>Video</td><td>14.5%</td><td>8 / 6 / 41</td><td>17</td></tr><tr class="blend"><td></td><td>Blended</td><td>16.2%</td><td>16 / 12 / 71</td><td>51</td></tr><tr class=""><td>Dan Henry</td><td>Static</td><td>8.3%</td><td>1 / 0 / 11</td><td>17</td></tr><tr class=""><td></td><td>Video</td><td>7.1%</td><td>1 / 6 / 7</td><td>28</td></tr><tr class="blend"><td></td><td>Blended</td><td>7.7%</td><td>2 / 6 / 18</td><td>45</td></tr><tr class=""><td>Case Source</td><td>Static</td><td>6.0%</td><td>9 / 18 / 122</td><td>106</td></tr><tr class=""><td></td><td>Video</td><td>2.7%</td><td>3 / 16 / 93</td><td>15</td></tr><tr class="blend"><td></td><td>Blended</td><td>4.6%</td><td>12 / 34 / 215</td><td>121</td></tr><tr class=""><td>VAM (excl NSR)</td><td>Static</td><td>4.6%</td><td>16 / 10 / 323</td><td>224</td></tr><tr class=""><td></td><td>Video</td><td>4.9%</td><td>8 / 6 / 148</td><td>34</td></tr><tr class="blend"><td></td><td>Blended</td><td>4.7%</td><td>24 / 16 / 471</td><td>258</td></tr><tr class=""><td>Nurse Coach</td><td>Static</td><td>2.5%</td><td>1 / 7 / 32</td><td>38</td></tr><tr class=""><td></td><td>Video</td><td>4.8%</td><td>2 / 17 / 23</td><td>9</td></tr><tr class="blend"><td></td><td>Blended</td><td>3.7%</td><td>3 / 24 / 55</td><td>47</td></tr><tr class=""><td>NSR</td><td>Static</td><td>0.0%</td><td>0 / 0 / 27</td><td>6</td></tr><tr class=""><td></td><td>Video</td><td>0.0%</td><td>0 / 0 / 15</td><td>3</td></tr><tr class="blend"><td></td><td>Blended</td><td>0.0%</td><td>0 / 0 / 42</td><td>9</td></tr><tr class=""><td>Quintessa</td><td>Static</td><td>0.0%</td><td>0 / 0 / 3</td><td>57</td></tr><tr class=""><td></td><td>Video</td><td>0.0%</td><td>0 / 0 / 2</td><td>8</td></tr><tr class="blend"><td></td><td>Blended</td><td>0.0%</td><td>0 / 0 / 5</td><td>65</td></tr></tbody></table></div>
-  <h2>Client Pipelines</h2>
-  <div class="cards"><div class="card">
-  <div class="card-head"><h3>CEO Lawyer</h3><div class="links"><a class="lnk" href="https://marcuswest-lab.github.io/ceolawyer-creative-dashboard/" target="_blank" rel="noopener">Creative Dashboard ↗</a><a class="lnk" href="https://marcuswest-lab.github.io/ceolawyer-creative-dashboard/" target="_blank" rel="noopener">Creative Dashboard ↗</a></div></div>
-  <div class="funnel"><div class="pl-cols"><div class="pl"><span class="pl-h">Ready to launch</span> <span class="none">None</span></div><div class="pl"><span class="pl-h">In Production</span> <span class="none">None</span></div></div></div>
-</div><div class="card">
-  <div class="card-head"><h3>Nurse Coach</h3><div class="links"><a class="lnk" href="https://marcuswest-lab.github.io/nursecoach-creative-dashboard/" target="_blank" rel="noopener">Creative Dashboard ↗</a><a class="lnk" href="https://marcuswest-lab.github.io/nursecoach-creative-dashboard/" target="_blank" rel="noopener">Creative Dashboard ↗</a></div></div>
-  <div class="funnel"><div class="pl-cols"><div class="pl"><div class="pl-h">Ready to launch</div><div class="pl-row tot"><span class="k">Total</span><span class="v">16<span class="sub"> batches · 40 ads</span></span></div><div class="pl-row"><span class="k">Videos</span><span class="v">1<span class="sub"> batch · 5 ads</span></span></div><div class="pl-row"><span class="k">Statics</span><span class="v">15<span class="sub"> batches · 35 ads</span></span></div></div><div class="pl"><span class="pl-h">In Production</span> <span class="none">None</span></div></div></div>
-</div><div class="card">
-  <div class="card-head"><h3>VAM</h3><div class="links"><a class="lnk" href="https://marcuswest-lab.github.io/vam-creative-dashboard/" target="_blank" rel="noopener">Creative Dashboard ↗</a><a class="lnk" href="https://marcuswest-lab.github.io/vam-creative-dashboard/" target="_blank" rel="noopener">Creative Dashboard ↗</a></div></div>
-  <div class="funnel"><div class="funnel-name">VAM Funnel</div><div class="pl-cols"><div class="pl"><div class="pl-h">Ready to launch</div><div class="pl-row tot"><span class="k">Total</span><span class="v">17<span class="sub"> batches · 94 ads</span></span></div><div class="pl-row"><span class="k">Videos</span><span class="v">8<span class="sub"> batches · 40 ads</span></span></div><div class="pl-row"><span class="k">Statics</span><span class="v">9<span class="sub"> batches · 54 ads</span></span></div></div><div class="pl"><div class="pl-h">In Production</div><div class="pl-row tot"><span class="k">Total</span><span class="v">4<span class="sub"> batches · 25 ads</span></span></div><div class="pl-row"><span class="k">Videos</span><span class="v">4<span class="sub"> batches · 25 ads</span></span></div><div class="pl-row"><span class="k">Statics</span><span class="v">0<span class="sub"> batches · 0 ads</span></span></div></div></div></div><div class="funnel"><div class="funnel-name">NSR Funnel</div><div class="pl-cols"><div class="pl"><div class="pl-h">Ready to launch</div><div class="pl-row tot"><span class="k">Total</span><span class="v">15<span class="sub"> batches · 84 ads</span></span></div><div class="pl-row"><span class="k">Videos</span><span class="v">5<span class="sub"> batches · 23 ads</span></span></div><div class="pl-row"><span class="k">Statics</span><span class="v">10<span class="sub"> batches · 61 ads</span></span></div></div><div class="pl"><div class="pl-h">In Production</div><div class="pl-row tot"><span class="k">Total</span><span class="v">3<span class="sub"> batches · 30 ads</span></span></div><div class="pl-row"><span class="k">Videos</span><span class="v">1<span class="sub"> batch · 10 ads</span></span></div><div class="pl-row"><span class="k">Statics</span><span class="v">2<span class="sub"> batches · 20 ads</span></span></div></div></div></div>
-</div><div class="card">
-  <div class="card-head"><h3>Case Source</h3><div class="links"><a class="lnk" href="https://marcuswest-lab.github.io/casesource-creative-dashboard/" target="_blank" rel="noopener">Creative Dashboard ↗</a><a class="lnk" href="https://marcuswest-lab.github.io/casesource-creative-dashboard/" target="_blank" rel="noopener">Creative Dashboard ↗</a></div></div>
-  <div class="funnel"><div class="pl-cols"><div class="pl"><div class="pl-h">Ready to launch</div><div class="pl-row tot"><span class="k">Total</span><span class="v">15<span class="sub"> batches · 85 ads</span></span></div><div class="pl-row"><span class="k">Videos</span><span class="v">9<span class="sub"> batches · 45 ads</span></span></div><div class="pl-row"><span class="k">Statics</span><span class="v">6<span class="sub"> batches · 40 ads</span></span></div></div><div class="pl"><div class="pl-h">In Production</div><div class="pl-row tot"><span class="k">Total</span><span class="v">1<span class="sub"> batch · 5 ads</span></span></div><div class="pl-row"><span class="k">Videos</span><span class="v">1<span class="sub"> batch · 5 ads</span></span></div><div class="pl-row"><span class="k">Statics</span><span class="v">0<span class="sub"> batches · 0 ads</span></span></div></div></div></div>
-</div><div class="card">
-  <div class="card-head"><h3>Dan Henry</h3><div class="links"><a class="lnk" href="https://marcuswest-lab.github.io/danhenry-creative-dashboard/" target="_blank" rel="noopener">Creative Dashboard ↗</a><a class="lnk" href="https://marcuswest-lab.github.io/danhenry-creative-dashboard/" target="_blank" rel="noopener">Creative Dashboard ↗</a></div></div>
-  <div class="funnel"><div class="funnel-name">MDW Funnel</div><div class="pl-cols"><div class="pl"><span class="pl-h">Ready to launch</span> <span class="none">None</span></div><div class="pl"><div class="pl-h">In Production</div><div class="pl-row tot"><span class="k">Total</span><span class="v">1<span class="sub"> batch · 1 ads</span></span></div><div class="pl-row"><span class="k">Videos</span><span class="v">1<span class="sub"> batch · 1 ads</span></span></div><div class="pl-row"><span class="k">Statics</span><span class="v">0<span class="sub"> batches · 0 ads</span></span></div></div></div></div><div class="funnel"><div class="funnel-name">PB Funnel</div><div class="pl-cols"><div class="pl"><span class="pl-h">Ready to launch</span> <span class="none">None</span></div><div class="pl"><span class="pl-h">In Production</span> <span class="none">None</span></div></div></div><div class="funnel"><div class="funnel-name">5MS Funnel</div><div class="pl-cols"><div class="pl"><span class="pl-h">Ready to launch</span> <span class="none">None</span></div><div class="pl"><span class="pl-h">In Production</span> <span class="none">None</span></div></div></div>
-</div><div class="card">
-  <div class="card-head"><h3>Quintessa</h3><div class="links"><a class="lnk" href="https://marcuswest-lab.github.io/quintessa-creative-dashboard/" target="_blank" rel="noopener">Creative Dashboard ↗</a><a class="lnk" href="https://marcuswest-lab.github.io/quintessa-creative-dashboard/" target="_blank" rel="noopener">Creative Dashboard ↗</a></div></div>
-  <div class="funnel"><div class="pl-cols"><div class="pl"><div class="pl-h">Ready to launch</div><div class="pl-row tot"><span class="k">Total</span><span class="v">20<span class="sub"> batches · 126 ads</span></span></div><div class="pl-row"><span class="k">Videos</span><span class="v">6<span class="sub"> batches · 26 ads</span></span></div><div class="pl-row"><span class="k">Statics</span><span class="v">14<span class="sub"> batches · 100 ads</span></span></div></div><div class="pl"><div class="pl-h">In Production</div><div class="pl-row tot"><span class="k">Total</span><span class="v">2<span class="sub"> batches · 50 ads</span></span></div><div class="pl-row"><span class="k">Videos</span><span class="v">2<span class="sub"> batches · 50 ads</span></span></div><div class="pl-row"><span class="k">Statics</span><span class="v">0<span class="sub"> batches · 0 ads</span></span></div></div></div></div>
-</div></div>
+  <div class="wr-wrap"><h2>Creative Win Rates + Pipelines</h2><table class="wr big"><thead><tr><th>Client</th><th>Type</th><th>Win rate</th><th>W / F / L</th><th>Testing</th><th>Avg $/Winner</th><th>Top Winner</th><th>Avg Top-3 Winners</th><th>Ready to Launch</th><th>In Production</th></tr></thead><tbody><tr class=""><td rowspan="3" class="cli"><a href="https://marcuswest-lab.github.io/tcc-creative-dashboard/" target="_blank" rel="noopener">TCC ↗</a></td><td>Static</td><td>36.0%</td><td>9 / 1 / 15</td><td>8</td><td class="plc">—</td><td class="plc">—</td></tr><tr class=""><td>Video</td><td>23.9%</td><td>22 / 8 / 62</td><td>28</td><td class="plc">—</td><td class="plc">—</td></tr><tr class="blend"><td>Blended</td><td>26.5%</td><td>31 / 9 / 77</td><td>36</td><td class="plc">—</td><td class="plc">—</td></tr><tr class=""><td rowspan="3" class="cli"><a href="https://marcuswest-lab.github.io/ceolawyer-creative-dashboard/" target="_blank" rel="noopener">CEO Lawyer ↗</a></td><td>Static</td><td>18.2%</td><td>8 / 6 / 30</td><td>34</td><td class="plc">0</td><td class="plc">0</td></tr><tr class=""><td>Video</td><td>14.5%</td><td>8 / 6 / 41</td><td>17</td><td class="plc">0</td><td class="plc">0</td></tr><tr class="blend"><td>Blended</td><td>16.2%</td><td>16 / 12 / 71</td><td>51</td><td class="plc">0</td><td class="plc">0</td></tr><tr class=""><td rowspan="3" class="cli"><a href="https://marcuswest-lab.github.io/danhenry-creative-dashboard/" target="_blank" rel="noopener">Dan Henry ↗</a></td><td>Static</td><td>8.3%</td><td>1 / 0 / 11</td><td>17</td><td class="plc">0</td><td class="plc">0</td></tr><tr class=""><td>Video</td><td>7.1%</td><td>1 / 6 / 7</td><td>28</td><td class="plc">0</td><td class="plc">1<span class="sub"> · 1 ads</span></td></tr><tr class="blend"><td>Blended</td><td>7.7%</td><td>2 / 6 / 18</td><td>45</td><td class="plc">0</td><td class="plc">1<span class="sub"> · 1 ads</span></td></tr><tr class=""><td rowspan="3" class="cli"><a href="https://marcuswest-lab.github.io/casesource-creative-dashboard/" target="_blank" rel="noopener">Case Source ↗</a></td><td>Static</td><td>6.0%</td><td>9 / 18 / 122</td><td>106</td><td class="plc">6<span class="sub"> · 40 ads</span></td><td class="plc">0</td></tr><tr class=""><td>Video</td><td>2.7%</td><td>3 / 16 / 93</td><td>15</td><td class="plc">9<span class="sub"> · 45 ads</span></td><td class="plc">1<span class="sub"> · 5 ads</span></td></tr><tr class="blend"><td>Blended</td><td>4.6%</td><td>12 / 34 / 215</td><td>121</td><td class="plc">15<span class="sub"> · 85 ads</span></td><td class="plc">1<span class="sub"> · 5 ads</span></td></tr><tr class=""><td rowspan="3" class="cli">VAM (excl NSR)</td><td>Static</td><td>4.6%</td><td>16 / 10 / 323</td><td>224</td><td class="plc">—</td><td class="plc">—</td></tr><tr class=""><td>Video</td><td>4.9%</td><td>8 / 6 / 148</td><td>34</td><td class="plc">—</td><td class="plc">—</td></tr><tr class="blend"><td>Blended</td><td>4.7%</td><td>24 / 16 / 471</td><td>258</td><td class="plc">—</td><td class="plc">—</td></tr><tr class=""><td rowspan="3" class="cli"><a href="https://marcuswest-lab.github.io/nursecoach-creative-dashboard/" target="_blank" rel="noopener">Nurse Coach ↗</a></td><td>Static</td><td>2.5%</td><td>1 / 7 / 32</td><td>38</td><td class="plc">15<span class="sub"> · 35 ads</span></td><td class="plc">0</td></tr><tr class=""><td>Video</td><td>4.8%</td><td>2 / 17 / 23</td><td>9</td><td class="plc">1<span class="sub"> · 5 ads</span></td><td class="plc">0</td></tr><tr class="blend"><td>Blended</td><td>3.7%</td><td>3 / 24 / 55</td><td>47</td><td class="plc">16<span class="sub"> · 40 ads</span></td><td class="plc">0</td></tr><tr class=""><td rowspan="3" class="cli"><a href="https://marcuswest-lab.github.io/vam-creative-dashboard/" target="_blank" rel="noopener">NSR ↗</a></td><td>Static</td><td>0.0%</td><td>0 / 0 / 27</td><td>6</td><td class="plc">10<span class="sub"> · 61 ads</span></td><td class="plc">2<span class="sub"> · 20 ads</span></td></tr><tr class=""><td>Video</td><td>0.0%</td><td>0 / 0 / 15</td><td>3</td><td class="plc">5<span class="sub"> · 23 ads</span></td><td class="plc">1<span class="sub"> · 10 ads</span></td></tr><tr class="blend"><td>Blended</td><td>0.0%</td><td>0 / 0 / 42</td><td>9</td><td class="plc">15<span class="sub"> · 84 ads</span></td><td class="plc">3<span class="sub"> · 30 ads</span></td></tr><tr class=""><td rowspan="3" class="cli"><a href="https://marcuswest-lab.github.io/quintessa-creative-dashboard/" target="_blank" rel="noopener">Quintessa ↗</a></td><td>Static</td><td>0.0%</td><td>0 / 0 / 3</td><td>57</td><td class="plc">14<span class="sub"> · 100 ads</span></td><td class="plc">0</td></tr><tr class=""><td>Video</td><td>0.0%</td><td>0 / 0 / 2</td><td>8</td><td class="plc">6<span class="sub"> · 26 ads</span></td><td class="plc">2<span class="sub"> · 50 ads</span></td></tr><tr class="blend"><td>Blended</td><td>0.0%</td><td>0 / 0 / 5</td><td>65</td><td class="plc">20<span class="sub"> · 126 ads</span></td><td class="plc">2<span class="sub"> · 50 ads</span></td></tr></tbody></table></div>
 </section><section class="week" id="week-2" hidden>
   <h2>Summary</h2>
   <div class="summary"><p>Client Creative Priorities (where we need help the most)</p><p>CEO Lawyer</p><p>Ready to launch</p><p>Total: 4 batches (9 ads)</p><p>Videos: 4 batches (9 ads)</p><p>Statics: 0 batches (0 ads)</p><p>In Production</p><p>None</p><p>Notes</p><p>None</p><p>Nurse Coach</p><p>Ready to launch</p><p>Total: 16 batches (40 ads)</p><p>Videos: 1 batch (5 ads)</p><p>Statics: 15 batches (35 ads)</p><p>In Production</p><p>None</p><p>Notes</p><p>None</p><p>VAM Funnel</p><p>Ready to launch</p><p>Total: 16 batches (90 ads)</p><p>Videos: 10 batches (50 ads)</p><p>Statics: 6 batches (40 ads)</p><p>In Production</p><p>Total: 2 batches (20 ads)</p><p>Videos: 2 batches (20 ads)</p><p>Statics: 0 batches (0 ads)</p><p>Notes</p><p>None</p><p>NSR Funnel</p><p>Ready to launch</p><p>Total: 14 batches (79 ads)</p><p>Videos: 5 batches (23 ads)</p><p>Statics: 9 batches (56 ads)</p><p>In Production</p><p>Total: 5 batches (30 ads)</p><p>Videos: 3 batches (15 ads)</p><p>Statics: 2 batches (15 ads)</p><p>Notes</p><p>None</p><p>Case Source</p><p>Ready to launch</p><p>Total: 11 batches (55 ads)</p><p>Videos: 8 batches (40 ads)</p><p>Statics: 3 batches (15 ads)</p><p>In Production</p><p>Total: 5 batches (40 ads)</p><p>Videos: 3 batches (15 ads)</p><p>Statics: 2 batches (25 ads)</p><p>Notes</p><p>None</p><p>Dan Henry</p><p>Ready to launch</p><p>Total: 5 batches (22 ads)</p><p>Videos: 2 batches (11 ads)</p><p>Statics: 3 batches (11 ads)</p><p>In Production</p><p>None</p><p>Notes</p><p>None</p><p>Quintessa</p><p>Ready to launch</p><p>Total: 20 batches (126 ads)</p><p>Videos: 6 batches (26 ads)</p><p>Statics: 14 batches (100 ads)</p><p>In Production</p><p>Total: 2 batches (50 ads)</p><p>Videos: 2 batches (50 ads)</p><p>Statics: 0 batches (0 ads)</p><p>Notes</p><p>None</p></div>
-  
-  <h2>Client Pipelines</h2>
-  <div class="cards"><div class="card">
+  <h2>Client Pipelines</h2><div class="cards"><div class="card">
   <div class="card-head"><h3>CEO Lawyer</h3><div class="links"><a class="lnk" href="https://marcuswest-lab.github.io/ceolawyer-creative-dashboard/" target="_blank" rel="noopener">Creative Dashboard ↗</a></div></div>
   <div class="funnel"><div class="pl-cols"><div class="pl"><span class="pl-h">In Production</span> <span class="none">None</span></div></div></div>
 </div><div class="card">
@@ -130,9 +95,7 @@ table.wr tr.blend td{background:var(--surf2);font-weight:700}
 </section><section class="week" id="week-3" hidden>
   <h2>Summary</h2>
   <div class="summary"><p>Client Creative Priorities (where we need help the most)</p><p>VAM</p><p>Pushing NSR once sequences etc are good to go</p><p>ROAS has been lower this past week</p><p>4-6 batches this week</p><p>NC</p><p>Come up with 5 potential headlines for the new evergreen LP</p><p>Dan Henry</p><p>Good for now</p><p>Honestly, just kind of holding our ground until we can get traction with the backend because on the frontend things are fairly stable</p><p>Case Source</p><p>Good on batches for now</p><p>Quintessa</p><p>Good on batches for now</p><p>TCC</p><p>Monthly creative report + 1 batch/week. Good on batches for now</p></div>
-  
-  <h2>Client Pipelines</h2>
-  <div class="cards"><div class="card">
+  <h2>Client Pipelines</h2><div class="cards"><div class="card">
   <div class="card-head"><h3>CEO Lawyer</h3><div class="links"><a class="lnk" href="https://marcuswest-lab.github.io/ceolawyer-creative-dashboard/" target="_blank" rel="noopener">Creative Dashboard ↗</a></div></div>
   <div class="funnel"><div class="pl-cols"><div class="pl"><span class="pl-h">In Production</span> <span class="none">None</span></div></div></div>
 </div><div class="card">
@@ -157,9 +120,7 @@ table.wr tr.blend td{background:var(--surf2);font-weight:700}
 </section><section class="week" id="week-4" hidden>
   <h2>Summary</h2>
   <div class="summary"><p>Client Creative Priorities (where we need help the most)</p><p>VAM</p><p>Pushing NSR once sequences etc are good to go</p><p>Dan Henry</p><p>Make 5 min slides edits for copy</p><p>Case Source</p><p>Good on batches for now</p><p>Quintessa</p><p>Good on batches for now</p><p>NC</p><p>Statics and videos in progress</p><p>If we need Heather to film in different locations, we can have her do that</p><p>TCC</p><p>Monthly creative report + 1 batch/week. Good on batches for now</p></div>
-  
-  <h2>Client Pipelines</h2>
-  <div class="cards"><div class="card">
+  <h2>Client Pipelines</h2><div class="cards"><div class="card">
   <div class="card-head"><h3>CEO Lawyer</h3><div class="links"><a class="lnk" href="https://marcuswest-lab.github.io/ceolawyer-creative-dashboard/" target="_blank" rel="noopener">Creative Dashboard ↗</a></div></div>
   <div class="funnel"><div class="pl-cols"><div class="pl"><span class="pl-h">In Production</span> <span class="none">None</span></div></div></div>
 </div><div class="card">
@@ -184,9 +145,7 @@ table.wr tr.blend td{background:var(--surf2);font-weight:700}
 </section><section class="week" id="week-5" hidden>
   <h2>Summary</h2>
   <div class="summary"><p>Client Creative Priorities (where we need help the most)</p><p>Case Source</p><p>Good on batches for now</p><p>VAM</p><p>Pushing to $35k/day next week</p><p>Pushing NSR - will probably need batches here</p><p>TCC</p><p>1 batch/wk + monthly creative report to qualify for bonus</p><p>Dan Henry</p><p>Write copy for 5 min slides offer</p><p>Quintessa</p><p>They want to launch a commercial trucking campaign as well in mid-June</p><p>New batches coming</p><p>NC</p><p>Statics and videos in progress</p></div>
-  
-  <h2>Client Pipelines</h2>
-  <div class="cards"><div class="card">
+  <h2>Client Pipelines</h2><div class="cards"><div class="card">
   <div class="card-head"><h3>CEO Lawyer</h3><div class="links"><a class="lnk" href="https://marcuswest-lab.github.io/ceolawyer-creative-dashboard/" target="_blank" rel="noopener">Creative Dashboard ↗</a></div></div>
   <div class="funnel"><div class="pl-cols"><div class="pl"><span class="pl-h">In Production</span> <span class="none">None</span></div></div></div>
 </div><div class="card">
@@ -211,9 +170,7 @@ table.wr tr.blend td{background:var(--surf2);font-weight:700}
 </section><section class="week" id="week-6" hidden>
   <h2>Summary</h2>
   <div class="summary"><p>Client Creative Priorities (where we need help the most)</p><p>Case Source</p><p>Scaling to $50k/day by June 15th</p><p>Good on batches for now</p><p>VAM</p><p>Pushing to $35k/day next week</p><p>TCC</p><p>1 batch/wk + monthly creative report to qualify for bonus</p><p>Marcus is working on a draft for the creative report and will send to Nate for review.</p><p>Dan Henry</p><p>Write up Dan’s 2 angles</p><p><a href="https://docs.google.com/document/d/1NsI_eDA-5cU_NeJCsLEOz4xqrDfCNsfUCD_SoRveEzw/edit?usp=sharing" target="_blank" rel="noopener">https://docs.google.com/document/d/1NsI_eDA-5cU_NeJCsLEOz4xqrDfCNsfUCD_SoRveEzw/edit?usp=sharing</a> </p><p>Quintessa</p><p>They want to launch a commercial trucking campaign as well in mid-June</p><p>New batches coming</p><p>NC</p><p>Videos sent to Heather</p><p>Static batch submitted</p></div>
-  
-  <h2>Client Pipelines</h2>
-  <div class="cards"><div class="card">
+  <h2>Client Pipelines</h2><div class="cards"><div class="card">
   <div class="card-head"><h3>CEO Lawyer</h3><div class="links"><a class="lnk" href="https://marcuswest-lab.github.io/ceolawyer-creative-dashboard/" target="_blank" rel="noopener">Creative Dashboard ↗</a></div></div>
   <div class="funnel"><div class="pl-cols"><div class="pl"><span class="pl-h">In Production</span> <span class="none">None</span></div></div></div>
 </div><div class="card">
@@ -238,9 +195,7 @@ table.wr tr.blend td{background:var(--surf2);font-weight:700}
 </section><section class="week" id="week-7" hidden>
   <h2>Summary</h2>
   <div class="summary"><p>Client Creative Priorities (where we need help the most)</p><p>Case Source</p><p>Scaling to $50k/day by June 15th</p><p>2 static batches and 2 AI UGC batches per week</p><p>VAM</p><p>Pushing to $35k/day the week after next</p><p>4 video batches/week</p><p>More NSR creatives </p><p>TCC</p><p>1 batch/wk + monthly creative report to qualify for bonus</p><p>Dan Henry</p><p>Take a look at what’s working for MDW and potentially consider iterating</p><p>Quintessa</p><p>Launching on 5/28</p><p>They also want to launch a commercial trucking campaign as well in mid-June</p><p>NC</p><p>Videos sent to Heather</p><p>Static batch submitted</p></div>
-  
-  <h2>Client Pipelines</h2>
-  <div class="cards"><div class="card">
+  <h2>Client Pipelines</h2><div class="cards"><div class="card">
   <div class="card-head"><h3>CEO Lawyer</h3><div class="links"><a class="lnk" href="https://marcuswest-lab.github.io/ceolawyer-creative-dashboard/" target="_blank" rel="noopener">Creative Dashboard ↗</a></div></div>
   <div class="funnel"><div class="pl-cols"><div class="pl"><span class="pl-h">In Production</span> <span class="none">None</span></div></div></div>
 </div><div class="card">
@@ -265,9 +220,7 @@ table.wr tr.blend td{background:var(--surf2);font-weight:700}
 </section><section class="week" id="week-8" hidden>
   <h2>Summary</h2>
   <div class="summary"><p>Client Creative Priorities (where we need help the most)</p><p>Case Source</p><p>Scaling to $50k/day within the next 30 days</p><p>2 static batches and 2 AI UGC batches per week</p><p>Spanish funnel launching today</p><p>VAM</p><p>Pushing to $35k/day the week after next (which means we need to submit requests next week)</p><p>4 video batches/week</p><p>More NSR creatives </p><p>TCC</p><p>1 batch/wk</p><p>Dan Henry</p><p>Take a look at what’s working for MDW and potentially consider iterating</p><p>Quintessa</p><p>Launching on 5/28</p><p>NC</p><p>Videos sent to Heather</p><p>Static batch submitted</p></div>
-  
-  <h2>Client Pipelines</h2>
-  <div class="cards"><div class="card">
+  <h2>Client Pipelines</h2><div class="cards"><div class="card">
   <div class="card-head"><h3>CEO Lawyer</h3><div class="links"><a class="lnk" href="https://marcuswest-lab.github.io/ceolawyer-creative-dashboard/" target="_blank" rel="noopener">Creative Dashboard ↗</a></div></div>
   <div class="funnel"><div class="pl-cols"><div class="pl"><span class="pl-h">In Production</span> <span class="none">None</span></div></div></div>
 </div><div class="card">
@@ -292,9 +245,7 @@ table.wr tr.blend td{background:var(--surf2);font-weight:700}
 </section><section class="week" id="week-9" hidden>
   <h2>Summary</h2>
   <div class="summary"><p>Client Creative Priorities (where we need help the most)</p><p>Case Source</p><p>Scaling to $50k/day within the next 30 days</p><p>2 static batches and 2 AI UGC batches per week</p><p>VAM</p><p>4 video batches/week</p><p>Billo + AI UGCs</p><p>TCC</p><p>1 batch/wk</p><p>Nurse Coach</p><p>Let’s do more creatives for NC</p></div>
-  
-  <h2>Client Pipelines</h2>
-  <div class="cards"><div class="card">
+  <h2>Client Pipelines</h2><div class="cards"><div class="card">
   <div class="card-head"><h3>CEO Lawyer</h3><div class="links"><a class="lnk" href="https://marcuswest-lab.github.io/ceolawyer-creative-dashboard/" target="_blank" rel="noopener">Creative Dashboard ↗</a></div></div>
   <div class="funnel"><div class="pl-cols"><div class="pl"><span class="pl-h">In Production</span> <span class="none">None</span></div></div></div>
 </div><div class="card">
@@ -319,9 +270,7 @@ table.wr tr.blend td{background:var(--surf2);font-weight:700}
 </section><section class="week" id="week-10" hidden>
   <h2>Summary</h2>
   <div class="summary"><p>Client Creative Priorities (where we need help the most)</p><p>VAM</p><p>We should revisit creative output needs for VAM. I am thinking we&#x27;ll need 10 batches per week. At $300/day per batch, that would put us at 10% of the overall budget for creative testing. For this week we have cut down to $23,700 based on making our normal cuts at the ad level. So we have to increase by $6300 for Monday to hit our spend goal and we have 6 batches to launch so thats just $1800. Just something to think about and plan for</p><p>Billo + AI UGCs</p><p>Case Source</p><p>We’re down to 8 batches currently. Not sure if we&#x27;ll need some more, considering that the results have been inconsistent lately.</p><p>Billo + AI UGCs</p><p>Dan Henry</p><p>We’re pretty stocked up for PB webinar with Dan’s videos and our statics</p><p>Need some assets (i.e. creatives and copy) for MDW</p><p>Quintessa</p><p>Creatives and copy currently under compliance review by Quintessa. Will make changes if necessary</p><p>Nurse Coach</p><p>Let’s do more creatives for NC</p></div>
-  
-  <h2>Client Pipelines</h2>
-  <div class="cards"><div class="card">
+  <h2>Client Pipelines</h2><div class="cards"><div class="card">
   <div class="card-head"><h3>CEO Lawyer</h3><div class="links"><a class="lnk" href="https://marcuswest-lab.github.io/ceolawyer-creative-dashboard/" target="_blank" rel="noopener">Creative Dashboard ↗</a></div></div>
   <div class="funnel"><div class="pl-cols"><div class="pl"><span class="pl-h">In Production</span> <span class="none">None</span></div></div></div>
 </div><div class="card">
@@ -346,9 +295,7 @@ table.wr tr.blend td{background:var(--surf2);font-weight:700}
 </section><section class="week" id="week-11" hidden>
   <h2>Summary</h2>
   <div class="summary"><p>Client Creative Priorities (where we need help the most)</p><p>Overall</p><p>We’re in a good spot creative-wise. We’ll just have to prep a bit for Dan Henry because I’m sure we’ll get some requests coming in</p><p>VAM</p><p>Currently have 3 creative batches ready to launch, 9 in production</p><p>About to launch NSR</p><p>Continue focusing on billo</p><p>But generally speaking, we’re pretty good on creative requests rn</p></div>
-  
-  <h2>Client Pipelines</h2>
-  <div class="cards"><div class="card">
+  <h2>Client Pipelines</h2><div class="cards"><div class="card">
   <div class="card-head"><h3>CEO Lawyer</h3><div class="links"><a class="lnk" href="https://marcuswest-lab.github.io/ceolawyer-creative-dashboard/" target="_blank" rel="noopener">Creative Dashboard ↗</a></div></div>
   <div class="funnel"><div class="pl-cols"><div class="pl"><span class="pl-h">In Production</span> <span class="none">None</span></div></div></div>
 </div><div class="card">
@@ -367,9 +314,7 @@ table.wr tr.blend td{background:var(--surf2);font-weight:700}
 </section><section class="week" id="week-12" hidden>
   <h2>Summary</h2>
   <div class="summary"><p>Client Creative Priorities (where we need help the most)</p><p>VAM</p><p>Currently spending $25k/day, low ROAS last week (but most likely due to Audience Network traffic)</p><p>Currently have 4 creative batches ready, 9 in production</p><p>About to launch NSR</p><p>Continue focusing on billo</p><p>But generally speaking, we’re pretty good on creative requests rn</p><p>TCC</p><p>Gmail/Microsoft Inbox statics</p><p>CEO Lawyer</p><p>We should send them some top performing ads for them to create iterations of that we can test</p><p>NOTE: for Nurse Coach, Hyros is messing up on the exports for some reason, so that data is from April 13th</p></div>
-  
-  <h2>Client Pipelines</h2>
-  <div class="cards"><div class="card">
+  <h2>Client Pipelines</h2><div class="cards"><div class="card">
   <div class="card-head"><h3>CEO Lawyer</h3><div class="links"><a class="lnk" href="https://marcuswest-lab.github.io/ceolawyer-creative-dashboard/" target="_blank" rel="noopener">Creative Dashboard ↗</a></div></div>
   <div class="funnel"><div class="pl-cols"><div class="pl"><span class="pl-h">In Production</span> <span class="none">None</span></div></div></div>
 </div><div class="card">
@@ -388,9 +333,7 @@ table.wr tr.blend td{background:var(--surf2);font-weight:700}
 </section><section class="week" id="week-13" hidden>
   <h2>Summary</h2>
   <div class="summary"><p>Client Creative Priorities (where we need help the most)</p><p>VAM</p><p>Just scaled up to $25k/day from $18.5k/day, will need to put some more videos in the pipeline</p><p>Currently have 2 creative batches ready, 6 in production</p><p>Focus on billo</p><p>TCC</p><p>Gmail statics</p><p>Case Source</p><p>Super stacked pipeline rn, we&#x27;ve mostly been biding our time so that we can get the new funnel and Hyros up and running, which we&#x27;ve been able to complete today, so we don&#x27;t need many more creatives for Case Source right now </p><p>Just continue to work on billo videos, but no rush</p></div>
-  
-  <h2>Client Pipelines</h2>
-  <div class="cards"><div class="card">
+  <h2>Client Pipelines</h2><div class="cards"><div class="card">
   <div class="card-head"><h3>CEO Lawyer</h3><div class="links"><a class="lnk" href="https://marcuswest-lab.github.io/ceolawyer-creative-dashboard/" target="_blank" rel="noopener">Creative Dashboard ↗</a></div></div>
   <div class="funnel"><div class="pl-cols"><div class="pl"><span class="pl-h">In Production</span> <span class="none">None</span></div></div></div>
 </div><div class="card">
@@ -409,9 +352,7 @@ table.wr tr.blend td{background:var(--surf2);font-weight:700}
 </section><section class="week" id="week-14" hidden>
   <h2>Summary</h2>
   <div class="summary"><p>Client Creative Priorities (where we need help the most)</p><p>Value Added</p><p>Numbers looking better this week, also we’ve been able to sustain better now too, so can pace ourselves a bit with the batches</p><p>Looking decent in terms of pipeline</p><p>Andrew and I switched up the media buying setup a little bit for VAM. Basically we&#x27;re going to optimize on the ad level which should get us more spend per ad variation and we&#x27;ll see how this plays out</p><p>TCC</p><p>Gmail statics</p><p>Case Source</p><p>We have a lot of stuff in the pipeline, so it&#x27;s not super urgent to get anything new right now</p><p>We can bring up again the topic of billo, and they can create the billo account and we can help hire/manage the creators</p></div>
-  
-  <h2>Client Pipelines</h2>
-  <div class="cards"><div class="card">
+  <h2>Client Pipelines</h2><div class="cards"><div class="card">
   <div class="card-head"><h3>CEO Lawyer</h3><div class="links"><a class="lnk" href="https://marcuswest-lab.github.io/ceolawyer-creative-dashboard/" target="_blank" rel="noopener">Creative Dashboard ↗</a></div></div>
   <div class="funnel"><div class="pl-cols"><div class="pl"><span class="pl-h">In Production</span> <span class="none">None</span></div></div></div>
 </div><div class="card">
@@ -430,9 +371,7 @@ table.wr tr.blend td{background:var(--surf2);font-weight:700}
 </section><section class="week" id="week-15" hidden>
   <h2>Summary</h2>
   <div class="summary"><p>Client Creative Priorities (where we need help the most)</p><p>Case Source</p><p>Performance was a bit slower this week, we should probably get a batch or 2 in the works</p><p>Value Added: Numbers looking better this week, also we’ve been able to sustain better now too, so can pace ourselves a bit with the batches</p><p>Looking decent in terms of pipeline</p><p>Andrew and I switched up the media buying setup a little bit for VAM. Basically we&#x27;re going to optimize on the ad level which should get us more spend per ad variation and we&#x27;ll see how this plays out</p><p>Andrew is working on some billo stuff</p><p>Take a look at Oriana’s new concept here: <a href="https://badmarketingteam.slack.com/archives/C09N4V43BHA/p1774394176620049" target="_blank" rel="noopener">https://badmarketingteam.slack.com/archives/C09N4V43BHA/p1774394176620049</a> </p></div>
-  
-  <h2>Client Pipelines</h2>
-  <div class="cards"><div class="card">
+  <h2>Client Pipelines</h2><div class="cards"><div class="card">
   <div class="card-head"><h3>CEO Lawyer</h3><div class="links"><a class="lnk" href="https://marcuswest-lab.github.io/ceolawyer-creative-dashboard/" target="_blank" rel="noopener">Creative Dashboard ↗</a></div></div>
   <div class="funnel"><div class="pl-cols"><div class="pl"><span class="pl-h">In Production</span> <span class="none">None</span></div></div></div>
 </div><div class="card">
@@ -451,9 +390,7 @@ table.wr tr.blend td{background:var(--surf2);font-weight:700}
 </section><section class="week" id="week-16" hidden>
   <h2>Summary</h2>
   <div class="summary"><p>Client Creative Priorities (where we need help the most)</p><p>Value Added: Numbers looking better this week, but still keeping this here as a priority. We also have a decent pipeline going as well, so maybe just Keep this on our radar to continue to come up with new ideas since it is a scaling account but we also don&#x27;t need to hold strictly to three batches a week at this point</p><p>Looking decent in terms of pipeline</p><p>Andrew and I switched up the media buying setup a little bit for value added. Basically we&#x27;re going to optimize on the ad level which should get us more spend per ad variation and we&#x27;ll see how this plays out</p><p>Andrew is working on some billo stuff</p><p>Take a look at Oriana’s new concept here: <a href="https://badmarketingteam.slack.com/archives/C09N4V43BHA/p1774394176620049" target="_blank" rel="noopener">https://badmarketingteam.slack.com/archives/C09N4V43BHA/p1774394176620049</a> </p><p>Case Source</p><p>Performance was a bit slower this week, just keeping this on our radar since the plan is to scale these guys to the moon</p><p>I also asked if James could shoot for 5-10 UGCs per month, but considering their turnaround times so far, I wouldn’t necessarily bank on this, but hopefully they can turn around at least a few per month</p></div>
-  
-  <h2>Client Pipelines</h2>
-  <div class="cards"><div class="card">
+  <h2>Client Pipelines</h2><div class="cards"><div class="card">
   <div class="card-head"><h3>CEO Lawyer</h3><div class="links"></div></div>
   <div class="funnel"><div class="pl-cols"><div class="pl"><span class="pl-h">In Production</span> <span class="none">None</span></div></div></div>
 </div><div class="card">
@@ -472,9 +409,7 @@ table.wr tr.blend td{background:var(--surf2);font-weight:700}
 </section><section class="week" id="week-17" hidden>
   <h2>Summary</h2>
   <div class="summary"><p>Client Creative Priorities (where we need help the most)</p><p>Value Added: Numbers looking better this week, but still keeping this here as a priority since we’re still not totally in the clear yet and I know they’re still wanting to push scale</p><p>Pipeline is looking better, but let’s keep going with at 3 batch submissions a week and mostly focus on videos, until we have a few stable winners</p><p>This is not going to be forever btw, I think hopefully we’ll eventually find some video winners that have more stability and we’ll be able to control our creative output a bit more at that point</p><p>Also hopefully when we get call tracking metrics and diagnose their core issues on the call side and address some of those things, we’ll find more stability with the ROAS</p><p>On the media buying side, we’re exploring ways to have our spend go further</p><p>Andrew is working on some billo stuff</p><p>Take a look at Meme video concept, context <a href="https://badmarketingteam.slack.com/archives/C09N4V43BHA/p1772662818023009" target="_blank" rel="noopener">https://badmarketingteam.slack.com/archives/C09N4V43BHA/p1772662818023009</a> ]</p><p>Case Source</p><p>Nothing urgent here because numbers look good and we have some stuff still in the pipeline, but just keeping this on our radar since the plan is to scale these guys to the moon</p><p>Here was my update I sent yesterday: <a href="https://www.loom.com/share/67d969974d864993863041e167e1b85d" target="_blank" rel="noopener">https://www.loom.com/share/67d969974d864993863041e167e1b85d</a> </p><p>I also asked if James could shoot for 5-10 UGCs per month, but considering their turnaround times so far, I wouldn’t necessarily bank on this, but hopefully they can turn around at least a few per month</p><p>TCC</p><p>Lead Magnet copy (either this week or early next week is okay)</p><p>For reference, this is their version: <a href="https://docs.google.com/document/d/1NZtm4lgQEKvcXX8CowiuJ2J6sae5Ar9iB8TOg2VyMqw/edit?tab=t.mvziuzw92bm7" target="_blank" rel="noopener">https://docs.google.com/document/d/1NZtm4lgQEKvcXX8CowiuJ2J6sae5Ar9iB8TOg2VyMqw/edit?tab=t.mvziuzw92bm7</a> </p></div>
-  
-  <h2>Client Pipelines</h2>
-  <div class="cards"><div class="card">
+  <h2>Client Pipelines</h2><div class="cards"><div class="card">
   <div class="card-head"><h3>CEO Lawyer</h3><div class="links"></div></div>
   <div class="funnel"><div class="pl-cols"><div class="pl"><span class="pl-h">In Production</span> <span class="none">None</span></div></div></div>
 </div><div class="card">
@@ -493,9 +428,7 @@ table.wr tr.blend td{background:var(--surf2);font-weight:700}
 </section><section class="week" id="week-18" hidden>
   <h2>Summary</h2>
   <div class="summary"><p>Client Creative Priorities (where we need help the most)</p><p>Value Added: We’re in red status this week for them. Super low ROAS. I know we’ve been coming up with some new ideas, so let’s keep that going for this week. We’re bound to find a winner at some point. </p><p>UPDATE: looking better EOD March 11</p><p>Let’s keep going with at least 3 batches a week, and mostly focus on videos</p><p>We’ll also speak with VAM to see if they’re open to hiring UGC creators</p><p>Take a look at Meme video concept, context <a href="https://badmarketingteam.slack.com/archives/C09N4V43BHA/p1772662818023009" target="_blank" rel="noopener">https://badmarketingteam.slack.com/archives/C09N4V43BHA/p1772662818023009</a> </p></div>
-  
-  <h2>Client Pipelines</h2>
-  <div class="cards"><div class="card">
+  <h2>Client Pipelines</h2><div class="cards"><div class="card">
   <div class="card-head"><h3>CEO Lawyer</h3><div class="links"></div></div>
   
 </div><div class="card">
@@ -514,9 +447,7 @@ table.wr tr.blend td{background:var(--surf2);font-weight:700}
 </section><section class="week" id="week-19" hidden>
   <h2>Summary</h2>
   <div class="summary"><p>Client Creative Priorities (where we need help the most)</p><p>Value Added: Still some requests in the works, but wouldn’t hurt to always have more ideas for this one since they’re scaling quickly</p></div>
-  
-  <h2>Client Pipelines</h2>
-  <div class="cards"><div class="card">
+  <h2>Client Pipelines</h2><div class="cards"><div class="card">
   <div class="card-head"><h3>CEO Lawyer</h3><div class="links"></div></div>
   
 </div><div class="card">
@@ -535,9 +466,7 @@ table.wr tr.blend td{background:var(--surf2);font-weight:700}
 </section><section class="week" id="week-20" hidden>
   <h2>Summary</h2>
   <div class="summary"><p>Client Creative Priorities (where we need help the most)</p><p>Value Added: Still some requests in the works, but wouldn’t hurt to always have more ideas for this one since they’re scaling quickly</p><p>Case Source: Currently just have one more batch to launch today, but should stock up for next week.</p></div>
-  
-  <h2>Client Pipelines</h2>
-  <div class="cards"><div class="card">
+  <h2>Client Pipelines</h2><div class="cards"><div class="card">
   <div class="card-head"><h3>CEO Lawyer</h3><div class="links"></div></div>
   
 </div><div class="card">
@@ -556,9 +485,7 @@ table.wr tr.blend td{background:var(--surf2);font-weight:700}
 </section><section class="week" id="week-21" hidden>
   <h2>Summary</h2>
   <div class="summary"><p>Client Creative Priorities (where we need help the most)</p><p>CEO Lawyer: Work on revised Reddit/Gmail style creatives based on real client stories (We can source these from some of the video ads and then also we&#x27;re going to request that they send over stories as well).</p><p>Value Added: Still some requests in the works, but wouldn’t hurt to always have more ideas for this one since they’re scaling quickly</p><p>TCC: Need to come up with some ideas for new lead magnet funnel (on hold until we speak to them about this first)</p></div>
-  
-  <h2>Client Pipelines</h2>
-  <div class="cards"><div class="card">
+  <h2>Client Pipelines</h2><div class="cards"><div class="card">
   <div class="card-head"><h3>CEO Lawyer</h3><div class="links"></div></div>
   
 </div><div class="card">
@@ -577,9 +504,7 @@ table.wr tr.blend td{background:var(--surf2);font-weight:700}
 </section><section class="week" id="week-22" hidden>
   <h2>Summary</h2>
   <div class="summary"><p>Client Creative Priorities (where we need help the most)</p><p>TLDR: we should be okay until Nate’s return since we have a good amount of requests in the pipeline, but still flagging these clients so that they&#x27;re still on our radar until next week when Nate comes back</p><p>Value Added: Already made good progress here this week, still flagging this until we’re back within KPI, but Nate put in a lot of creative requests, so should be okay until his return</p><p>Core Tax: We have some creatives in the works, so should be okay until Nate’s return I believe</p><p>Case Source: We’ve got some statics, but would be good to get some videos. Sent over UGC scripts.</p><p>CEO Lawyer: Work on revised Twitter/Reddit/Gmail style creatives based on real client stories (We can source these from some of the video ads and then also we&#x27;re going to request that they send over stories as well). Not super urgent, this can happen once Nate returns.</p></div>
-  
-  <h2>Client Pipelines</h2>
-  <div class="cards"><div class="card">
+  <h2>Client Pipelines</h2><div class="cards"><div class="card">
   <div class="card-head"><h3>CEO Lawyer</h3><div class="links"></div></div>
   
 </div><div class="card">
@@ -598,9 +523,7 @@ table.wr tr.blend td{background:var(--surf2);font-weight:700}
 </section><section class="week" id="week-23" hidden>
   <h2>Summary</h2>
   <div class="summary"><p>Client Creative Priorities (where we need help the most)</p><p>Value Added: ROAS was very low this week, just trying to find something that will work for this account</p><p>Core Tax: Branded account went down, so we launched through the remaining statics. We can stock up the pipeline again. Results are currently okay though.</p><p>Case Source: We’ve got some statics, but would be good to get some </p></div>
-  
-  <h2>Client Pipelines</h2>
-  <div class="cards"><div class="card">
+  <h2>Client Pipelines</h2><div class="cards"><div class="card">
   <div class="card-head"><h3>CEO Lawyer</h3><div class="links"></div></div>
   
 </div><div class="card">
@@ -619,9 +542,7 @@ table.wr tr.blend td{background:var(--surf2);font-weight:700}
 </section><section class="week" id="week-24" hidden>
   <h2>Summary</h2>
   <div class="summary"><p>Client Creative Priorities (where we need help the most)</p><p>Case Source: new client, need to audit their ad account and see what creatives we’ll need for them</p><p>Value Added. High priority. Trying to scale, need to stack pipeline</p></div>
-  
-  <h2>Client Pipelines</h2>
-  <div class="cards"><div class="card">
+  <h2>Client Pipelines</h2><div class="cards"><div class="card">
   <div class="card-head"><h3>CEO Lawyer</h3><div class="links"></div></div>
   
 </div><div class="card">
@@ -640,9 +561,7 @@ table.wr tr.blend td{background:var(--surf2);font-weight:700}
 </section><section class="week" id="week-25" hidden>
   <h2>Summary</h2>
   <div class="summary"><p>Client Creative Priorities (where we need help the most)</p><p>Value Added. Super urgent/high priority. We’re trying to scale, ROAS is low, and we have no creatives.</p><p>Case Source: new client, need to audit their ad account and see what creatives we’ll need for them</p></div>
-  
-  <h2>Client Pipelines</h2>
-  <div class="cards"><div class="card">
+  <h2>Client Pipelines</h2><div class="cards"><div class="card">
   <div class="card-head"><h3>CEO Lawyer</h3><div class="links"></div></div>
   
 </div><div class="card">
@@ -661,9 +580,7 @@ table.wr tr.blend td{background:var(--surf2);font-weight:700}
 </section><section class="week" id="week-26" hidden>
   <h2>Summary</h2>
   <div class="summary"><p>Client Creative Priorities (where we need help the most)</p><p>Value Added. We’re about to scale pretty hard (from $5k/day to $10k/day within 3 weeks, then to $15k/day by end of March), so it’s time to stack the pipeline.</p><p>CEO Lawyer: Thomas asked if we can do one more round so that we have a backlog of creatives to pull from</p></div>
-  
-  <h2>Client Pipelines</h2>
-  <div class="cards"><div class="card">
+  <h2>Client Pipelines</h2><div class="cards"><div class="card">
   <div class="card-head"><h3>CEO Lawyer</h3><div class="links"></div></div>
   
 </div><div class="card">
@@ -679,9 +596,7 @@ table.wr tr.blend td{background:var(--surf2);font-weight:700}
 </section><section class="week" id="week-27" hidden>
   <h2>Summary</h2>
   <div class="summary"><p>Client Creative Priorities (where we need help the most)</p><p>Also potentially CEO lawyer, but we&#x27;ll talk to them about whether we can work out a creative cadence with their creative person Romeo and see how many creatives we will want to produce on our end.</p></div>
-  
-  <h2>Client Pipelines</h2>
-  <div class="cards"><div class="card">
+  <h2>Client Pipelines</h2><div class="cards"><div class="card">
   <div class="card-head"><h3>CEO Lawyer</h3><div class="links"></div></div>
   
 </div><div class="card">
@@ -697,9 +612,7 @@ table.wr tr.blend td{background:var(--surf2);font-weight:700}
 </section><section class="week" id="week-28" hidden>
   <h2>Summary</h2>
   <div class="summary"><p>Client Creative Priorities (where we need help the most)</p><p>Core Tax is priority right now. Results are looking good overall, but we don’t have a pipeline of next creatives to test at the moment. It would be good to get some stuff in the works just so we’re stocked up.</p><p>Next priority would be Value Added. They are our most scalable client and they want to spend more in Jan, so we could def stock up. We do have a decent pipeline right now, but if you do have any extra time, this would be the next account to look into.</p><p>And then I’d say Nurse Coach. We’re currently going to test through some creative and the new funnels, but we only have a couple of creatives in the pipeline, so we might get through these quickly</p></div>
-  
-  <h2>Client Pipelines</h2>
-  <div class="cards"><div class="card">
+  <h2>Client Pipelines</h2><div class="cards"><div class="card">
   <div class="card-head"><h3>CEO Lawyer</h3><div class="links"></div></div>
   
 </div><div class="card">
@@ -715,9 +628,7 @@ table.wr tr.blend td{background:var(--surf2);font-weight:700}
 </section><section class="week" id="week-29" hidden>
   <h2>Summary</h2>
   <div class="summary"><p>Client Creatives (where we might need help)</p><p>Value Added is first priority since we don&#x27;t have anything in the creative testing pipeline for them at the moment, and they&#x27;re wanting to scale hard in 2026.</p><p>Then Core Tax we can think about stacking some creatives too since we don&#x27;t have anything right now in the testing pipeline for them.</p></div>
-  
-  <h2>Client Pipelines</h2>
-  <div class="cards"><div class="card">
+  <h2>Client Pipelines</h2><div class="cards"><div class="card">
   <div class="card-head"><h3>CEO Lawyer</h3><div class="links"></div></div>
   
 </div><div class="card">
