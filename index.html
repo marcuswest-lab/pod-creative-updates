@@ -8,10 +8,15 @@ a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
 header{padding:22px 28px 14px;border-bottom:1px solid var(--line)}
 header h1{margin:0;font-size:22px;letter-spacing:.2px}
 header .sub{color:var(--mut);font-size:13px;margin-top:4px}
-.tabs{position:sticky;top:0;z-index:5;display:flex;gap:6px;flex-wrap:wrap;padding:12px 28px;background:var(--bg);border-bottom:1px solid var(--line)}
-.tab{background:var(--surf);color:var(--mut);border:1px solid var(--line);border-radius:999px;padding:6px 14px;font:inherit;font-size:13px;cursor:pointer}
-.tab:hover{color:var(--txt)}
-.tab.active{background:var(--acc);color:#07121f;border-color:var(--acc);font-weight:700}
+.tabs{position:sticky;top:0;z-index:5;display:flex;gap:8px;align-items:center;padding:12px 28px;background:var(--bg);border-bottom:1px solid var(--line)}
+.tabs .wk-lab{color:var(--mut);font-size:13px}
+.wk-sel{background:var(--acc);color:#07121f;border:1px solid var(--acc);border-radius:999px;padding:6px 30px 6px 14px;font:inherit;font-size:13px;font-weight:700;cursor:pointer;appearance:none;
+  background-image:linear-gradient(45deg,transparent 50%,#07121f 50%),linear-gradient(135deg,#07121f 50%,transparent 50%);
+  background-position:calc(100% - 16px) 52%,calc(100% - 11px) 52%;background-size:5px 5px,5px 5px;background-repeat:no-repeat}
+.wk-nav{background:var(--surf);color:var(--mut);border:1px solid var(--line);border-radius:999px;width:30px;height:30px;font:inherit;font-size:14px;line-height:1;cursor:pointer}
+.wk-nav:hover:not(:disabled){color:var(--txt)}
+.wk-nav:disabled{opacity:.35;cursor:default}
+.wk-pos{color:var(--mut);font-size:12px}
 main{padding:22px 28px 60px;max-width:1500px;margin:0 auto}
 .rollup{background:linear-gradient(90deg,#12233b,#161b24);border:1px solid var(--line);border-radius:12px;padding:16px 20px;font-size:16px;color:var(--mut)}
 .rollup .big{font-size:34px;font-weight:800;color:var(--good);margin-right:8px;vertical-align:-2px}
@@ -80,7 +85,7 @@ table.wr.calc th:last-child{background:#123049}
 <body>
 <header><h1>D1 P4 Pod — Creative Updates</h1>
 <div class="sub">Computed live from the Creative Trackers &amp; Raw Data. Summary &amp; Notes filled in after.</div></header>
-<nav class="tabs"><button class="tab active" data-i="0">8/15/26</button><button class="tab" data-i="1">8/7/26</button><button class="tab" data-i="2">7/31/26</button><button class="tab" data-i="3">7/28/26</button><button class="tab" data-i="4">7/25/26</button><button class="tab" data-i="5">7/17/26</button><button class="tab" data-i="6">7/10/26</button><button class="tab" data-i="7">7/3/26</button><button class="tab" data-i="8">6/29/26</button><button class="tab" data-i="9">6/22/26</button><button class="tab" data-i="10">6/15/26</button><button class="tab" data-i="11">6/8/26</button><button class="tab" data-i="12">6/1/26</button><button class="tab" data-i="13">5/27/26</button><button class="tab" data-i="14">5/22/26</button><button class="tab" data-i="15">5/15/26</button><button class="tab" data-i="16">5/8/26</button><button class="tab" data-i="17">4/27/26</button><button class="tab" data-i="18">4/20/26</button><button class="tab" data-i="19">4/13/26</button><button class="tab" data-i="20">4/6/26</button><button class="tab" data-i="21">3/31/26</button><button class="tab" data-i="22">3/25/26</button><button class="tab" data-i="23">3/18/26</button><button class="tab" data-i="24">3/11/26</button><button class="tab" data-i="25">3/4/26</button><button class="tab" data-i="26">2/25/26</button><button class="tab" data-i="27">2/19/26</button><button class="tab" data-i="28">2/12/26</button><button class="tab" data-i="29">2/5/26</button><button class="tab" data-i="30">1/28/26</button><button class="tab" data-i="31">1/23/26</button><button class="tab" data-i="32">1/16/26</button><button class="tab" data-i="33">1/9/26</button><button class="tab" data-i="34">1/2/26</button><button class="tab" data-i="35">12/19/25</button></nav>
+<nav class="tabs"><span class="wk-lab">Week</span><button class="wk-nav" id="wkPrev" title="Older week">&#8249;</button><select class="wk-sel" id="wkSel"><option value="0" selected>8/15/26</option><option value="1">8/7/26</option><option value="2">7/31/26</option><option value="3">7/28/26</option><option value="4">7/25/26</option><option value="5">7/17/26</option><option value="6">7/10/26</option><option value="7">7/3/26</option><option value="8">6/29/26</option><option value="9">6/22/26</option><option value="10">6/15/26</option><option value="11">6/8/26</option><option value="12">6/1/26</option><option value="13">5/27/26</option><option value="14">5/22/26</option><option value="15">5/15/26</option><option value="16">5/8/26</option><option value="17">4/27/26</option><option value="18">4/20/26</option><option value="19">4/13/26</option><option value="20">4/6/26</option><option value="21">3/31/26</option><option value="22">3/25/26</option><option value="23">3/18/26</option><option value="24">3/11/26</option><option value="25">3/4/26</option><option value="26">2/25/26</option><option value="27">2/19/26</option><option value="28">2/12/26</option><option value="29">2/5/26</option><option value="30">1/28/26</option><option value="31">1/23/26</option><option value="32">1/16/26</option><option value="33">1/9/26</option><option value="34">1/2/26</option><option value="35">12/19/25</option></select><button class="wk-nav" id="wkNext" title="Newer week">&#8250;</button><span class="wk-pos" id="wkPos"></span></nav>
 <main><section class="week" id="week-0" 
   data-date="8/15/26" data-defaults="{&quot;calc&quot;: {&quot;Nurse Coach&quot;: {&quot;budget&quot;: 3000, &quot;spb&quot;: 250, &quot;pct&quot;: 0}, &quot;TCC&quot;: {&quot;budget&quot;: 5500, &quot;spb&quot;: 1000, &quot;pct&quot;: 0}, &quot;VAM&quot;: {&quot;budget&quot;: 36500, &quot;spb&quot;: 1000, &quot;pct&quot;: 15}, &quot;NSR&quot;: {&quot;budget&quot;: 3500, &quot;spb&quot;: 500, &quot;pct&quot;: 50}, &quot;Case Source&quot;: {&quot;budget&quot;: 20000, &quot;spb&quot;: 1000, &quot;pct&quot;: 10}, &quot;Dan Henry&quot;: {&quot;budget&quot;: 6000, &quot;spb&quot;: 1000, &quot;pct&quot;: 20}, &quot;CEO Lawyer&quot;: {&quot;budget&quot;: 5000, &quot;spb&quot;: 1000, &quot;pct&quot;: 0}, &quot;Quintessa&quot;: {&quot;budget&quot;: 5000, &quot;spb&quot;: 500, &quot;pct&quot;: 0}}, &quot;lm&quot;: {}}">
   <h2>Summary</h2>
@@ -725,16 +730,27 @@ table.wr.calc th:last-child{background:#123049}
 </div></div>
 </section></main>
 <script>
-const tabs=[...document.querySelectorAll('.tab')],weeks=[...document.querySelectorAll('.week')];
-tabs.forEach(t=>t.onclick=()=>{const i=+t.dataset.i;
- tabs.forEach(x=>x.classList.toggle('active',x===t));
+const weeks=[...document.querySelectorAll('.week')];
+const wkSel=document.getElementById('wkSel'),wkPrev=document.getElementById('wkPrev'),
+      wkNext=document.getElementById('wkNext'),wkPos=document.getElementById('wkPos');
+function showWeek(i,scroll){
+ i=Math.max(0,Math.min(weeks.length-1,i));
+ wkSel.value=i;
  weeks.forEach(w=>w.hidden = (w.id!=='week-'+i));
- window.scrollTo({top:0});fitTable();});
+ wkNext.disabled = (i===0); wkPrev.disabled = (i===weeks.length-1);
+ wkPos.textContent = i===0 ? 'latest' : i+' week'+(i>1?'s':'')+' ago';
+ if(scroll) window.scrollTo({top:0});
+ fitTable();
+}
+wkSel.onchange=()=>showWeek(+wkSel.value,true);
+wkPrev.onclick=()=>showWeek(+wkSel.value+1,true);
+wkNext.onclick=()=>showWeek(+wkSel.value-1,true);
 function fitTable(){
  const nav=document.querySelector('.tabs');
  const navH=nav?Math.round(nav.getBoundingClientRect().height):0;
  document.documentElement.style.setProperty('--navH',navH+'px');
 }
+showWeek(0,false);
 fitTable();window.addEventListener('resize',fitTable);window.addEventListener('load',fitTable);
 
 // ---- Batch Pace Calculator + Runway (per-week, saved to localStorage) ----
