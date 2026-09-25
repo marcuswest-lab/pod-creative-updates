@@ -33,6 +33,11 @@ table.wr td.cli{text-align:left;font-weight:700}
 table.wr td.typ{text-align:left;font-weight:400}
 table.wr.big th:first-child{left:0;z-index:6;box-shadow:inset 0 -1px 0 var(--line),inset 0 1px 0 var(--line),2px 0 0 var(--line)}
 table.wr.big td.cli{position:sticky;left:0;z-index:3;background:var(--bg);box-shadow:2px 0 0 var(--line)}
+/* Type is frozen beside Client. --cliW is the Client column's measured width,
+   set per table by fitTable() -- client names vary, so it can't be fixed. */
+table.wr.big th:nth-child(2){left:var(--cliW,0px);z-index:6;box-shadow:inset 0 -1px 0 var(--line),inset 0 1px 0 var(--line),2px 0 0 var(--line)}
+table.wr.big td.typ{position:sticky;left:var(--cliW,0px);z-index:3;background:var(--bg);box-shadow:2px 0 0 var(--line)}
+table.wr.big tr.blend td.typ{background:var(--surf2)}
 table.wr tr.blend td{background:var(--surf2);font-weight:700}
 table.wr td.cli a{color:var(--acc)}
 table.wr td .sub{color:var(--mut);font-size:11px;font-weight:400}
@@ -877,8 +882,15 @@ function fitTable(){
  const nav=document.querySelector('.tabs');
  const navH=nav?Math.round(nav.getBoundingClientRect().height):0;
  document.documentElement.style.setProperty('--navH',navH+'px');
+ // Pin Type to the right edge of the frozen Client column. Measured only on
+ // the visible week -- hidden panels report 0 width.
+ document.querySelectorAll('.week:not([hidden]) table.wr.big').forEach(t=>{
+  const c=t.querySelector('thead th');
+  if(c) t.style.setProperty('--cliW',c.getBoundingClientRect().width+'px');
+ });
 }
 showWeek(0,false);
+if(document.fonts&&document.fonts.ready) document.fonts.ready.then(fitTable);
 fitTable();window.addEventListener('resize',fitTable);window.addEventListener('load',fitTable);
 
 // ---- Batch Pace Calculator + Runway (per-week, saved to localStorage) ----
