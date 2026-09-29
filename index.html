@@ -867,6 +867,8 @@ table.wr.calc th:last-child{background:#123049}
 .view-btn.active{background:var(--acc);border-color:var(--acc);color:#fff}
 .view-sep{width:1px;height:22px;background:var(--line);margin:0 6px}
 #swipe{padding:18px 28px 40px}
+#swipe .sw-top{display:flex;align-items:center;gap:10px;margin:0 0 12px}
+#swipe .sw-lab{color:var(--mut);font-size:13px}
 #swipe .sw-intro{color:var(--mut);font-size:13px;margin:0 0 12px;max-width:1100px}
 #swipe .sw-chips{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 16px}
 #swipe .sw-chip{background:var(--surf);color:var(--txt);border:1px solid var(--line);border-radius:999px;padding:4px 11px;font:inherit;font-size:12px;cursor:pointer}
@@ -1009,7 +1011,9 @@ document.querySelectorAll('.week').forEach(function(sec){
   main.hidden=s; sw.hidden=!s;
   weekCtl.forEach(function(el){el.style.display=s?'none':'';});
   if(s&&!loaded){loaded=true;load();}
-  if(location.hash!==(s?'#swipe':'')) history.replaceState(null,'',s?'#swipe':location.pathname+location.search);
+  // Keep a #swipe/<niche> deep link intact; renderNiche() sets the niche part.
+  if(s&&location.hash.indexOf('#swipe')!==0) history.replaceState(null,'','#swipe');
+  if(!s&&location.hash) history.replaceState(null,'',location.pathname+location.search);
   window.scrollTo({top:0});
  }
  nav.addEventListener('click',function(e){var b=e.target.closest('.view-btn'); if(b) show(b.dataset.view);});
@@ -1019,38 +1023,59 @@ document.querySelectorAll('.week').forEach(function(sec){
   fetch('swipe/swipe.json',{cache:'no-store'}).then(function(r){return r.json();}).then(render)
    .catch(function(){sw.innerHTML='<p class="sw-intro">Could not load swipe/swipe.json.</p>';});
  }
+ var DATA=null,NEW='New (auto-pulled)';
  function render(d){
+  DATA=d;
+  var niches=d.niches||[{key:'all',label:'All'}];
+  var want=(location.hash.split('/')[1])||(function(){try{return localStorage.getItem('swipeNiche');}catch(e){return null;}})();
+  var cur=niches.some(function(n){return n.key===want;})?want:niches[0].key;
+  sw.innerHTML='<div class="sw-top"><label class="sw-lab">Niche</label><select class="wk-sel" id="swNiche">'+
+   niches.map(function(n){var c=(d.ads||[]).filter(function(a){return a.niche===n.key;}).length;
+    return '<option value="'+esc(n.key)+'"'+(n.key===cur?' selected':'')+'>'+esc(n.label)+(n.clients?' — '+esc(n.clients):'')+' ('+c+')</option>';}).join('')+
+   '</select></div><div id="swNicheBody"></div>';
+  var sel=document.getElementById('swNiche');
+  sel.onchange=function(){renderNiche(sel.value);};
+  renderNiche(cur);
+ }
+ function renderNiche(key){
+  try{localStorage.setItem('swipeNiche',key);}catch(e){}
+  history.replaceState(null,'','#swipe/'+key);
+  var d=DATA,n=(d.niches||[]).filter(function(x){return x.key===key;})[0]||{};
+  var body=document.getElementById('swNicheBody');
   // Filter chips = one main format per ad (+ an "Animated elements" flag); detail tags show on the card only.
-  var ads=d.ads||[],fmts={},nAnim=0,ANIM='Animated elements';
-  ads.forEach(function(a){if(a.format) fmts[a.format]=(fmts[a.format]||0)+1; if(a.animated) nAnim++;});
-  var fmtList=Object.keys(fmts).sort(function(a,b){return fmts[b]-fmts[a]||a.localeCompare(b);});
+  var ads=(d.ads||[]).filter(function(a){return !d.niches||a.niche===key;}),fmts={},nAnim=0,ANIM='Animated elements';
+  ads.forEach(function(a){var f=a.source==='auto'&&!a.format?NEW:a.format; if(f) fmts[f]=(fmts[f]||0)+1; if(a.animated) nAnim++;});
+  var fmtList=Object.keys(fmts).sort(function(a,b){return (a===NEW)-(b===NEW)||fmts[b]-fmts[a]||a.localeCompare(b);});
   var chip=function(t,n){return '<button class="sw-chip" data-tag="'+esc(t)+'">'+esc(t)+' ('+n+')</button>';};
-  var h='<p class="sw-intro">'+esc(d.intro||'')+'</p><div class="sw-chips"><button class="sw-chip on" data-tag="">All ('+ads.length+')</button>'+
+  var h='<p class="sw-intro">'+esc(n.intro||d.intro||'')+'</p><div class="sw-chips"><button class="sw-chip on" data-tag="">All ('+ads.length+')</button>'+
    (nAnim?chip(ANIM,nAnim):'')+fmtList.map(function(t){return chip(t,fmts[t]);}).join('')+'</div><div class="sw-grid">';
   ads.forEach(function(a){
-   var keys=[a.format||''].concat(a.animated?[ANIM]:[]);
+   var fmt=a.source==='auto'&&!a.format?NEW:a.format;
+   var keys=[fmt||''].concat(a.animated?[ANIM]:[]);
    var media=a.video?'<video src="'+esc(a.video)+'" poster="'+esc(a.poster||'')+'" controls muted loop playsinline preload="none"></video>'
      :(a.image?'<img src="'+esc(a.image)+'" loading="lazy" alt="">':'<div class="sw-gone">Media not available — open in Ad Library</div>');
    h+='<div class="sw-card" data-tags="'+esc(keys.join('|'))+'"><div class="sw-media">'+media+'</div><div class="sw-body">'+
     '<div class="sw-adv">'+esc(a.advertiser)+(a.length?' · '+esc(a.length):'')+'</div>'+
-    '<div class="sw-meta"><b style="color:var(--txt)">'+esc(a.format||'')+'</b>'+(a.animated?' · <span style="color:var(--warn)">animated elements</span>':'')+'</div>'+
+    '<div class="sw-meta"><b style="color:var(--txt)">'+esc(fmt||'')+'</b>'+(a.animated?' · <span style="color:var(--warn)">animated elements</span>':'')+
+     (a.copies>1?' · '+esc(a.copies)+' copies running':'')+'</div>'+
     '<div class="sw-meta">Running since '+esc(a.started||'?')+(a.active===false?' · <span style="color:var(--bad)">no longer active</span>':'')+'</div>'+
     '<div class="sw-tags">'+(a.tags||[]).map(function(t){return '<span class="sw-tag">'+esc(t)+'</span>';}).join('')+'</div>'+
-    '<div>'+esc(a.breakdown)+'</div>'+
+    (a.source==='auto'&&!a.breakdown?'<div class="sw-meta">Auto-pulled '+esc(a.first_seen||'')+' from the saved search — not reviewed yet.</div>'
+      +(a.body?'<div>'+esc(a.body)+'</div>':''):'<div>'+esc(a.breakdown)+'</div>')+
     (a.iterate?'<div class="sw-it"><b>Iterate for us:</b> '+esc(a.iterate)+'</div>':'')+
     '<a href="https://www.facebook.com/ads/library/?id='+esc(a.id)+'" target="_blank" rel="noopener">Open in Ad Library ↗</a></div></div>';
   });
   h+='</div><p class="sw-foot">Videos stream from Meta\'s Ad Library. Media links refreshed '+esc(d.media_refreshed||'?')+
-   '. Sorted by our pick order, not spend — Meta does not publish competitor spend.</p>';
-  sw.innerHTML=h;
-  sw.querySelector('.sw-chips').addEventListener('click',function(e){var c=e.target.closest('.sw-chip'); if(!c) return;
-   [].slice.call(sw.querySelectorAll('.sw-chip')).forEach(function(x){x.classList.toggle('on',x===c);});
-   var t=c.dataset.tag; [].slice.call(sw.querySelectorAll('.sw-card')).forEach(function(k){k.hidden=!!t&&k.dataset.tags.split('|').indexOf(t)<0;});});
+   '. Curated picks first, then new auto-pulled ads from the saved searches (top by impressions) — Meta does not publish competitor spend.</p>';
+  body.innerHTML=h;
+  body.querySelector('.sw-chips').addEventListener('click',function(e){var c=e.target.closest('.sw-chip'); if(!c) return;
+   [].slice.call(body.querySelectorAll('.sw-chip')).forEach(function(x){x.classList.toggle('on',x===c);});
+   var t=c.dataset.tag; [].slice.call(body.querySelectorAll('.sw-card')).forEach(function(k){k.hidden=!!t&&k.dataset.tags.split('|').indexOf(t)<0;});});
   // play only while visible
   if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(en){var v=en.target;
     if(en.isIntersecting){v.preload='auto';v.play().catch(function(){});}else v.pause();});},{threshold:.5});
-   [].slice.call(sw.querySelectorAll('video')).forEach(function(v){io.observe(v);});}
+   [].slice.call(body.querySelectorAll('video')).forEach(function(v){io.observe(v);});}
  }
- if(location.hash==='#swipe') show('swipe');
+ if(location.hash.indexOf('#swipe')===0) show('swipe');
 })();
 </script><!--SWIPE-TAB-END--></body></html>
