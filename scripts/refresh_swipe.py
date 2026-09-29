@@ -183,11 +183,12 @@ def main():
             continue
         words = [w.lower() for w in n.get("must_include", [])]
         skip_pages = {p.lower() for p in n.get("exclude_pages", [])}
+        skip_ids = {str(x) for x in n.get("exclude_ids", [])}  # retired by the Friday review
         for it in found:
             i = ad_id(it)
             page = str(find(it, ["page_name", "pageName"]) or "")
             body = text_of(it)
-            if not i or page.lower() in skip_pages:
+            if not i or page.lower() in skip_pages or i in skip_ids:
                 continue
             if words and not any(w in (body + " " + page).lower() for w in words):
                 continue  # keyword search also returns unrelated apps/dramas
