@@ -1,9 +1,10 @@
 """Daily Swipe File refresh via Apify (runs from .github/workflows/refresh-swipe.yml).
 
-1. Refresh media links for every ad already in swipe/swipe.json. Meta's
+Modes (argv[1] or SWIPE_MODE): links | discover | all (default).
+1. links — refresh media links for every ad already in swipe/swipe.json. Meta's
    video/thumbnail URLs expire after ~4-5 days; only media fields change,
    curated fields (format, tags, breakdown, iterate) are never touched.
-2. Discover: run each niche's saved Ad Library searches (top by impressions)
+2. discover — run each niche's saved Ad Library searches (top by impressions)
    and add ads we don't have yet as source="auto" (unreviewed). Auto ads that
    stop showing up for 14 days are dropped; each niche keeps at most auto_max.
 
@@ -158,7 +159,27 @@ def main():
     ads = data["ads"]
     by_id = {a["id"]: a for a in ads}
 
-    # 1. Refresh links for ads we already have.
+    mode = (sys.argv[1] if len(sys.argv) > 1 else os.environ.get("SWIPE_MODE", "all")).lower()
+    if mode not in ("links", "discover", "all"):
+        sys.exit(f"unknown mode {mode!r} (use links | discover | all)")
+    print(f"Mode: {mode}")
+    refreshed = added = 0
+
+    # 1. Refresh links for ads we already have (every 3 days — links expire after ~4-5 days).
+    if mode in ("links", "all"):
+        refreshed = refresh_links(by_id)
+
+    # 2. Discover new top ads per niche (weekly, before the Friday review).
+    if mode in ("discover", "all"):
+        added = discover(data, ads, by_id)
+
+    if mode in ("links", "all") and not refreshed:
+        sys.exit("No links refreshed -- check the actor output format")
+    data["media_refreshed"] = TODAY if refreshed else data.get("media_refreshed")
+    json.dump(data, open(PATH, "w"), indent=1, ensure_ascii=False)
+
+
+def refresh_links(by_id):
     items = run_actor([f"https://www.facebook.com/ads/library/?id={i}" for i in by_id], max(50, len(by_id) * 2))
     got = {}
     for it in items:
@@ -170,8 +191,10 @@ def main():
         if i not in got:
             print(f"  kept old links: {i} {a.get('advertiser')}")
     print(f"Refreshed {refreshed}/{len(by_id)} ads")
+    return refreshed
 
-    # 2. Discover new top ads per niche.
+
+def discover(data, ads, by_id):
     added = 0
     for n in data.get("niches", []):
         if not n.get("searches"):
@@ -219,11 +242,7 @@ def main():
         print(f"  {n['key']}: {len(keep)} auto-pulled ads kept")
     added = sum(1 for a in ads if a.get("source") == "auto" and a.get("first_seen") == TODAY)
     print(f"New today (after caps): {added}")
-
-    if not refreshed and not added:
-        sys.exit("Nothing refreshed or added -- check the actor output format")
-    data["media_refreshed"] = TODAY
-    json.dump(data, open(PATH, "w"), indent=1, ensure_ascii=False)
+    return added
 
 
 if __name__ == "__main__":
