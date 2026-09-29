@@ -186,10 +186,16 @@ def refresh_links(by_id):
         i = ad_id(it)
         if i:
             got.setdefault(i, it)
-    refreshed = sum(1 for i, a in by_id.items() if i in got and apply_media(a, got[i]))
+    refreshed = 0
     for i, a in by_id.items():
         if i not in got:
-            print(f"  kept old links: {i} {a.get('advertiser')}")
+            print(f"  kept old links (ad not returned — may have stopped): {i} {a.get('advertiser')}")
+        elif apply_media(a, got[i]):
+            refreshed += 1
+            a.pop("version_missing", None)
+        else:
+            a["version_missing"] = TODAY  # Friday review re-points the card to a returned version
+            print(f"  kept old links (reviewed version not returned): {i} {a.get('advertiser')}")
     print(f"Refreshed {refreshed}/{len(by_id)} ads")
     return refreshed
 
