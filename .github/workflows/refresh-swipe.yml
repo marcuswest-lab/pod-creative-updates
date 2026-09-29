@@ -1,0 +1,38 @@
+name: Refresh swipe file media
+
+# Meta Ad Library video/thumbnail links expire after ~4-5 days, so pull fresh
+# ones daily. Only swipe/swipe.json changes; no media files are stored.
+on:
+  schedule:
+    - cron: "0 11 * * *"   # daily, ~7am ET
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-swipe
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Pull fresh links from Apify
+        env:
+          APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
+        run: python scripts/refresh_swipe.py
+      - name: Commit if changed
+        run: |
+          git config user.name "swipe-refresh-bot"
+          git config user.email "swipe-refresh-bot@users.noreply.github.com"
+          git add swipe/swipe.json
+          if git diff --cached --quiet; then echo "No changes"; exit 0; fi
+          git commit -m "Refresh swipe file media links ($(date -u +%F))"
+          git pull --rebase
+          git push
