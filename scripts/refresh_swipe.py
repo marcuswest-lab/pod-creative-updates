@@ -11,11 +11,14 @@ Nothing is downloaded -- the dashboard streams videos from Meta's CDN.
 
 Env: APIFY_TOKEN (required, repo secret) · APIFY_ACTOR (default apify~facebook-ads-scraper)
 """
+import base64
 import datetime
 import json
 import os
+import re
 import sys
 import time
+import urllib.parse
 import urllib.request
 
 PATH = os.path.join(os.path.dirname(__file__), "..", "swipe", "swipe.json")
@@ -73,10 +76,50 @@ def ad_id(it):
     return str(v) if v is not None else None
 
 
-def media(it):
-    video = find(it, ["video_hd_url", "video_sd_url"])
-    image = None if video else find(it, ["original_image_url", "resized_image_url"])
-    return video, image, find(it, ["video_preview_image_url"]) or image
+def asset_key(url):
+    """Stable id of the underlying video/image, so a refresh keeps the SAME version of an ad
+    (advertisers run several versions under one ad id; the actor lists them in any order)."""
+    if not url:
+        return None
+    m = re.search(r"efg=([^&]+)", url)
+    if m:
+        try:
+            raw = urllib.parse.unquote(m.group(1))
+            raw += "=" * (-len(raw) % 4)
+            v = json.loads(base64.urlsafe_b64decode(raw)).get("xpv_asset_id")
+            if v:
+                return f"v{v}"
+        except Exception:
+            pass
+    m = re.search(r"/(\d+_\d+_\d+)_[nt]\.", url)
+    return f"i{m.group(1)}" if m else None
+
+
+def media_options(it):
+    """Every (video, image, poster) version in an actor item, in the order found."""
+    opts, queue = [], [it]
+    while queue:
+        o = queue.pop(0)
+        if isinstance(o, dict):
+            keys = {norm(k): v for k, v in o.items()}
+            v = keys.get("videohdurl") or keys.get("videosdurl")
+            img = keys.get("originalimageurl") or keys.get("resizedimageurl")
+            if v or img:
+                opts.append((v, None if v else img, keys.get("videopreviewimageurl") or img))
+            queue.extend(o.values())
+        elif isinstance(o, list):
+            queue.extend(o)
+    return opts
+
+
+def media(it, want=None):
+    opts = media_options(it)
+    if want:
+        for v, img, poster in opts:
+            if asset_key(v or img) == want:
+                return v, img, poster
+        return None, None, None  # our version isn't in this result -- keep the old links
+    return opts[0] if opts else (None, None, None)
 
 
 def text_of(it):
@@ -95,10 +138,10 @@ def started(it):
 
 
 def apply_media(a, it):
-    video, image, poster = media(it)
+    video, image, poster = media(it, a.get("asset"))
     if not (video or image):
         return False
-    a.update(video=video, image=image, poster=poster)
+    a.update(video=video, image=image, poster=poster, asset=asset_key(video or image))
     act = find(it, ["is_active", "isActive"])
     if isinstance(act, bool):
         a["active"] = act

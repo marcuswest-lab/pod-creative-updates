@@ -885,6 +885,10 @@ table.wr.calc th:last-child{background:#123049}
 #swipe .sw-tag{background:var(--surf2);border:1px solid var(--line);border-radius:4px;padding:1px 6px;font-size:11px;color:var(--mut)}
 #swipe .sw-it{border-left:3px solid var(--good);padding-left:8px}
 #swipe .sw-it b{color:var(--good)}
+#swipe .sw-links{display:flex;align-items:center;justify-content:space-between;gap:8px}
+#swipe .sw-copy{background:var(--surf2);color:var(--txt);border:1px solid var(--line);border-radius:5px;padding:3px 9px;font:inherit;font-size:12px;cursor:pointer}
+#swipe .sw-copy:hover{border-color:var(--acc)}
+#swipe .sw-card.sw-focus{outline:3px solid var(--warn);outline-offset:2px;box-shadow:0 0 0 6px rgba(245,183,61,.18)}
 #swipe .sw-foot{color:var(--mut);font-size:12px;margin-top:18px}
 </style><section id="swipe" hidden></section><!--SWIPE-TAB-END-->
 <script>
@@ -1027,7 +1031,10 @@ document.querySelectorAll('.week').forEach(function(sec){
  function render(d){
   DATA=d;
   var niches=d.niches||[{key:'all',label:'All'}];
-  var want=(location.hash.split('/')[1])||(function(){try{return localStorage.getItem('swipeNiche');}catch(e){return null;}})();
+  // Deep links: #swipe/<niche>/<adId> (or #swipe/<adId>) opens the niche and jumps to that ad.
+  var parts=location.hash.split('/'),focus=parts[2]||(/^\d+$/.test(parts[1]||'')?parts[1]:null);
+  var fa=focus?(d.ads||[]).filter(function(a){return a.id===focus;})[0]:null;
+  var want=(fa&&fa.niche)||parts[1]||(function(){try{return localStorage.getItem('swipeNiche');}catch(e){return null;}})();
   var cur=niches.some(function(n){return n.key===want;})?want:niches[0].key;
   sw.innerHTML='<div class="sw-top"><label class="sw-lab">Niche</label><select class="wk-sel" id="swNiche">'+
    niches.map(function(n){var c=(d.ads||[]).filter(function(a){return a.niche===n.key;}).length;
@@ -1035,11 +1042,11 @@ document.querySelectorAll('.week').forEach(function(sec){
    '</select></div><div id="swNicheBody"></div>';
   var sel=document.getElementById('swNiche');
   sel.onchange=function(){renderNiche(sel.value);};
-  renderNiche(cur);
+  renderNiche(cur,fa?fa.id:null);
  }
- function renderNiche(key){
+ function renderNiche(key,focus){
   try{localStorage.setItem('swipeNiche',key);}catch(e){}
-  history.replaceState(null,'','#swipe/'+key);
+  history.replaceState(null,'','#swipe/'+key+(focus?'/'+focus:''));
   var d=DATA,n=(d.niches||[]).filter(function(x){return x.key===key;})[0]||{};
   var body=document.getElementById('swNicheBody');
   // Filter chips = one main format per ad (+ an "Animated elements" flag); detail tags show on the card only.
@@ -1054,7 +1061,7 @@ document.querySelectorAll('.week').forEach(function(sec){
    var keys=[fmt||''].concat(a.animated?[ANIM]:[]);
    var media=a.video?'<video src="'+esc(a.video)+'" poster="'+esc(a.poster||'')+'" controls muted loop playsinline preload="none"></video>'
      :(a.image?'<img src="'+esc(a.image)+'" loading="lazy" alt="">':'<div class="sw-gone">Media not available — open in Ad Library</div>');
-   h+='<div class="sw-card" data-tags="'+esc(keys.join('|'))+'"><div class="sw-media">'+media+'</div><div class="sw-body">'+
+   h+='<div class="sw-card" id="ad-'+esc(a.id)+'" data-id="'+esc(a.id)+'" data-tags="'+esc(keys.join('|'))+'"><div class="sw-media">'+media+'</div><div class="sw-body">'+
     '<div class="sw-adv">'+esc(a.advertiser)+(a.length?' · '+esc(a.length):'')+'</div>'+
     '<div class="sw-meta"><b style="color:var(--txt)">'+esc(fmt||'')+'</b>'+(a.animated?' · <span style="color:var(--warn)">animated elements</span>':'')+
      (a.copies>1?' · '+esc(a.copies)+' copies running':'')+'</div>'+
@@ -1063,7 +1070,8 @@ document.querySelectorAll('.week').forEach(function(sec){
     (a.source==='auto'&&!a.breakdown?'<div class="sw-meta">Auto-pulled '+esc(a.first_seen||'')+' from the saved search — not reviewed yet.</div>'
       +(a.body?'<div>'+esc(a.body)+'</div>':''):'<div>'+esc(a.breakdown)+'</div>')+
     (a.iterate?'<div class="sw-it"><b>Iterate for us:</b> '+esc(a.iterate)+'</div>':'')+
-    '<a href="https://www.facebook.com/ads/library/?id='+esc(a.id)+'" target="_blank" rel="noopener">Open in Ad Library ↗</a></div></div>';
+    '<div class="sw-links"><a href="https://www.facebook.com/ads/library/?id='+esc(a.id)+'" target="_blank" rel="noopener">Open in Ad Library ↗</a>'+
+    '<button class="sw-copy" data-link="'+esc(key+'/'+a.id)+'">Copy link</button></div></div></div>';
   });
   h+='</div><p class="sw-foot">Videos stream from Meta\'s Ad Library. Media links refreshed '+esc(d.media_refreshed||'?')+
    '. Curated picks first, then new auto-pulled ads from the saved searches (top by impressions) — Meta does not publish competitor spend.</p>';
@@ -1071,6 +1079,14 @@ document.querySelectorAll('.week').forEach(function(sec){
   body.querySelector('.sw-chips').addEventListener('click',function(e){var c=e.target.closest('.sw-chip'); if(!c) return;
    [].slice.call(body.querySelectorAll('.sw-chip')).forEach(function(x){x.classList.toggle('on',x===c);});
    var t=c.dataset.tag; [].slice.call(body.querySelectorAll('.sw-card')).forEach(function(k){k.hidden=!!t&&k.dataset.tags.split('|').indexOf(t)<0;});});
+  body.addEventListener('click',function(e){var b=e.target.closest('.sw-copy'); if(!b) return;
+   var url=location.origin+location.pathname+'#swipe/'+b.dataset.link;
+   var done=function(){b.textContent='Copied ✓';setTimeout(function(){b.textContent='Copy link';},1500);};
+   if(navigator.clipboard&&navigator.clipboard.writeText) navigator.clipboard.writeText(url).then(done,function(){prompt('Copy this link:',url);});
+   else prompt('Copy this link:',url);
+   history.replaceState(null,'','#swipe/'+b.dataset.link);});
+  if(focus){var fc=document.getElementById('ad-'+focus);
+   if(fc){fc.classList.add('sw-focus');[60,700,1600].forEach(function(t){setTimeout(function(){var nh=(nav.getBoundingClientRect().height||0)+12;window.scrollTo({top:fc.getBoundingClientRect().top+window.scrollY-nh});},t);});}}
   // play only while visible
   if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(en){var v=en.target;
     if(en.isIntersecting){v.preload='auto';v.play().catch(function(){});}else v.pause();});},{threshold:.5});
