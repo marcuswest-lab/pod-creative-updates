@@ -25,6 +25,7 @@ ACTOR = os.environ.get("APIFY_ACTOR", "apify~facebook-ads-scraper")
 TODAY = datetime.date.today().isoformat()
 STALE_DAYS = 14
 PER_SEARCH = 30
+PER_ADVERTISER = 2  # keep the auto list diverse (one firm can run dozens of near-identical ads)
 
 
 def call(method, url, body=None):
@@ -79,10 +80,13 @@ def media(it):
 
 
 def text_of(it):
-    b = find(it, ["body"])
-    if isinstance(b, dict):
-        b = b.get("text")
-    return b if isinstance(b, str) else ""
+    for key in (["body"], ["title"], ["link_description", "caption"]):
+        b = find(it, key)
+        if isinstance(b, dict):
+            b = b.get("text")
+        if isinstance(b, str) and b.strip() and "{{" not in b:  # skip catalog placeholders like {{product.brand}}
+            return b
+    return ""
 
 
 def started(it):
@@ -159,9 +163,18 @@ def main():
         auto = [a for a in ads if a["niche"] == n["key"] and a.get("source") == "auto"]
         keep = sorted([a for a in auto if a.get("last_seen", "") >= cutoff],
                       key=lambda a: a.get("last_seen", ""), reverse=True)[: n.get("auto_max", 24)]
+        per_page, capped = {}, []
+        for a in keep:
+            k = a.get("advertiser", "").lower()
+            per_page[k] = per_page.get(k, 0) + 1
+            if per_page[k] <= PER_ADVERTISER:
+                capped.append(a)
+        keep = capped[: n.get("auto_max", 24)]
         drop = {id(a) for a in auto} - {id(a) for a in keep}
         ads[:] = [a for a in ads if id(a) not in drop]
-    print(f"Added {added} new auto-pulled ads")
+        print(f"  {n['key']}: {len(keep)} auto-pulled ads kept")
+    added = sum(1 for a in ads if a.get("source") == "auto" and a.get("first_seen") == TODAY)
+    print(f"New today (after caps): {added}")
 
     if not refreshed and not added:
         sys.exit("Nothing refreshed or added -- check the actor output format")
