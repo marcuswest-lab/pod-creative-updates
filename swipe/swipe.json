@@ -1405,10 +1405,202 @@
    "breakdown": "Customer-review voiceover over real crew footage in a NYC apartment: 'Hired Otter Moving... they assured me everything would be fine... made sure I was comfortable... contact with 1 person'. Ends on a 'Catch the right wave' end card.",
    "iterate": "Read a real 5-star review as voiceover over crew footage; land on 'one person handled my move start to finish'.",
    "week": "2026-10-02"
+  },
+  {
+   "id": "3025883217610298",
+   "niche": "mva",
+   "advertiser": "Accident Connect",
+   "started": "2026-07-25",
+   "length": "0:13",
+   "format": "UGC",
+   "animated": false,
+   "tags": [
+    "Hidden page",
+    "State swap",
+    "Objection buster"
+   ],
+   "breakdown": "Hidden page (caraccidentsconnect.com network, also tied to the Larry H. Parker pages). Selfie UGC, woman pointing at stacked text: 'How I got $89k for my accident (only had neck pain)' → 'Never went to court' → 'Never called insurance myself' → 'Just used the 2026 crash payout service'. Same ad runs state by state (D.C., FL, OH, NC, TX…).",
+   "iterate": "Stacked-text objection UGC: 'never went to court / never dealt with insurance myself / just checked online', with the state swapped per ad set.",
+   "source": "curated",
+   "week": "2026-10-02",
+   "active": true,
+   "first_seen": "2026-10-02",
+   "video": "https://video.faep24-2.fna.fbcdn.net/o1/v/t2/f2/m366/AQP9AwiuQLx_qc6Umupk9vcLE4i8v16MbF752ET96u_6uU-vfFDK5VPi0W7aFDgb3ilrwWNnQdUs-tO5YOjxiQUYdKy2LCEekaXXq244bRXEng.mp4?_nc_cat=103&_nc_oc=Adrw36BItfP5YWYExCbf6FIHxJIGSKvn4x7XgFNDMX1GF6BhaMURXkLyxx9sJEF1Qoo&_nc_sid=b66105&_nc_ht=video.faep24-2.fna.fbcdn.net&_nc_ohc=IRRbcdza-1kQ7kNvwHFRIMn&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuNzIwLmRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHAiLCJ4cHZfYXNzZXRfaWQiOjk5ODgxMTEzNjMxNzUxOSwiYXNzZXRfYWdlX2RheXMiOjY4LCJ2aV91c2VjYXNlX2lkIjoxMDEzOSwiZHVyYXRpb25fcyI6MTIsInVybGdlbl9zb3VyY2UiOiJ3d3cifQ%3D%3D&ccb=17-1&vs=88065d2002d6dd03&_nc_vs=HBksFQIYRWZiX2VwaGVtZXJhbC9CNTRFRDRGQTU5NTM4MzQ4QUVFMjhFOEY3QTkxNEZCNV9tdF8xX3ZpZGVvX2Rhc2hpbml0Lm1wNBUAAsgBEgAVAhhAZmJfcGVybWFuZW50L0ExNDMzNUE4RDUwRDEzNzMwM0MwNDM5MjY3NDU2RDhCX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACae4dLvuprGAxUCKAJDMywXQCl3S8an754YGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHARAHUAZbaeAQA&_nc_gid=ciH4XBbOpeEyh2qcGpsIVw&_nc_ss=7b289&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQOFkPNiCHb3IYz9osqkrzMmr0o3G5yhE_tLOMLC06bpJQ&oe=6AC59A3D",
+   "image": null,
+   "poster": "https://scontent.faep24-1.fna.fbcdn.net/v/t39.35426-6/756141216_1627251905669786_4087381199421569632_n.jpg?_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=L46y_oz1gKAQ7kNvwGrJYHJ&_nc_oc=AdrYmS_8sX_LssQlO73-jxss4alJJkzFY2GtPa6oDC02HaKn2XGWc4ZRKgt1QF5fQII&_nc_zt=14&_nc_ht=scontent.faep24-1.fna&_nc_gid=ciH4XBbOpeEyh2qcGpsIVw&_nc_ss=7b289&oh=00_AQMlbKhP7acRahh9VI-hEg8YJ-CGFovGnahWUc61JCRqlw&oe=6AC575E8",
+   "asset": "v998811136317519"
+  },
+  {
+   "id": "1102170372470152",
+   "niche": "mva",
+   "advertiser": "Accident Assist",
+   "started": "2026-08-15",
+   "length": "0:33",
+   "format": "Stock b-roll + captions",
+   "animated": false,
+   "tags": [
+    "Hidden page",
+    "Body-shop b-roll",
+    "Scaling signal"
+   ],
+   "breakdown": "Hidden page for Case Advisors (thecaseadvisors.com, also runs as Auto Accident Advocates, Collision Care, Case Advisors). Dashcam crash, then phone footage of a body shop sanding and repainting the car, word-by-word captions ending 'Accident in the last two years? See how much you qualify for now.' Copy: '88% of accident victims never get the full payout they deserve.' 8+ copies launched since 9/19.",
+   "iterate": "Body-shop repair b-roll (car getting fixed) as the visual while captions say the car is fixed, but your claim isn't.",
+   "source": "curated",
+   "week": "2026-10-02",
+   "active": true,
+   "first_seen": "2026-10-02",
+   "video": "https://video.faep24-2.fna.fbcdn.net/o1/v/t2/f2/m366/AQP5Bzs9mi93BO8f6sbYO4ko_gWxBwDYCqjbTDoBjkInPS_QT3D3fOvW7bAMGkr47QUULJM35uHEW8t1nk2yxxEiHCQUoLs7UJMWiRAdkH-mFQ.mp4?_nc_cat=109&_nc_oc=AdpX0K6CKn0I39qCOR4CMqa_2CdI3vC0jc-FrHBIMYS9NLTag4F9SSIn4a27PQ49H9U&_nc_sid=b66105&_nc_ht=video.faep24-2.fna.fbcdn.net&_nc_ohc=sm1XOoHWoKoQ7kNvwEzEfL_&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuNzIwLmRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHAiLCJ4cHZfYXNzZXRfaWQiOjE3MTY5NjAxNjkzOTEzMDAsImFzc2V0X2FnZV9kYXlzIjo1OSwidmlfdXNlY2FzZV9pZCI6MTA3OTksImR1cmF0aW9uX3MiOjMyLCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&vs=bd4198d05299fb0d&_nc_vs=HBksFQIYRWZiX2VwaGVtZXJhbC9GNzRGQUVEMDUwNDhDNDdDNDA0Q0NCMTNBMzBGNEI4Ml9tdF8xX3ZpZGVvX2Rhc2hpbml0Lm1wNBUAAsgBEgAVAhhAZmJfcGVybWFuZW50LzFCNEYyMDQ0MUU0Nzk1ODU3MzI0MEZCQTJCRkU4MUFFX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACaI0-uPnuSMBhUCKAJDMywXQEBVP3ztkWgYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHARAHUAZd6oAQA&_nc_gid=DcM7_YFvfG19ojf5Q6DYhg&_nc_ss=7b289&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQPhTYA5I6-1oK9LBxr5IVpbB86bV-RuYQAO52Fep-q4jQ&oe=6AC596C3",
+   "image": null,
+   "poster": "https://scontent.ffdo24-3.fna.fbcdn.net/v/t39.35426-6/761306960_1543324410010994_8361956797285697161_n.jpg?_nc_cat=101&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=9sSdKennCE0Q7kNvwE6GoxY&_nc_oc=AdpQhsE7NLhomVRYR15nBYRuLuuRaAW4dks57Ojua0PbEVgAAt-1Hgy2m4y7vc-lV64&_nc_zt=14&_nc_ht=scontent.ffdo24-3.fna&_nc_gid=DcM7_YFvfG19ojf5Q6DYhg&_nc_ss=7b289&oh=00_AQO6VYKFeEmdQhdFk01JZmvCOSbeg4BM9munpVUcwWfo8g&oe=6AC584F5",
+   "asset": "v1716960169391300"
+  },
+  {
+   "id": "2079959212650062",
+   "niche": "mva",
+   "advertiser": "Accident Assist",
+   "started": "2026-07-06",
+   "length": "0:15",
+   "format": "UGC",
+   "animated": true,
+   "tags": [
+    "Hidden page",
+    "Lowballed",
+    "Kinetic text"
+   ],
+   "breakdown": "Case Advisors network. In-car creator, fast cuts with big kinetic words ('TWO', 'LOWBALLED', '12 LAST MONTH') and a 'link below' pill. Running since July with several versions, including Spanish.",
+   "iterate": "Creator in-car 'they lowballed me' rant with one huge kinetic word per beat; cut a Spanish version with the same edit.",
+   "source": "curated",
+   "week": "2026-10-02",
+   "active": true,
+   "first_seen": "2026-10-02",
+   "video": "https://video.faep24-2.fna.fbcdn.net/o1/v/t2/f2/m412/AQPJz3FOgP-U0nvLVxtwNaNiGrCRvv1g2b5vPR4GWZ2feUvnCBAY_ENfduHDbejcSEaKk4TwfRhOMhhl-x2yeJRbzzap6ns82Dg0STlfmg.mp4?_nc_cat=101&_nc_oc=AdrwcsTaXVu5qKbku3gusQkcBFFe7UHrGLqYD1UCIRhwOxupCE_PR7CUjzcixYoEUK8&_nc_sid=ef5aa3&_nc_ht=video.faep24-2.fna.fbcdn.net&_nc_ohc=ohLWZo5F4RoQ7kNvwHobDhn&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6NDM3OTgyMTkyMjI5MjQyNiwiYXNzZXRfYWdlX2RheXMiOjEwMCwidmlfdXNlY2FzZV9pZCI6MTAxMzksImR1cmF0aW9uX3MiOjE1LCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&_nc_gid=miuDUgUjCC3zy2_PGgRMrA&_nc_ss=7b289&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQNmD10c4s17HUK215tPQ4yAWWbxwBPFlfXnTWFF5HXwRQ&oe=6AC58509",
+   "image": null,
+   "poster": "https://scontent.faep24-1.fna.fbcdn.net/v/t39.35426-6/730917694_1022913803628162_7591059218337333458_n.jpg?_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=XL7cmieosWIQ7kNvwELtyTb&_nc_oc=AdocaGB-bEtghq4tZ6zsVChQw-zq07NAfC8kCLsCV1gnDiCZtM71S37J-aSbMi5YQJI&_nc_zt=14&_nc_ht=scontent.faep24-1.fna&_nc_gid=miuDUgUjCC3zy2_PGgRMrA&_nc_ss=7b289&oh=00_AQPeOMsmORted1DD4IQjl9VN2xtkEom4CmI9TO5fe9SmRQ&oe=6AC5779E",
+   "asset": "v4379821922292426"
+  },
+  {
+   "id": "2257485721322944",
+   "niche": "mva",
+   "advertiser": "Compensation Accident Assist",
+   "started": "2026-07-27",
+   "length": "0:41",
+   "format": "UGC",
+   "animated": false,
+   "tags": [
+    "Hidden page",
+    "AI angle",
+    "Screen recording"
+   ],
+   "breakdown": "Hidden page for truecompensation.org (6 pages incl. Compensation Calculator and a Spanish page). Creator: 'compare your case to... how much you're really owed... with AI', then a screen recording of the form, then a creator mashup ending 'Click below to see if you qualify for BIG CASH'. Copy opens '🚨 If you were injured in a vehicle accident in Texas, stop scrolling.'",
+   "iterate": "'Check your case with AI' hook: creator plus screen recording of the quiz, with a state-specific 'stop scrolling' first line in the copy.",
+   "source": "curated",
+   "week": "2026-10-02",
+   "active": true,
+   "first_seen": "2026-10-02",
+   "video": "https://video.faep24-2.fna.fbcdn.net/o1/v/t2/f2/m366/AQOjH2aHJLTtPsCHzlqU7nU_jvuOvwyTrbAgPcIYi5fC6sHpWksN4Bgq56LjuwIPhcHFZOh053F9nJoj-yc2Ouq97LDwp8qsaVjsH2tiipwQEA.mp4?_nc_cat=103&_nc_oc=AdpgDmBQEmyRhplFCWwjNLpdwhh1S3dX0Sm58m9Xp7SuI64CCT4yDG_XNesPePDB1og&_nc_sid=b66105&_nc_ht=video.faep24-2.fna.fbcdn.net&_nc_ohc=y7iC0AqdA_gQ7kNvwG5DX7y&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuNzIwLmRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHAiLCJ4cHZfYXNzZXRfaWQiOjMwMjgzOTM3OTczNTk2NDEsImFzc2V0X2FnZV9kYXlzIjoxMjIsInZpX3VzZWNhc2VfaWQiOjEwNzk5LCJkdXJhdGlvbl9zIjo0MCwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&vs=85c3b4a76c92a7d8&_nc_vs=HBksFQIYRWZiX2VwaGVtZXJhbC9FMDREMzFBQzIyQTE1RkQ4RjQ5REIxMjkyQkY4MzRBOF9tdF8xX3ZpZGVvX2Rhc2hpbml0Lm1wNBUAAsgBEgAVAhhAZmJfcGVybWFuZW50LzBBNDhBOUQzQUZEQjQzNEQzRTdBQzZGODYyRTVERThFX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACay4MCI3JPhChUCKAJDMywXQERd0vGp--cYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHARAHUAZd6oAQA&_nc_gid=l3GMDsratPZBbeF69Glkug&_nc_ss=7b289&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQPa_DCEK4_0s9XcbnYs0I8VMATPHFZ4ChuKykaqn3Wa2Q&oe=6AC566CD",
+   "image": null,
+   "poster": "https://scontent.faep24-1.fna.fbcdn.net/v/t39.35426-6/757432050_1355316642772476_2429788099813185032_n.jpg?_nc_cat=107&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=Rwk-nn8Rd24Q7kNvwGKgcKp&_nc_oc=AdoVZaKNOcMS7RpMdKRdZ91Tj2XqJu4EJW_b64lFyUiLs23gxk9O9wmxR54WdohunRc&_nc_zt=14&_nc_ht=scontent.faep24-1.fna&_nc_gid=l3GMDsratPZBbeF69Glkug&_nc_ss=7b289&oh=00_AQPneerGL8AfmIzS61JWy6G2r-aXex67jtpEFkdnm5WEeA&oe=6AC5704D",
+   "asset": "v3028393797359641"
+  },
+  {
+   "id": "1629875982131498",
+   "niche": "mva",
+   "advertiser": "Drivers Rights",
+   "started": "2026-09-28",
+   "length": "0:15",
+   "format": "UGC",
+   "animated": false,
+   "tags": [
+    "Hidden page",
+    "Cash b-roll",
+    "Scaling signal"
+   ],
+   "breakdown": "One of 4 driverslegalrights.com pages. In-car woman with the question bar 'Injured in a car accident in the last 2 years that wasn't your fault?', cut with crash footage and cash being counted on a desk, ending on a 'Free Case Check' button. Launched 9/28 with 4 versions.",
+   "iterate": "Qualifier bar pinned on top for the whole video ('last 2 years + not your fault'), creator talks under it, ends on a 'Free Case Check' button.",
+   "source": "curated",
+   "week": "2026-10-02",
+   "active": true,
+   "first_seen": "2026-10-02",
+   "video": "https://video.ffdo24-3.fna.fbcdn.net/o1/v/t2/f2/m366/AQOMsxFq2-77CPDwr_8mr-3UtNTG87sLdGuAB63WSpCJpf429_9j9wNtq2hnOL0thKGEJjMiVsqTunZBl8ynRXu4NwSOd5VBZXCbB4YKF-iZPg.mp4?_nc_cat=104&_nc_oc=AdpS8YYTWZ7ZeliUlSuZPMno1ZU5rNAAJoRAROYjJfGbEZEgjG8eWR-bA2q8INdbf14&_nc_sid=b66105&_nc_ht=video.ffdo24-3.fna.fbcdn.net&_nc_ohc=9dww6n6J-FIQ7kNvwHofAlr&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuNzIwLmRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHAiLCJ4cHZfYXNzZXRfaWQiOjE1NzI1NjAxNDA2NTk0NDksImFzc2V0X2FnZV9kYXlzIjozLCJ2aV91c2VjYXNlX2lkIjoxMDEzOSwiZHVyYXRpb25fcyI6MTUsInVybGdlbl9zb3VyY2UiOiJ3d3cifQ%3D%3D&ccb=17-1&vs=ada2c06efd626fa7&_nc_vs=HBksFQIYRWZiX2VwaGVtZXJhbC8xRkZCMEQ5MkUxOEQ0RkE2QjhFRTNCNjI4Q0VBQzRBMV9tdF8xX3ZpZGVvX2Rhc2hpbml0Lm1wNBUAAsgBEgAVAhhAZmJfcGVybWFuZW50LzNERjVDMTRFOEVDNzRCNkE5QjU2Q0RCM0Y2REI4MTMzX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACbyq5OJho_LBRUCKAJDMywXQC4zMzMzMzMYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHARAHUAZbaeAQA&_nc_gid=D-bjMl710Cr6ZbO93OsOZw&_nc_ss=7b289&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQNIeL1BYRo4UWaoEdPJI_8v5IbGSKGR-Me-HlmiSMYNMw&oe=6AC59758",
+   "image": null,
+   "poster": "https://scontent.faep24-2.fna.fbcdn.net/v/t39.35426-6/829196446_2514945115652466_4675325329925439413_n.jpg?_nc_cat=111&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=JP3VxCL9-XMQ7kNvwHxH4BS&_nc_oc=AdrMj67LhoNYdatADuaXwb-q9vlHSG0aPfZ7sStNnjUWF4on0IpIqVSrL-P3oAheYYc&_nc_zt=14&_nc_ht=scontent.faep24-2.fna&_nc_gid=D-bjMl710Cr6ZbO93OsOZw&_nc_ss=7b289&oh=00_AQMmi30FXFq4R0cMmWpxXTXEPVIPwFr4kIUn0lcze_vX1w&oe=6AC58181",
+   "asset": "v1572560140659449"
+  },
+  {
+   "id": "1645039026559163",
+   "niche": "mva",
+   "advertiser": "Drivers' Legal Rights",
+   "started": "2026-07-11",
+   "length": "",
+   "format": "Text / static style",
+   "animated": false,
+   "tags": [
+    "Hidden page",
+    "Long story copy",
+    "AI image"
+   ],
+   "breakdown": "AI image of an injured man with his arm in a sling beside a wreck: 'ACCIDENT CLAIM ALERT: The insurance offer may not be the full picture.' Long narrative copy: 'the first insurance offer can feel like a relief… you just want the whole thing to be over… medical visits, neck pain, missed work…' then the 1-minute quiz.",
+   "iterate": "Story-led long copy on a simple 'claim alert' static: walk through the feeling of wanting it over, list what the first offer leaves out, then the quiz.",
+   "source": "curated",
+   "week": "2026-10-02",
+   "active": true,
+   "first_seen": "2026-10-02",
+   "video": null,
+   "image": "https://scontent.faep24-1.fna.fbcdn.net/v/t39.35426-6/736207207_1332949172149663_6671680022275921347_n.jpg?_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=xoodhpDYPEwQ7kNvwG_leBI&_nc_oc=AdoVx7wOiZflFxpWodhCuhz30QBR9yLMXQCyDWFEEBEvAfAAGiaqyz0G2ChxElqhWd0&_nc_zt=14&_nc_ht=scontent.faep24-1.fna&_nc_gid=52aUqAMUzvbhXM2hvrDNjw&_nc_ss=7b289&oh=00_AQNktaR56Jd-MfmXkecmwsfFOa25Vh5Hv86XwICzHYNIbQ&oe=6AC57F4A",
+   "poster": "https://scontent.faep24-1.fna.fbcdn.net/v/t39.35426-6/736207207_1332949172149663_6671680022275921347_n.jpg?_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=xoodhpDYPEwQ7kNvwG_leBI&_nc_oc=AdoVx7wOiZflFxpWodhCuhz30QBR9yLMXQCyDWFEEBEvAfAAGiaqyz0G2ChxElqhWd0&_nc_zt=14&_nc_ht=scontent.faep24-1.fna&_nc_gid=52aUqAMUzvbhXM2hvrDNjw&_nc_ss=7b289&oh=00_AQNktaR56Jd-MfmXkecmwsfFOa25Vh5Hv86XwICzHYNIbQ&oe=6AC57F4A",
+   "asset": "i736207207_1332949172149663_6671680022275921347"
+  },
+  {
+   "id": "29000566179627909",
+   "niche": "moving",
+   "advertiser": "Moving Savings Guide",
+   "started": "2026-10-01",
+   "length": "",
+   "format": "Price / calculator static",
+   "animated": false,
+   "tags": [
+    "Hidden page",
+    "Magazine-style page",
+    "Compare rates"
+   ],
+   "breakdown": "Hidden page: a 'guide' page that sends traffic to America's Moving & Storage (americasmoving-quote.com). Static: red semi, 'America's Long Distance Moving · get pricing today starting at $1495', badges. Copy: 'don't book anything until you've compared rates. One quote is never the full picture.'",
+   "iterate": "Neutral-sounding 'moving guide' page running 'compare before you book' ads that land on our quote form.",
+   "source": "curated",
+   "week": "2026-10-02",
+   "active": true,
+   "first_seen": "2026-10-02",
+   "video": null,
+   "image": "https://scontent.faep24-1.fna.fbcdn.net/v/t39.35426-6/830181126_1845028126502678_226015218953710650_n.jpg?_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=EgZvuQS16rAQ7kNvwGDOE9D&_nc_oc=AdpLzQw2OQery7v-c8A0sKFCf--xmf5JhKbJ59-jQQNEJ3bEXBzh1txONXySC54qsek&_nc_zt=14&_nc_ht=scontent.faep24-1.fna&_nc_gid=ns0BEDCF8GtCvi5V3nMtTg&_nc_ss=7b289&oh=00_AQMrCoVZ_VSe-BlDEgCbmbeAkZRzOQQnBucBJsk2ce53sg&oe=6AC56E61",
+   "poster": "https://scontent.faep24-1.fna.fbcdn.net/v/t39.35426-6/830181126_1845028126502678_226015218953710650_n.jpg?_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=EgZvuQS16rAQ7kNvwGDOE9D&_nc_oc=AdpLzQw2OQery7v-c8A0sKFCf--xmf5JhKbJ59-jQQNEJ3bEXBzh1txONXySC54qsek&_nc_zt=14&_nc_ht=scontent.faep24-1.fna&_nc_gid=ns0BEDCF8GtCvi5V3nMtTg&_nc_ss=7b289&oh=00_AQMrCoVZ_VSe-BlDEgCbmbeAkZRzOQQnBucBJsk2ce53sg&oe=6AC56E61",
+   "asset": "i830181126_1845028126502678_226015218953710650"
+  },
+  {
+   "id": "1619403509853192",
+   "niche": "moving",
+   "advertiser": "Jacob and Sons Moving & Storage",
+   "started": "2026-09-30",
+   "length": "",
+   "format": "Trust static",
+   "animated": false,
+   "tags": [
+    "Not a broker",
+    "Anti-broker",
+    "Real crew"
+   ],
+   "breakdown": "Not a hidden page (found through the same search). Owners shaking hands at their truck with a Google 5.0 badge, 'Long distance moving service, save up to 40%'. Copy: 'Don't risk booking with a broker that raises your price after pickup… what you book is what you pay. ✅ We Are NOT A Broker.'",
+   "iterate": "'We're the mover, not a broker' static: real crew at the truck, plus a 'price you book is the price you pay' line.",
+   "source": "curated",
+   "week": "2026-10-02",
+   "active": true,
+   "first_seen": "2026-10-02",
+   "video": null,
+   "image": "https://scontent.faep24-1.fna.fbcdn.net/v/t39.35426-6/825328460_1720764966115957_4555108351651606166_n.jpg?_nc_cat=111&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=EhafwPJdc0EQ7kNvwHJyLfP&_nc_oc=AdpzWM0eiBYhLarpnOEntuwvlTSSS03ZNDZu1BwrxbZM-IUbZSKHFF-YgYKqBEZv3QM&_nc_zt=14&_nc_ht=scontent.faep24-1.fna&_nc_gid=R8JpARZwlFVH9qeEnRtbEw&_nc_ss=7b289&oh=00_AQOp1iSmG1JZnwFGNcv95m4xuyym-lG8uT1oVD14BcWoiQ&oe=6AC5730D",
+   "poster": "https://scontent.faep24-1.fna.fbcdn.net/v/t39.35426-6/825328460_1720764966115957_4555108351651606166_n.jpg?_nc_cat=111&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=EhafwPJdc0EQ7kNvwHJyLfP&_nc_oc=AdpzWM0eiBYhLarpnOEntuwvlTSSS03ZNDZu1BwrxbZM-IUbZSKHFF-YgYKqBEZv3QM&_nc_zt=14&_nc_ht=scontent.faep24-1.fna&_nc_gid=R8JpARZwlFVH9qeEnRtbEw&_nc_ss=7b289&oh=00_AQOp1iSmG1JZnwFGNcv95m4xuyym-lG8uT1oVD14BcWoiQ&oe=6AC5730D",
+   "asset": "i825328460_1720764966115957_4555108351651606166"
   }
  ],
  "weeks": {
   "2026-09-29": "Sep 29 · first build",
-  "2026-10-02": "Oct 2 · weekly review"
+  "2026-10-02": "Oct 2 · weekly review + hidden pages"
  }
 }
