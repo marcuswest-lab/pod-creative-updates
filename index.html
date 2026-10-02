@@ -872,6 +872,9 @@ table.wr.calc th:last-child{background:#123049}
 #swipe .sw-intro{color:var(--mut);font-size:13px;margin:0 0 12px;max-width:1100px}
 #swipe .sw-chips{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 16px}
 #swipe .sw-chip{background:var(--surf);color:var(--txt);border:1px solid var(--line);border-radius:999px;padding:4px 11px;font:inherit;font-size:12px;cursor:pointer}
+#swipe .sw-weeks{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px;padding:0 0 12px;border-bottom:1px solid var(--line)}
+#swipe .sw-wk{background:var(--surf2);color:var(--txt);border:1px solid var(--line);border-radius:6px;padding:6px 12px;font:inherit;font-size:13px;cursor:pointer}
+#swipe .sw-wk.on{background:var(--acc);border-color:var(--acc);color:#fff}
 #swipe .sw-chip.on{background:var(--acc);border-color:var(--acc);color:#fff}
 #swipe .sw-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
 #swipe .sw-card{background:var(--surf);border:1px solid var(--line);border-radius:10px;overflow:hidden;display:flex;flex-direction:column}
@@ -1027,7 +1030,7 @@ document.querySelectorAll('.week').forEach(function(sec){
   fetch('swipe/swipe.json',{cache:'no-store'}).then(function(r){return r.json();}).then(render)
    .catch(function(){sw.innerHTML='<p class="sw-intro">Could not load swipe/swipe.json.</p>';});
  }
- var DATA=null,NEW='New (auto-pulled)';
+ var DATA=null,NEW='New (auto-pulled)',WEEK=null,UNREV='unreviewed';
  function render(d){
   DATA=d;
   var niches=d.niches||[{key:'all',label:'All'}];
@@ -1041,7 +1044,7 @@ document.querySelectorAll('.week').forEach(function(sec){
     return '<option value="'+esc(n.key)+'"'+(n.key===cur?' selected':'')+'>'+esc(n.label)+(n.clients?' — '+esc(n.clients):'')+' ('+c+')</option>';}).join('')+
    '</select></div><div id="swNicheBody"></div>';
   var sel=document.getElementById('swNiche');
-  sel.onchange=function(){renderNiche(sel.value);};
+  sel.onchange=function(){WEEK=null;renderNiche(sel.value);};
   renderNiche(cur,fa?fa.id:null);
  }
  function renderNiche(key,focus){
@@ -1050,11 +1053,22 @@ document.querySelectorAll('.week').forEach(function(sec){
   var d=DATA,n=(d.niches||[]).filter(function(x){return x.key===key;})[0]||{};
   var body=document.getElementById('swNicheBody');
   // Filter chips = one main format per ad (+ an "Animated elements" flag); detail tags show on the card only.
-  var ads=(d.ads||[]).filter(function(a){return !d.niches||a.niche===key;}),fmts={},nAnim=0,ANIM='Animated elements';
+  var all=(d.ads||[]).filter(function(a){return !d.niches||a.niche===key;}),fmts={},nAnim=0,ANIM='Animated elements';
+  // Week tabs: one per weekly review (ad.week), newest first, plus All and any not-yet-reviewed auto pulls.
+  var wkOf=function(a){return a.week||(a.source==='auto'?UNREV:'');},wks={};
+  all.forEach(function(a){var w=wkOf(a); if(w) wks[w]=(wks[w]||0)+1;});
+  var wkList=Object.keys(wks).filter(function(w){return w!==UNREV;}).sort().reverse();
+  if(focus) WEEK='all';
+  if(!WEEK||(WEEK!=='all'&&!wks[WEEK])) WEEK=wkList[0]||'all';
+  var ads=WEEK==='all'?all:all.filter(function(a){return wkOf(a)===WEEK;});
+  var wkLabel=function(w){return w===UNREV?'Not reviewed yet':((d.weeks||{})[w]||('Week of '+w));};
+  var wkBtn=function(w,n,lab){return '<button class="sw-wk'+(w===WEEK?' on':'')+'" data-week="'+esc(w)+'">'+esc(lab)+' ('+n+')</button>';};
+  var wkBar='<div class="sw-weeks">'+wkList.map(function(w){return wkBtn(w,wks[w],wkLabel(w));}).join('')+
+   (wks[UNREV]?wkBtn(UNREV,wks[UNREV],wkLabel(UNREV)):'')+wkBtn('all',all.length,'All weeks')+'</div>';
   ads.forEach(function(a){var f=a.source==='auto'&&!a.format?NEW:a.format; if(f) fmts[f]=(fmts[f]||0)+1; if(a.animated) nAnim++;});
   var fmtList=Object.keys(fmts).sort(function(a,b){return (a===NEW)-(b===NEW)||fmts[b]-fmts[a]||a.localeCompare(b);});
   var chip=function(t,n){return '<button class="sw-chip" data-tag="'+esc(t)+'">'+esc(t)+' ('+n+')</button>';};
-  var h='<p class="sw-intro">'+esc(n.intro||d.intro||'')+'</p><div class="sw-chips"><button class="sw-chip on" data-tag="">All ('+ads.length+')</button>'+
+  var h=wkBar+'<p class="sw-intro">'+esc(n.intro||d.intro||'')+'</p><div class="sw-chips"><button class="sw-chip on" data-tag="">All ('+ads.length+')</button>'+
    (nAnim?chip(ANIM,nAnim):'')+fmtList.map(function(t){return chip(t,fmts[t]);}).join('')+'</div><div class="sw-grid">';
   ads.forEach(function(a){
    var fmt=a.source==='auto'&&!a.format?NEW:a.format;
@@ -1076,15 +1090,18 @@ document.querySelectorAll('.week').forEach(function(sec){
   h+='</div><p class="sw-foot">Videos stream from Meta\'s Ad Library. Media links refreshed '+esc(d.media_refreshed||'?')+
    '. Curated picks first, then new auto-pulled ads from the saved searches (top by impressions) — Meta does not publish competitor spend.</p>';
   body.innerHTML=h;
+  body.querySelector('.sw-weeks').addEventListener('click',function(e){var b=e.target.closest('.sw-wk'); if(!b) return; WEEK=b.dataset.week; renderNiche(key);});
   body.querySelector('.sw-chips').addEventListener('click',function(e){var c=e.target.closest('.sw-chip'); if(!c) return;
    [].slice.call(body.querySelectorAll('.sw-chip')).forEach(function(x){x.classList.toggle('on',x===c);});
    var t=c.dataset.tag; [].slice.call(body.querySelectorAll('.sw-card')).forEach(function(k){k.hidden=!!t&&k.dataset.tags.split('|').indexOf(t)<0;});});
+  // #swNicheBody survives re-renders (niche/week switch), so bind the copy handler once.
+  if(!body.dataset.bound){body.dataset.bound='1';
   body.addEventListener('click',function(e){var b=e.target.closest('.sw-copy'); if(!b) return;
    var url=location.origin+location.pathname+'#swipe/'+b.dataset.link;
    var done=function(){b.textContent='Copied ✓';setTimeout(function(){b.textContent='Copy link';},1500);};
    if(navigator.clipboard&&navigator.clipboard.writeText) navigator.clipboard.writeText(url).then(done,function(){prompt('Copy this link:',url);});
    else prompt('Copy this link:',url);
-   history.replaceState(null,'','#swipe/'+b.dataset.link);});
+   history.replaceState(null,'','#swipe/'+b.dataset.link);});}
   if(focus){var fc=document.getElementById('ad-'+focus);
    if(fc){fc.classList.add('sw-focus');[60,700,1600].forEach(function(t){setTimeout(function(){var nh=(nav.getBoundingClientRect().height||0)+12;window.scrollTo({top:fc.getBoundingClientRect().top+window.scrollY-nh});},t);});}}
   // play only while visible
