@@ -1182,6 +1182,9 @@ document.querySelectorAll('.week').forEach(function(sec){
   try{localStorage.setItem('swipeNiche',key);}catch(e){}
   history.replaceState(null,'','#swipe/'+key+(focus?'/'+focus:''));
   var d=DATA,n=(d.niches||[]).filter(function(x){return x.key===key;})[0]||{};
+  var STALE=d.media_refreshed&&(Date.now()-Date.parse(d.media_refreshed+'T00:00:00Z'))>4*864e5;
+  var gone=function(id,why){return '<div class="sw-gone">'+esc(why)+' — <a href="https://www.facebook.com/ads/library/?id='+esc(id)+
+   '" target="_blank" rel="noopener">open in Ad Library ↗</a><br><small>If Meta says the ad isn\'t in the Library, the advertiser stopped running it — use the breakdown below.</small></div>';};
   var body=document.getElementById('swNicheBody');
   // Filter chips = one main format per ad (+ an "Animated elements" flag); detail tags show on the card only.
   var all=(d.ads||[]).filter(function(a){return !d.niches||a.niche===key;}),fmts={},nAnim=0,ANIM='Animated elements';
@@ -1204,8 +1207,10 @@ document.querySelectorAll('.week').forEach(function(sec){
   ads.forEach(function(a){
    var fmt=a.source==='auto'&&!a.format?NEW:a.format;
    var keys=[fmt||''].concat(a.animated?[ANIM]:[]);
-   var media=a.video?'<video src="'+esc(a.video)+'" poster="'+esc(a.poster||'')+'" controls muted loop playsinline preload="none"></video>'
-     :(a.image?'<img src="'+esc(a.image)+'" loading="lazy" alt="">':'<div class="sw-gone">Media not available — open in Ad Library</div>');
+   // Meta media links die ~4-5 days after a refresh: show a clear placeholder instead of a dead player.
+   var media=STALE&&(a.video||a.image)?gone(a.id,'Preview expired (links last refreshed '+(d.media_refreshed||'?')+')')
+     :a.video?'<video src="'+esc(a.video)+'" poster="'+esc(a.poster||'')+'" controls muted loop playsinline preload="none"></video>'
+     :(a.image?'<img src="'+esc(a.image)+'" loading="lazy" alt="">':gone(a.id,'Media not available'));
    h+='<div class="sw-card" id="ad-'+esc(a.id)+'" data-id="'+esc(a.id)+'" data-tags="'+esc(keys.join('|'))+'"><div class="sw-media">'+media+'</div><div class="sw-body">'+
     '<div class="sw-adv">'+esc(a.advertiser)+(a.length?' · '+esc(a.length):'')+'</div>'+
     '<div class="sw-meta"><b style="color:var(--txt)">'+esc(fmt||'')+'</b>'+(a.animated?' · <span style="color:var(--warn)">animated elements</span>':'')+
@@ -1221,6 +1226,9 @@ document.querySelectorAll('.week').forEach(function(sec){
   h+='</div><p class="sw-foot">Videos stream from Meta\'s Ad Library. Media links refreshed '+esc(d.media_refreshed||'?')+
    '. Curated picks first, then new auto-pulled ads from the saved searches (top by impressions) — Meta does not publish competitor spend.</p>';
   body.innerHTML=h;
+  // A link that dies before the age check catches it: swap the player for the placeholder.
+  [].slice.call(body.querySelectorAll('.sw-media video,.sw-media img')).forEach(function(m){
+   m.addEventListener('error',function(){var c=m.closest('.sw-card'); if(c) m.parentNode.innerHTML=gone(c.dataset.id,'Preview expired');});});
   body.querySelector('.sw-weeks').addEventListener('click',function(e){var b=e.target.closest('.sw-wk'); if(!b) return; WEEK=b.dataset.week; renderNiche(key);});
   body.querySelector('.sw-chips').addEventListener('click',function(e){var c=e.target.closest('.sw-chip'); if(!c) return;
    [].slice.call(body.querySelectorAll('.sw-chip')).forEach(function(x){x.classList.toggle('on',x===c);});
