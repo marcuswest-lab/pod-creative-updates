@@ -1,0 +1,502 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Creative Win Rates</title><style>
+.nm{max-width:360px} a{color:var(--head)}
+:root{--bg:#fff;--fg:#1f2937;--muted:#6b7280;--line:#d1d5db;--head:#2f5597;--alt:#f3f4f6}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0c0f14;--fg:#e2e8f0;--muted:#94a3b8;--line:#334155;--head:#93b4ef;--alt:#151922}}
+body{background:var(--bg);color:var(--fg);font-family:Calibri,'Segoe UI',Arial,sans-serif;max-width:1100px;margin:0 auto;padding:24px 16px 60px;line-height:1.45}
+h1{color:var(--head);font-size:26px;margin:0 0 4px} h2{color:var(--head);font-size:21px;margin:30px 0 8px} h3{color:var(--head);font-size:16px;margin:20px 0 6px}
+.sub{color:var(--muted);font-size:13px} p,li{font-size:14px}
+.tw{overflow-x:auto} table{border-collapse:collapse;width:100%;margin:6px 0 14px;font-size:13px}
+th,td{border:1px solid var(--line);padding:5px 8px;text-align:left;vertical-align:top} th{background:var(--alt)}
+td.old{color:var(--muted);font-style:italic}
+</style></head><body>
+<h1>Creative Win Rates by Awareness, Format and Style</h1>
+<div class="sub"><a href="index.html">← Pod creative updates</a></div>
+<div class="sub">D1 POD 4 · built October 20, 2026 · grades from the pod's Raw Data classification · tracker fields from the Creative Trackers</div>
+<h2>How to read this</h2>
+<p><b>Win rate</b> = ads that ever won (current Winners + past winners) ÷ graded ads (Winner, On the fence or Loser). Testing and unspent ads aren't counted. It's the same all-time win rate as the client dashboards and the pod page, and it counts <b>every</b> graded ad, old tracker included.</p>
+<p>Older ads from before the CID tracker have no awareness level, lead type, angle, idea or talent recorded, so in those tables they sit in one <i>Old tracker (not tagged)</i> row — each table still adds up to the client's baseline. Static vs video and net new vs iteration include them.</p>
+<p>A value needs 8+ graded ads for its own row (smaller ones are pooled into "Other"); under 5 ads only the count is shown. <b>Personas are inferred</b>: the trackers don't record one yet, so each ad gets a persona from its Idea and Angle names using keyword rules (e.g. "DIY Moves Cost More" → DIY-considering mover). Treat it as a guide; it gets replaced by Nico's persona mapping and a tracker Persona column once those exist. <b>Spend</b> is Meta spend on the graded ads; <b>Top spender</b> is the highest-spend ad in that row.</p>
+<h2>Baseline win rate by client</h2><div class="tw"><table><tr>
+<th>VAM</th><th>NSR</th><th>Case Source</th><th>TCC</th><th>Dan Henry</th><th>BRV</th></tr><tr>
+<td>6% (77/1227)</td><td>2% (4/216)</td><td>13% (73/568)</td><td>13% (29/231)</td><td>14% (8/59)</td><td>0% (0/21)</td></tr>
+<tr><td class='old'>new tracker only: 6% (70/1080)</td><td class='old'>new tracker only: 2% (4/216)</td><td class='old'>new tracker only: 13% (73/568)</td><td class='old'>new tracker only: 17% (11/63)</td><td class='old'>new tracker only: 14% (8/59)</td><td class='old'>new tracker only: 0% (0/21)</td></tr></table></div>
+<h2>Static vs video</h2><div class='tw'><table><tr><th></th><th>VAM</th><th>NSR</th><th>Case Source</th><th>TCC</th><th>Dan Henry</th><th>BRV</th></tr>
+<tr><td>Static</td><td>5% (38/735)</td><td>3% (3/113)</td><td>11% (36/334)</td><td>6% (5/80)</td><td>15% (3/20)</td><td>0% (0/12)</td></tr>
+<tr><td>Video</td><td>8% (39/492)</td><td>1% (1/103)</td><td>16% (37/234)</td><td>16% (24/151)</td><td>13% (5/39)</td><td>0% (0/9)</td></tr>
+<tr><td>Spend on graded ads</td><td>$5,993k</td><td>$348k</td><td>$3,103k</td><td>$1,682k</td><td>$145k</td><td>$15k</td></tr>
+</table></div>
+<h2>Two variables together</h2><p>Win rate where both match (new-tracker ads only). Persona × format (is the format right for who we're talking to?), persona × awareness, awareness × format and lead type × format.</p>
+<h3>VAM · Persona × format</h3><div class='tw'><table><tr><th></th><th>Static</th><th>Video</th><th>All</th></tr><tr><td>DIY-considering mover</td><td>10% (10/105)</td><td>8% (2/24)</td><td>9% (12/129)</td></tr><tr><td>Price-shopper / budget-focused</td><td>5% (8/149)</td><td>10% (19/191)</td><td>8% (27/340)</td></tr><tr><td>Overwhelmed interstate mover (wants done-for-you)</td><td>5% (7/148)</td><td>9% (13/140)</td><td>7% (20/288)</td></tr><tr><td>Destination-specific mover</td><td>0% (0/10)</td><td>20% (1/5)</td><td>7% (1/15)</td></tr><tr><td>Full-home / family mover (3BR+)</td><td>7% (3/46)</td><td>–</td><td>7% (3/46)</td></tr><tr><td>Skeptic burned by movers / fears scams</td><td>4% (4/97)</td><td>5% (2/40)</td><td>4% (6/137)</td></tr><tr><td>Unclassified</td><td>0% (0/28)</td><td>7% (1/15)</td><td>2% (1/43)</td></tr><tr><td>Timing-driven mover (best time to move)</td><td>0% (0/15)</td><td>0% (0/20)</td><td>0% (0/35)</td></tr><tr><td>High-value belongings owner</td><td>0% (0/9)</td><td>0% (0/25)</td><td>0% (0/34)</td></tr><tr><td>Retiree / downsizer</td><td>0% (0/10)</td><td>0/3</td><td>0% (0/13)</td></tr></table></div>
+<h3>NSR · Persona × format</h3><div class='tw'><table><tr><th></th><th>Static</th><th>Video</th><th>All</th></tr><tr><td>DIY-considering mover</td><td>6% (1/18)</td><td>–</td><td>6% (1/18)</td></tr><tr><td>Price-shopper / budget-focused</td><td>0% (0/15)</td><td>10% (1/10)</td><td>4% (1/25)</td></tr><tr><td>Retiree / downsizer</td><td>4% (1/25)</td><td>0% (0/5)</td><td>3% (1/30)</td></tr><tr><td>Skeptic burned by movers / fears scams</td><td>8% (1/12)</td><td>0% (0/25)</td><td>3% (1/37)</td></tr><tr><td>Overwhelmed interstate mover (wants done-for-you)</td><td>0% (0/17)</td><td>0% (0/28)</td><td>0% (0/45)</td></tr><tr><td>Full-home / family mover (3BR+)</td><td>0% (0/20)</td><td>0% (0/10)</td><td>0% (0/30)</td></tr><tr><td>High-value belongings owner</td><td>0% (0/5)</td><td>0% (0/20)</td><td>0% (0/25)</td></tr></table></div>
+<h3>Case Source · Persona × format</h3><div class='tw'><table><tr><th></th><th>Static</th><th>Video</th><th>All</th></tr><tr><td>Injured with mounting costs</td><td>33% (2/6)</td><td>0% (0/5)</td><td>18% (2/11)</td></tr><tr><td>Unsure if they qualify / don&#x27;t know help exists</td><td>14% (8/57)</td><td>20% (6/30)</td><td>16% (14/87)</td></tr><tr><td>Has an offer / about to settle</td><td>10% (26/261)</td><td>16% (30/184)</td><td>13% (56/445)</td></tr><tr><td>Just crashed (last 30 days)</td><td>0% (0/5)</td><td>10% (1/10)</td><td>7% (1/15)</td></tr><tr><td>Unclassified</td><td>0% (0/5)</td><td>0% (0/5)</td><td>0% (0/10)</td></tr></table></div>
+<h3>TCC · Persona × format</h3><div class='tw'><table><tr><th></th><th>Static</th><th>Video</th><th>All</th></tr><tr><td>Owner stuck doing hiring themselves</td><td>–</td><td>32% (9/28)</td><td>32% (9/28)</td></tr><tr><td>Burned by recruiters / bad hires</td><td>20% (1/5)</td><td>0% (0/5)</td><td>10% (1/10)</td></tr><tr><td>Owner losing jobs to open roles / competitors</td><td>0% (0/10)</td><td>1/4</td><td>7% (1/14)</td></tr><tr><td>Seasonal hiring push</td><td>–</td><td>0% (0/11)</td><td>0% (0/11)</td></tr></table></div>
+<h3>Dan Henry · Persona × format</h3><div class='tw'><table><tr><th></th><th>Static</th><th>Video</th><th>All</th></tr><tr><td>Coach/expert whose webinar doesn&#x27;t convert</td><td>30% (3/10)</td><td>67% (4/6)</td><td>44% (7/16)</td></tr><tr><td>Creator with followers but no sales</td><td>0% (0/10)</td><td>3% (1/33)</td><td>2% (1/43)</td></tr></table></div>
+<h3>VAM · Persona × awareness</h3><div class='tw'><table><tr><th></th><th>Solution Aware</th><th>Problem Aware</th><th>Most Aware</th><th>Unaware</th><th>All</th></tr><tr><td>DIY-considering mover</td><td>15% (8/53)</td><td>0% (0/14)</td><td>6% (4/62)</td><td>–</td><td>9% (12/129)</td></tr><tr><td>Price-shopper / budget-focused</td><td>9% (13/140)</td><td>8% (14/172)</td><td>0% (0/15)</td><td>0% (0/8)</td><td>8% (27/340)</td></tr><tr><td>Overwhelmed interstate mover (wants done-for-you)</td><td>11% (17/160)</td><td>2% (2/91)</td><td>3% (1/31)</td><td>0% (0/6)</td><td>7% (20/288)</td></tr><tr><td>Destination-specific mover</td><td>7% (1/15)</td><td>–</td><td>–</td><td>–</td><td>7% (1/15)</td></tr><tr><td>Full-home / family mover (3BR+)</td><td>–</td><td>7% (3/41)</td><td>0% (0/5)</td><td>–</td><td>7% (3/46)</td></tr><tr><td>Skeptic burned by movers / fears scams</td><td>0% (0/29)</td><td>4% (2/48)</td><td>7% (4/60)</td><td>–</td><td>4% (6/137)</td></tr><tr><td>Unclassified</td><td>0% (0/25)</td><td>6% (1/18)</td><td>–</td><td>–</td><td>2% (1/43)</td></tr><tr><td>Timing-driven mover (best time to move)</td><td>–</td><td>0% (0/23)</td><td>–</td><td>0% (0/12)</td><td>0% (0/35)</td></tr><tr><td>High-value belongings owner</td><td>0% (0/8)</td><td>0% (0/20)</td><td>0% (0/6)</td><td>–</td><td>0% (0/34)</td></tr><tr><td>Retiree / downsizer</td><td>0/3</td><td>0% (0/10)</td><td>–</td><td>–</td><td>0% (0/13)</td></tr></table></div>
+<h3>NSR · Persona × awareness</h3><div class='tw'><table><tr><th></th><th>Most Aware</th><th>Problem Aware</th><th>Solution Aware</th><th>All</th></tr><tr><td>DIY-considering mover</td><td>–</td><td>0% (0/5)</td><td>8% (1/13)</td><td>6% (1/18)</td></tr><tr><td>Price-shopper / budget-focused</td><td>–</td><td>7% (1/14)</td><td>0% (0/11)</td><td>4% (1/25)</td></tr><tr><td>Retiree / downsizer</td><td>0/3</td><td>5% (1/21)</td><td>0/4</td><td>3% (1/30)</td></tr><tr><td>Skeptic burned by movers / fears scams</td><td>8% (1/12)</td><td>0% (0/10)</td><td>0% (0/15)</td><td>3% (1/37)</td></tr><tr><td>Overwhelmed interstate mover (wants done-for-you)</td><td>0% (0/10)</td><td>0% (0/27)</td><td>0% (0/8)</td><td>0% (0/45)</td></tr><tr><td>Full-home / family mover (3BR+)</td><td>0% (0/7)</td><td>0% (0/5)</td><td>0% (0/18)</td><td>0% (0/30)</td></tr><tr><td>High-value belongings owner</td><td>0/4</td><td>0/4</td><td>0% (0/11)</td><td>0% (0/25)</td></tr></table></div>
+<h3>Case Source · Persona × awareness</h3><div class='tw'><table><tr><th></th><th>Product Aware</th><th>Problem Aware</th><th>Solution Aware</th><th>Unaware</th><th>Most Aware</th><th>All</th></tr><tr><td>Injured with mounting costs</td><td>–</td><td>1/3</td><td>1/2</td><td>0/1</td><td>0% (0/5)</td><td>18% (2/11)</td></tr><tr><td>Unsure if they qualify / don&#x27;t know help exists</td><td>19% (3/16)</td><td>18% (8/44)</td><td>0% (0/10)</td><td>19% (3/16)</td><td>0/1</td><td>16% (14/87)</td></tr><tr><td>Has an offer / about to settle</td><td>–</td><td>13% (49/391)</td><td>17% (6/35)</td><td>0% (0/8)</td><td>9% (1/11)</td><td>13% (56/445)</td></tr><tr><td>Just crashed (last 30 days)</td><td>–</td><td>8% (1/12)</td><td>0/3</td><td>–</td><td>–</td><td>7% (1/15)</td></tr><tr><td>Unclassified</td><td>–</td><td>–</td><td>0% (0/5)</td><td>–</td><td>0% (0/5)</td><td>0% (0/10)</td></tr></table></div>
+<h3>TCC · Persona × awareness</h3><div class='tw'><table><tr><th></th><th>Problem Aware</th><th>Solution Aware</th><th>All</th></tr><tr><td>Owner stuck doing hiring themselves</td><td>29% (6/21)</td><td>0/4</td><td>32% (9/28)</td></tr><tr><td>Burned by recruiters / bad hires</td><td>0% (0/7)</td><td>0/2</td><td>10% (1/10)</td></tr><tr><td>Owner losing jobs to open roles / competitors</td><td>0% (0/6)</td><td>12% (1/8)</td><td>7% (1/14)</td></tr><tr><td>Seasonal hiring push</td><td>0/1</td><td>0% (0/10)</td><td>0% (0/11)</td></tr></table></div>
+<h3>Dan Henry · Persona × awareness</h3><div class='tw'><table><tr><th></th><th>Problem Aware</th><th>Solution Aware</th><th>All</th></tr><tr><td>Coach/expert whose webinar doesn&#x27;t convert</td><td>40% (6/15)</td><td>1/1</td><td>44% (7/16)</td></tr><tr><td>Creator with followers but no sales</td><td>–</td><td>2% (1/43)</td><td>2% (1/43)</td></tr></table></div>
+<h3>VAM · Awareness × format</h3><div class='tw'><table><tr><th></th><th>Static</th><th>Video</th><th>All</th></tr><tr><td>Solution Aware</td><td>8% (13/169)</td><td>10% (26/264)</td><td>9% (39/433)</td></tr><tr><td>Problem Aware</td><td>4% (11/292)</td><td>8% (11/145)</td><td>5% (22/437)</td></tr><tr><td>Most Aware</td><td>5% (8/155)</td><td>4% (1/24)</td><td>5% (9/179)</td></tr><tr><td>Unaware</td><td>0/1</td><td>0% (0/25)</td><td>0% (0/26)</td></tr></table></div>
+<h3>NSR · Awareness × format</h3><div class='tw'><table><tr><th></th><th>Static</th><th>Video</th><th>All</th></tr><tr><td>Most Aware</td><td>6% (1/18)</td><td>0% (0/18)</td><td>3% (1/36)</td></tr><tr><td>Problem Aware</td><td>2% (1/60)</td><td>4% (1/27)</td><td>2% (2/87)</td></tr><tr><td>Solution Aware</td><td>3% (1/32)</td><td>0% (0/53)</td><td>1% (1/85)</td></tr></table></div>
+<h3>Case Source · Awareness × format</h3><div class='tw'><table><tr><th></th><th>Static</th><th>Video</th><th>All</th></tr><tr><td>Product Aware</td><td>19% (3/16)</td><td>–</td><td>19% (3/16)</td></tr><tr><td>Problem Aware</td><td>11% (28/263)</td><td>17% (31/187)</td><td>13% (59/450)</td></tr><tr><td>Solution Aware</td><td>14% (4/28)</td><td>11% (3/27)</td><td>13% (7/55)</td></tr><tr><td>Unaware</td><td>0% (0/10)</td><td>20% (3/15)</td><td>12% (3/25)</td></tr><tr><td>Most Aware</td><td>6% (1/17)</td><td>0% (0/5)</td><td>5% (1/22)</td></tr></table></div>
+<h3>TCC · Awareness × format</h3><div class='tw'><table><tr><th></th><th>Static</th><th>Video</th><th>All</th></tr><tr><td>Problem Aware</td><td>0% (0/8)</td><td>22% (6/27)</td><td>17% (6/35)</td></tr><tr><td>Solution Aware</td><td>0% (0/6)</td><td>6% (1/18)</td><td>4% (1/24)</td></tr></table></div>
+<h3>Dan Henry · Awareness × format</h3><div class='tw'><table><tr><th></th><th>Static</th><th>Video</th><th>All</th></tr><tr><td>Problem Aware</td><td>30% (3/10)</td><td>60% (3/5)</td><td>40% (6/15)</td></tr><tr><td>Solution Aware</td><td>0% (0/10)</td><td>6% (2/34)</td><td>5% (2/44)</td></tr></table></div>
+<h3>VAM · Lead type × format</h3><div class='tw'><table><tr><th></th><th>Static</th><th>Video</th><th>All</th></tr><tr><td>Problem-Solution</td><td>6% (5/89)</td><td>10% (17/165)</td><td>9% (22/254)</td></tr><tr><td>Story</td><td>9% (14/157)</td><td>8% (5/63)</td><td>9% (19/220)</td></tr><tr><td>Secret</td><td>8% (3/40)</td><td>9% (4/46)</td><td>8% (7/86)</td></tr><tr><td>Offer</td><td>4% (10/232)</td><td>7% (4/54)</td><td>5% (14/286)</td></tr><tr><td>Promise</td><td>0% (0/45)</td><td>7% (6/87)</td><td>5% (6/132)</td></tr><tr><td>Proclamation</td><td>0% (0/54)</td><td>4% (2/48)</td><td>2% (2/102)</td></tr></table></div>
+<h3>NSR · Lead type × format</h3><div class='tw'><table><tr><th></th><th>Static</th><th>Video</th><th>All</th></tr><tr><td>Story</td><td>6% (2/32)</td><td>0% (0/10)</td><td>5% (2/42)</td></tr><tr><td>Problem-Solution</td><td>0% (0/15)</td><td>4% (1/25)</td><td>2% (1/40)</td></tr><tr><td>Promise</td><td>7% (1/14)</td><td>0% (0/29)</td><td>2% (1/43)</td></tr><tr><td>Offer</td><td>0% (0/36)</td><td>0% (0/14)</td><td>0% (0/50)</td></tr><tr><td>Proclamation</td><td>0% (0/9)</td><td>0% (0/18)</td><td>0% (0/27)</td></tr><tr><td>Secret</td><td>0% (0/7)</td><td>0% (0/7)</td><td>0% (0/14)</td></tr></table></div>
+<h3>Case Source · Lead type × format</h3><div class='tw'><table><tr><th></th><th>Static</th><th>Video</th><th>All</th></tr><tr><td>Proclamation</td><td>13% (5/39)</td><td>17% (8/47)</td><td>15% (13/86)</td></tr><tr><td>Promise</td><td>10% (3/31)</td><td>19% (5/26)</td><td>14% (8/57)</td></tr><tr><td>Problem-Solution</td><td>9% (4/46)</td><td>19% (8/43)</td><td>13% (12/89)</td></tr><tr><td>Story</td><td>10% (13/132)</td><td>17% (14/82)</td><td>13% (27/214)</td></tr><tr><td>Offer</td><td>15% (8/54)</td><td>5% (1/19)</td><td>12% (9/73)</td></tr><tr><td>Secret</td><td>9% (3/32)</td><td>6% (1/17)</td><td>8% (4/49)</td></tr></table></div>
+<h3>TCC · Lead type × format</h3><div class='tw'><table><tr><th></th><th>Static</th><th>Video</th><th>All</th></tr><tr><td>Problem-Solution</td><td>0/4</td><td>29% (9/31)</td><td>26% (9/35)</td></tr><tr><td>Offer</td><td>12% (1/8)</td><td>–</td><td>12% (1/8)</td></tr><tr><td>Story</td><td>–</td><td>0% (0/8)</td><td>0% (0/8)</td></tr></table></div>
+<h3>Dan Henry · Lead type × format</h3><div class='tw'><table><tr><th></th><th>Static</th><th>Video</th><th>All</th></tr><tr><td>Promise</td><td>1/4</td><td>29% (2/7)</td><td>27% (3/11)</td></tr><tr><td>Secret</td><td>17% (1/6)</td><td>9% (1/11)</td><td>12% (2/17)</td></tr><tr><td>Problem-Solution</td><td>0% (0/6)</td><td>12% (1/8)</td><td>7% (1/14)</td></tr><tr><td>Proclamation</td><td>1/2</td><td>0% (0/12)</td><td>7% (1/14)</td></tr></table></div>
+<h3>BRV · Lead type × format</h3><div class='tw'><table><tr><th></th><th>Static</th><th>Video</th><th>All</th></tr><tr><td>Problem-Solution</td><td>0% (0/7)</td><td>0/3</td><td>0% (0/10)</td></tr><tr><td>Proclamation</td><td>0/3</td><td>0% (0/5)</td><td>0% (0/8)</td></tr></table></div>
+<h2>Persona (inferred)</h2>
+<h3>VAM</h3><div class='tw'><table><tr><th>Persona (inferred)</th><th>Win rate (all-time)</th><th>Current winners</th><th>Graded ads</th><th>Spend</th><th>Top spender</th></tr>
+<tr><td>DIY-considering mover</td><td>9% (12/129)</td><td>4</td><td>129</td><td>$480k</td><td class='nm'>DIY Cost Shock Revelation - Story Lead 11 - CIDEK9O6IN <span class='sub'>($88k)</span></td></tr>
+<tr><td>Price-shopper / budget-focused</td><td>8% (27/340)</td><td>3</td><td>340</td><td>$2,782k</td><td class='nm'>Price Assumption Reframe - Promise Lead - CIDV9JSGZU <span class='sub'>($760k, won)</span></td></tr>
+<tr><td>Overwhelmed interstate mover (wants done-for-you)</td><td>7% (20/288)</td><td>5</td><td>288</td><td>$916k</td><td class='nm'>Done For You - Problem-Solution Lead 23 - CIDTPOV1MN <span class='sub'>($112k, won)</span></td></tr>
+<tr><td>Destination-specific mover</td><td>7% (1/15)</td><td>0</td><td>15</td><td>$18k</td><td class='nm'>Social Proof Route Specificity - Promise Lead - CID76MOGPR <span class='sub'>($4,124, won)</span></td></tr>
+<tr><td>Full-home / family mover (3BR+)</td><td>7% (3/46)</td><td>0</td><td>46</td><td>$50k</td><td class='nm'>3BR Customer Relief - Offer Lead 8 - CID1BKK728 <span class='sub'>($9,857)</span></td></tr>
+<tr><td>Skeptic burned by movers / fears scams</td><td>4% (6/137)</td><td>1</td><td>137</td><td>$121k</td><td class='nm'>Stranger Danger Validation - Problem-Solution Lead 13 - CIDCJ3WSR5 <span class='sub'>($20k, won)</span></td></tr>
+<tr><td>Unclassified</td><td>2% (1/43)</td><td>0</td><td>43</td><td>$56k</td><td class='nm'>Contrasting Options - Story Lead 4 - CIDRS2GLZA <span class='sub'>($11k, won)</span></td></tr>
+<tr><td>Timing-driven mover (best time to move)</td><td>0% (0/35)</td><td>0</td><td>35</td><td>$122k</td><td class='nm'>CALC - Cheaper After Summer - Problem-Solution Lead - CIDZ9ZZPOC <span class='sub'>($59k)</span></td></tr>
+<tr><td>High-value belongings owner</td><td>0% (0/34)</td><td>0</td><td>34</td><td>$42k</td><td class='nm'>Irreplaceable Stuff - Problem-Solution Lead 5 - CIDB8CJ1CP <span class='sub'>($6,647)</span></td></tr>
+<tr><td>Retiree / downsizer</td><td>0% (0/13)</td><td>0</td><td>13</td><td>$15k</td><td class='nm'>Cold-State To Sun Belt Journey - Promise Lead 10 - CIDGGOQUOU <span class='sub'>($6,405)</span></td></tr>
+<tr><td class='old'>Old tracker (not tagged)</td><td>5% (7/147)</td><td>0</td><td>147</td><td>$1,392k</td><td class='nm'>SC11_FlyingFunny | SV8_Gmail <span class='sub'>($343k)</span></td></tr>
+</table></div>
+<h3>NSR</h3><div class='tw'><table><tr><th>Persona (inferred)</th><th>Win rate (all-time)</th><th>Current winners</th><th>Graded ads</th><th>Spend</th><th>Top spender</th></tr>
+<tr><td>DIY-considering mover</td><td>6% (1/18)</td><td>1</td><td>18</td><td>$75k</td><td class='nm'>NSR - DIY Cost Shock Revelation - Story Lead 2 - CIDWVWOQSV <span class='sub'>($45k)</span></td></tr>
+<tr><td>Price-shopper / budget-focused</td><td>4% (1/25)</td><td>0</td><td>25</td><td>$73k</td><td class='nm'>NSR - Real Trucks Real Prices - Problem-Solution Body 1 - CIDT3AQ3ED <span class='sub'>($27k, won)</span></td></tr>
+<tr><td>Retiree / downsizer</td><td>3% (1/30)</td><td>0</td><td>30</td><td>$66k</td><td class='nm'>NSR - Done-For-You Retirement Move Stack - Promise Lead 4 - CIDD004NJM <span class='sub'>($44k, won)</span></td></tr>
+<tr><td>Skeptic burned by movers / fears scams</td><td>3% (1/37)</td><td>1</td><td>37</td><td>$40k</td><td class='nm'>NSR - Stranger Danger Validation - Problem-Solution Lead 7 - CIDO3F1V… <span class='sub'>($5,859)</span></td></tr>
+<tr><td>Overwhelmed interstate mover (wants done-for-you)</td><td>0% (0/45)</td><td>0</td><td>45</td><td>$41k</td><td class='nm'>NSR - Done For You - Problem-Solution Lead 5 - CIDJ1ZR5GA <span class='sub'>($7,536)</span></td></tr>
+<tr><td>Full-home / family mover (3BR+)</td><td>0% (0/30)</td><td>0</td><td>30</td><td>$29k</td><td class='nm'>NSR - Three Bedroom Cross-Country Callout - Story Lead 3 - CID6WZIJ3H <span class='sub'>($6,341)</span></td></tr>
+<tr><td>High-value belongings owner</td><td>0% (0/25)</td><td>0</td><td>25</td><td>$11k</td><td class='nm'>NSR - Specialty Haul Handling Proof - Problem-Solution Lead - CIDP1NJ… <span class='sub'>($1,367)</span></td></tr>
+<tr><td>Other (fewer than 8 ads each)</td><td>0% (0/6)</td><td>0</td><td>6</td><td>$13k</td><td class='nm'>NSR - City Prices - Offer Lead - CID0FC4YSG <span class='sub'>($10k)</span></td></tr>
+</table></div>
+<h3>Case Source</h3><div class='tw'><table><tr><th>Persona (inferred)</th><th>Win rate (all-time)</th><th>Current winners</th><th>Graded ads</th><th>Spend</th><th>Top spender</th></tr>
+<tr><td>Injured with mounting costs</td><td>18% (2/11)</td><td>0</td><td>11</td><td>$22k</td><td class='nm'>Pain Cost Spiral - Proclamation Lead - CID58JNN9M <span class='sub'>($6,463, won)</span></td></tr>
+<tr><td>Unsure if they qualify / don&#x27;t know help exists</td><td>16% (14/87)</td><td>5</td><td>87</td><td>$263k</td><td class='nm'>Eligibility Qualifier - Secret Lead - CIDZVAYQH0 <span class='sub'>($41k, won)</span></td></tr>
+<tr><td>Has an offer / about to settle</td><td>13% (56/445)</td><td>16</td><td>445</td><td>$2,751k</td><td class='nm'>Premature Settlement Risk - Promise Lead 6 - CID30CI81M <span class='sub'>($547k, won)</span></td></tr>
+<tr><td>Just crashed (last 30 days)</td><td>7% (1/15)</td><td>1</td><td>15</td><td>$56k</td><td class='nm'>AI Talking Cars - Secret Lead 1 - CID26F2AH0 <span class='sub'>($19k)</span></td></tr>
+<tr><td>Unclassified</td><td>0% (0/10)</td><td>0</td><td>10</td><td>$11k</td><td class='nm'>Deal Hunting DFY - Offer Lead 5 - CIDC8UY39T <span class='sub'>($4,690)</span></td></tr>
+</table></div>
+<h3>TCC</h3><div class='tw'><table><tr><th>Persona (inferred)</th><th>Win rate (all-time)</th><th>Current winners</th><th>Graded ads</th><th>Spend</th><th>Top spender</th></tr>
+<tr><td>Owner stuck doing hiring themselves</td><td>32% (9/28)</td><td>1</td><td>28</td><td>$313k</td><td class='nm'>Animated - Try to Hire In House - Concrete Fail - 56 - Problem-Soluti… <span class='sub'>($60k, won)</span></td></tr>
+<tr><td>Burned by recruiters / bad hires</td><td>10% (1/10)</td><td>0</td><td>10</td><td>$102k</td><td class='nm'>BlackText - Rejection &amp; Revelation - Construction - Offer Lead 4 - CI… <span class='sub'>($61k, won)</span></td></tr>
+<tr><td>Owner losing jobs to open roles / competitors</td><td>7% (1/14)</td><td>1</td><td>14</td><td>$4,017</td><td class='nm'>Spokesperson-F - Blow Your Mind - electrical-contractors-7-figures - … <span class='sub'>($1,716, won)</span></td></tr>
+<tr><td>Seasonal hiring push</td><td>0% (0/11)</td><td>0</td><td>11</td><td>$12k</td><td class='nm'>Spokesperson-F - 3RW-recycled - time&amp;money2026 - Problem-Solution Lea… <span class='sub'>($7,823)</span></td></tr>
+<tr><td class='old'>Old tracker (not tagged)</td><td>11% (18/168)</td><td>13</td><td>168</td><td>$1,252k</td><td class='nm'>SC54_WereHiringSystem | SV18_BlackText <span class='sub'>($203k, won)</span></td></tr>
+</table></div>
+<h3>Dan Henry</h3><div class='tw'><table><tr><th>Persona (inferred)</th><th>Win rate (all-time)</th><th>Current winners</th><th>Graded ads</th><th>Spend</th><th>Top spender</th></tr>
+<tr><td>Coach/expert whose webinar doesn&#x27;t convert</td><td>44% (7/16)</td><td>0</td><td>16</td><td>$141k</td><td class='nm'>MDW - Webinar Diagnosis - Promise Lead - CID1IJPZRT <span class='sub'>($68k, won)</span></td></tr>
+<tr><td>Creator with followers but no sales</td><td>2% (1/43)</td><td>0</td><td>43</td><td>$3,318</td><td class='nm'>PB - Million Follower Sales Flop Comparison - Promise Lead 1 - CIDWH1… <span class='sub'>($347)</span></td></tr>
+</table></div>
+<h3>BRV</h3><div class='tw'><table><tr><th>Persona (inferred)</th><th>Win rate (all-time)</th><th>Current winners</th><th>Graded ads</th><th>Spend</th><th>Top spender</th></tr>
+<tr><td>White-collar worker afraid of AI layoffs</td><td>0% (0/15)</td><td>0</td><td>15</td><td>$12k</td><td class='nm'>Become a Plumber - Proclamation Lead 3 - CIDHQF3YF2 <span class='sub'>($3,255)</span></td></tr>
+<tr><td>Other (fewer than 8 ads each)</td><td>0% (0/6)</td><td>0</td><td>6</td><td>$2,994</td><td class='nm'>DFY Business - Problem-Solution Lead - CID6S9ZKI7 <span class='sub'>($759)</span></td></tr>
+</table></div>
+<h2>Net new vs iteration</h2>
+<h3>VAM</h3><div class='tw'><table><tr><th>Net new vs iteration</th><th>Win rate (all-time)</th><th>Current winners</th><th>Graded ads</th><th>Spend</th><th>Top spender</th></tr>
+<tr><td>Iteration</td><td>8% (29/367)</td><td>4</td><td>367</td><td>$2,280k</td><td class='nm'>SC11_FlyingFunny | SV8_Gmail <span class='sub'>($343k)</span></td></tr>
+<tr><td>Net New</td><td>6% (45/786)</td><td>9</td><td>786</td><td>$3,591k</td><td class='nm'>Price Assumption Reframe - Promise Lead - CIDV9JSGZU <span class='sub'>($760k, won)</span></td></tr>
+<tr><td class='old'>Old tracker (not tagged)</td><td>4% (3/74)</td><td>0</td><td>74</td><td>$122k</td><td class='nm'>SC7_CheckThis | SV11_TwitterStyleLight <span class='sub'>($56k, won)</span></td></tr>
+</table></div>
+<h3>NSR</h3><div class='tw'><table><tr><th>Net new vs iteration</th><th>Win rate (all-time)</th><th>Current winners</th><th>Graded ads</th><th>Spend</th><th>Top spender</th></tr>
+<tr><td>Iteration</td><td>5% (2/38)</td><td>2</td><td>38</td><td>$62k</td><td class='nm'>NSR - DIY Cost Shock Revelation - Story Lead 11 - CID44V41K0 <span class='sub'>($8,070)</span></td></tr>
+<tr><td>Net New</td><td>1% (2/178)</td><td>0</td><td>178</td><td>$286k</td><td class='nm'>NSR - DIY Cost Shock Revelation - Story Lead 2 - CIDWVWOQSV <span class='sub'>($45k)</span></td></tr>
+</table></div>
+<h3>Case Source</h3><div class='tw'><table><tr><th>Net new vs iteration</th><th>Win rate (all-time)</th><th>Current winners</th><th>Graded ads</th><th>Spend</th><th>Top spender</th></tr>
+<tr><td>Net New</td><td>15% (55/361)</td><td>14</td><td>361</td><td>$1,471k</td><td class='nm'>Payout Disparity - Offer Lead 3 - CIDV1DGFUC <span class='sub'>($116k, won)</span></td></tr>
+<tr><td>Iteration</td><td>9% (18/207)</td><td>8</td><td>207</td><td>$1,632k</td><td class='nm'>Premature Settlement Risk - Promise Lead 6 - CID30CI81M <span class='sub'>($547k, won)</span></td></tr>
+</table></div>
+<h3>TCC</h3><div class='tw'><table><tr><th>Net new vs iteration</th><th>Win rate (all-time)</th><th>Current winners</th><th>Graded ads</th><th>Spend</th><th>Top spender</th></tr>
+<tr><td>Net New</td><td>12% (17/145)</td><td>9</td><td>145</td><td>$1,233k</td><td class='nm'>SC54_WereHiringSystem | SV18_BlackText <span class='sub'>($203k, won)</span></td></tr>
+<tr><td>Iteration</td><td>7% (4/54)</td><td>1</td><td>54</td><td>$191k</td><td class='nm'>VHK92_Hook2 | VB27_New3RW | VV12_3ReasonsWhy <span class='sub'>($81k, won)</span></td></tr>
+<tr><td class='old'>Old tracker (not tagged)</td><td>25% (8/32)</td><td>5</td><td>32</td><td>$258k</td><td class='nm'>VHK107_Hook8 | VB28_Animated | VV20_ThisIsWhatHappens <span class='sub'>($60k, won)</span></td></tr>
+</table></div>
+<h3>Dan Henry</h3><div class='tw'><table><tr><th>Net new vs iteration</th><th>Win rate (all-time)</th><th>Current winners</th><th>Graded ads</th><th>Spend</th><th>Top spender</th></tr>
+<tr><td>Net New</td><td>15% (8/54)</td><td>0</td><td>54</td><td>$144k</td><td class='nm'>MDW - Webinar Diagnosis - Promise Lead - CID1IJPZRT <span class='sub'>($68k, won)</span></td></tr>
+<tr><td>Other (fewer than 8 ads each)</td><td>0% (0/5)</td><td>0</td><td>5</td><td>$412</td><td class='nm'>PB - Million Follower Sales Flop Comparison - Problem-Solution Lead 2… <span class='sub'>($233)</span></td></tr>
+</table></div>
+<h3>BRV</h3><div class='tw'><table><tr><th>Net new vs iteration</th><th>Win rate (all-time)</th><th>Current winners</th><th>Graded ads</th><th>Spend</th><th>Top spender</th></tr>
+<tr><td>Net New</td><td>0% (0/20)</td><td>0</td><td>20</td><td>$14k</td><td class='nm'>Become a Plumber - Proclamation Lead 3 - CIDHQF3YF2 <span class='sub'>($3,255)</span></td></tr>
+<tr><td>Other (fewer than 8 ads each)</td><td>0/1</td><td>0</td><td>1</td><td>$498</td><td class='nm'>AI Hit List - Headline + Image 6 - CIDEK46573 <span class='sub'>($498)</span></td></tr>
+</table></div>
+<h2>Awareness level</h2>
+<h3>VAM</h3><div class='tw'><table><tr><th>Awareness level</th><th>Win rate (all-time)</th><th>Current winners</th><th>Graded ads</th><th>Spend</th><th>Top spender</th></tr>
+<tr><td>Solution Aware</td><td>9% (39/433)</td><td>6</td><td>433</td><td>$1,873k</td><td class='nm'>Price Assumption Reframe - Promise Lead 3 - CIDFBHOBJQ <span class='sub'>($214k, won)</span></td></tr>
+<tr><td>Problem Aware</td><td>5% (22/437)</td><td>5</td><td>437</td><td>$2,328k</td><td class='nm'>Price Assumption Reframe - Promise Lead - CIDV9JSGZU <span class='sub'>($760k, won)</span></td></tr>
+<tr><td>Most Aware</td><td>5% (9/179)</td><td>2</td><td>179</td><td>$271k</td><td class='nm'>Cost Shock Revelation - Secret Lead 3 - CIDG1XZJ9B <span class='sub'>($27k, won)</span></td></tr>
+<tr><td>Unaware</td><td>0% (0/26)</td><td>0</td><td>26</td><td>$125k</td><td class='nm'>CALC - Cheaper After Summer - Problem-Solution Lead - CIDZ9ZZPOC <span class='sub'>($59k)</span></td></tr>
+<tr><td class='old'>Old tracker (not tagged)</td><td>5% (7/147)</td><td>0</td><td>147</td><td>$1,392k</td><td class='nm'>SC11_FlyingFunny | SV8_Gmail <span class='sub'>($343k)</span></td></tr>
+<tr><td>Other (fewer than 8 ads each)</td><td>0% (0/5)</td><td>0</td><td>5</td><td>$4,025</td><td class='nm'>Real Trucks Real Prices - Problem-Solution Lead 20 - CIDF3N8T5Q <span class='sub'>($2,028)</span></td></tr>
+</table></div>
+<h3>NSR</h3><div class='tw'><table><tr><th>Awareness level</th><th>Win rate (all-time)</th><th>Current winners</th><th>Graded ads</th><th>Spend</th><th>Top spender</th></tr>
+<tr><td>Most Aware</td><td>3% (1/36)</td><td>1</td><td>36</td><td>$42k</td><td class='nm'>NSR - Stranger Danger Validation - Problem-Solution Lead 7 - CIDO3F1V… <span class='sub'>($5,859)</span></td></tr>
+<tr><td>Problem Aware</td><td>2% (2/87)</td><td>0</td><td>87</td><td>$163k</td><td class='nm'>NSR - Done-For-You Retirement Move Stack - Promise Lead 4 - CIDD004NJM <span class='sub'>($44k, won)</span></td></tr>
+<tr><td>Solution Aware</td><td>1% (1/85)</td><td>1</td><td>85</td><td>$141k</td><td class='nm'>NSR - DIY Cost Shock Revelation - Story Lead 2 - CIDWVWOQSV <span class='sub'>($45k)</span></td></tr>
+<tr><td>Other (fewer than 8 ads each)</td><td>0% (0/8)</td><td>0</td><td>8</td><td>$2,850</td><td class='nm'>NSR - Solo Downsizer Trust Story - Promise Lead 2 - CIDEB7NY6C <span class='sub'>($651)</span></td></tr>
+</table></div>
+<h3>Case Source</h3><div class='tw'><table><tr><th>Awareness level</th><th>Win rate (all-time)</th><th>Current winners</th><th>Graded ads</th><th>Spend</th><th>Top spender</th></tr>
+<tr><td>Product Aware</td><td>19% (3/16)</td><td>2</td><td>16</td><td>$32k</td><td class='nm'>Offer vs Evaluation - Proclamation Lead 2 - CIDTO61DPC <span class='sub'>($14k, won)</span></td></tr>
+<tr><td>Problem Aware</td><td>13% (59/450)</td><td>19</td><td>450</td><td>$2,718k</td><td class='nm'>Premature Settlement Risk - Promise Lead 6 - CID30CI81M <span class='sub'>($547k, won)</span></td></tr>
+<tr><td>Solution Aware</td><td>13% (7/55)</td><td>0</td><td>55</td><td>$226k</td><td class='nm'>Premature Settlement Risk - Proclamation Lead 6 - CIDY233BVD <span class='sub'>($39k)</span></td></tr>
+<tr><td>Unaware</td><td>12% (3/25)</td><td>1</td><td>25</td><td>$83k</td><td class='nm'>Confusion To Clarity - Proclamation Lead 1 - CID24T5RRJ <span class='sub'>($23k, won)</span></td></tr>
+<tr><td>Most Aware</td><td>5% (1/22)</td><td>0</td><td>22</td><td>$44k</td><td class='nm'>Payout Disparity - Before/After Split 5 - CIDXPPMV3U <span class='sub'>($5,630)</span></td></tr>
+</table></div>
+<h3>TCC</h3><div class='tw'><table><tr><th>Awareness level</th><th>Win rate (all-time)</th><th>Current winners</th><th>Graded ads</th><th>Spend</th><th>Top spender</th></tr>
+<tr><td>Problem Aware</td><td>17% (6/35)</td><td>1</td><td>35</td><td>$227k</td><td class='nm'>Animated - Try to Hire In House - Concrete Fail - 56 - Problem-Soluti… <span class='sub'>($60k, won)</span></td></tr>
+<tr><td>Solution Aware</td><td>4% (1/24)</td><td>1</td><td>24</td><td>$62k</td><td class='nm'>Spokesperson-M - Music Video - whyyoustilldoing - 104 - Promise Body … <span class='sub'>($20k)</span></td></tr>
+<tr><td class='old'>Old tracker (not tagged)</td><td>11% (18/168)</td><td>13</td><td>168</td><td>$1,252k</td><td class='nm'>SC54_WereHiringSystem | SV18_BlackText <span class='sub'>($203k, won)</span></td></tr>
+<tr><td>Other (fewer than 8 ads each)</td><td>4/4</td><td>0</td><td>4</td><td>$141k</td><td class='nm'>BlackText - Rejection &amp; Revelation - Construction - Offer Lead 4 - CI… <span class='sub'>($61k, won)</span></td></tr>
+</table></div>
+<h3>Dan Henry</h3><div class='tw'><table><tr><th>Awareness level</th><th>Win rate (all-time)</th><th>Current winners</th><th>Graded ads</th><th>Spend</th><th>Top spender</th></tr>
+<tr><td>Problem Aware</td><td>40% (6/15)</td><td>0</td><td>15</td><td>$130k</td><td class='nm'>MDW - Webinar Diagnosis - Promise Lead - CID1IJPZRT <span class='sub'>($68k, won)</span></td></tr>
+<tr><td>Solution Aware</td><td>5% (2/44)</td><td>0</td><td>44</td><td>$15k</td><td class='nm'>MDW - Expert Access Authority - Promise Lead - CIDDUY6U0W <span class='sub'>($12k, won)</span></td></tr>
+</table></div>
+<h3>BRV</h3><div class='tw'><table><tr><th>Awareness level</th><th>Win rate (all-time)</th><th>Current winners</th><th>Graded ads</th><th>Spend</th><th>Top spender</th></tr>
+<tr><td>Problem Aware</td><td>0% (0/21)</td><td>0</td><td>21</td><td>$15k</td><td class='nm'>Become a Plumber - Proclamation Lead 3 - CIDHQF3YF2 <span class='sub'>($3,255)</span></td></tr>
+</table></div>
+<h2>Lead type</h2>
+<h3>VAM</h3><div class='tw'><table><tr><th>Lead type</th><th>Win rate (all-time)</th><th>Current winners</th><th>Graded ads</th><th>Spend</th><th>Top spender</th></tr>
+<tr><td>Problem-Solution</td><td>9% (22/254)</td><td>2</td><td>254</td><td>$1,110k</td><td class='nm'>Real Trucks Real Prices - Problem-Solution Body 8 - CIDSLVVCE3 <span class='sub'>($114k, won)</span></td></tr>
+<tr><td>Story</td><td>9% (19/220)</td><td>4</td><td>220</td><td>$510k</td><td class='nm'>DIY Cost Shock Revelation - Story Lead 11 - CIDEK9O6IN <span class='sub'>($88k)</span></td></tr>
+<tr><td>Secret</td><td>8% (7/86)</td><td>4</td><td>86</td><td>$225k</td><td class='nm'>Private Jet vs Commercial - Secret Lead 3 - CIDJXW2G08 <span class='sub'>($29k)</span></td></tr>
+<tr><td>Offer</td><td>5% (14/286)</td><td>2</td><td>286</td><td>$1,265k</td><td class='nm'>Moving Cost Clarity - Offer Lead 2 - CIDI9HB0RK <span class='sub'>($191k, won)</span></td></tr>
+<tr><td>Promise</td><td>5% (6/132)</td><td>0</td><td>132</td><td>$1,294k</td><td class='nm'>Price Assumption Reframe - Promise Lead - CIDV9JSGZU <span class='sub'>($760k, won)</span></td></tr>
+<tr><td>Proclamation</td><td>2% (2/102)</td><td>1</td><td>102</td><td>$197k</td><td class='nm'>Messy Garage - Proclamation Lead 2 - CIDHI495M4 <span class='sub'>($33k, won)</span></td></tr>
+<tr><td class='old'>Old tracker (not tagged)</td><td>5% (7/147)</td><td>0</td><td>147</td><td>$1,392k</td><td class='nm'>SC11_FlyingFunny | SV8_Gmail <span class='sub'>($343k)</span></td></tr>
+</table></div>
+<h3>NSR</h3><div class='tw'><table><tr><th>Lead type</th><th>Win rate (all-time)</th><th>Current winners</th><th>Graded ads</th><th>Spend</th><th>Top spender</th></tr>
+<tr><td>Story</td><td>5% (2/42)</td><td>2</td><td>42</td><td>$98k</td><td class='nm'>NSR - DIY Cost Shock Revelation - Story Lead 2 - CIDWVWOQSV <span class='sub'>($45k)</span></td></tr>
+<tr><td>Problem-Solution</td><td>2% (1/40)</td><td>0</td><td>40</td><td>$73k</td><td class='nm'>NSR - Real Trucks Real Prices - Problem-Solution Body 1 - CIDT3AQ3ED <span class='sub'>($27k, won)</span></td></tr>
+<tr><td>Promise</td><td>2% (1/43)</td><td>0</td><td>43</td><td>$75k</td><td class='nm'>NSR - Done-For-You Retirement Move Stack - Promise Lead 4 - CIDD004NJM <span class='sub'>($44k, won)</span></td></tr>
+<tr><td>Offer</td><td>0% (0/50)</td><td>0</td><td>50</td><td>$67k</td><td class='nm'>NSR - City Prices - Offer Lead - CID0FC4YSG <span class='sub'>($10k)</span></td></tr>
+<tr><td>Proclamation</td><td>0% (0/27)</td><td>0</td><td>27</td><td>$28k</td><td class='nm'>NSR - Hassle free moving - Proclamation Lead 4 - CIDOWB6USU <span class='sub'>($6,110)</span></td></tr>
+<tr><td>Secret</td><td>0% (0/14)</td><td>0</td><td>14</td><td>$7,507</td><td class='nm'>NSR - Solo Downsizer Trust Story - Secret Lead 2 - CID6W6AADQ <span class='sub'>($1,406)</span></td></tr>
+</table></div>
+<h3>Case Source</h3><div class='tw'><table><tr><th>Lead type</th><th>Win rate (all-time)</th><th>Current winners</th><th>Graded ads</th><th>Spend</th><th>Top spender</th></tr>
+<tr><td>Proclamation</td><td>15% (13/86)</td><td>6</td><td>86</td><td>$285k</td><td class='nm'>Premature Settlement Risk - Proclamation Lead 6 - CIDY233BVD <span class='sub'>($39k)</span></td></tr>
+<tr><td>Promise</td><td>14% (8/57)</td><td>3</td><td>57</td><td>$724k</td><td class='nm'>Premature Settlement Risk - Promise Lead 6 - CID30CI81M <span class='sub'>($547k, won)</span></td></tr>
+<tr><td>Problem-Solution</td><td>13% (12/89)</td><td>2</td><td>89</td><td>$237k</td><td class='nm'>Payout Disparity - Problem-Solution Lead 5 - CIDP2GBXFB <span class='sub'>($38k, won)</span></td></tr>
+<tr><td>Story</td><td>13% (27/214)</td><td>7</td><td>214</td><td>$1,356k</td><td class='nm'>Premature Settlement Risk - Story Lead 15 - CID0ZVVMP8 <span class='sub'>($193k, won)</span></td></tr>
+<tr><td>Offer</td><td>12% (9/73)</td><td>3</td><td>73</td><td>$289k</td><td class='nm'>Payout Disparity - Offer Lead 3 - CIDV1DGFUC <span class='sub'>($116k, won)</span></td></tr>
+<tr><td>Secret</td><td>8% (4/49)</td><td>1</td><td>49</td><td>$212k</td><td class='nm'>Premature Settlement Risk - Secret Lead 1 - CID8S5N1KV <span class='sub'>($58k, won)</span></td></tr>
+</table></div>
+<h3>TCC</h3><div class='tw'><table><tr><th>Lead type</th><th>Win rate (all-time)</th><th>Current winners</th><th>Graded ads</th><th>Spend</th><th>Top spender</th></tr>
+<tr><td>Problem-Solution</td><td>26% (9/35)</td><td>1</td><td>35</td><td>$286k</td><td class='nm'>Animated - Try to Hire In House - Concrete Fail - 56 - Problem-Soluti… <span class='sub'>($60k, won)</span></td></tr>
+<tr><td>Offer</td><td>12% (1/8)</td><td>0</td><td>8</td><td>$101k</td><td class='nm'>BlackText - Rejection &amp; Revelation - Construction - Offer Lead 4 - CI… <span class='sub'>($61k, won)</span></td></tr>
+<tr><td>Story</td><td>0% (0/8)</td><td>0</td><td>8</td><td>$3,526</td><td class='nm'>Spokesperson-F - Spring Hiring Challenge - the-busy-season+validation… <span class='sub'>($1,055)</span></td></tr>
+<tr><td class='old'>Old tracker (not tagged)</td><td>11% (18/168)</td><td>13</td><td>168</td><td>$1,252k</td><td class='nm'>SC54_WereHiringSystem | SV18_BlackText <span class='sub'>($203k, won)</span></td></tr>
+<tr><td>Other (fewer than 8 ads each)</td><td>8% (1/12)</td><td>1</td><td>12</td><td>$40k</td><td class='nm'>Spokesperson-M - Music Video - whyyoustilldoing - 104 - Promise Body … <span class='sub'>($20k)</span></td></tr>
+</table></div>
+<h3>Dan Henry</h3><div class='tw'><table><tr><th>Lead type</th><th>Win rate (all-time)</th><th>Current winners</th><th>Graded ads</th><th>Spend</th><th>Top spender</th></tr>
+<tr><td>Promise</td><td>27% (3/11)</td><td>0</td><td>11</td><td>$86k</td><td class='nm'>MDW - Webinar Diagnosis - Promise Lead - CID1IJPZRT <span class='sub'>($68k, won)</span></td></tr>
+<tr><td>Secret</td><td>12% (2/17)</td><td>0</td><td>17</td><td>$5,087</td><td class='nm'>MDW - Webinar Diagnosis - Secret Lead - CID2RDQ7Y4 <span class='sub'>($2,891, won)</span></td></tr>
+<tr><td>Problem-Solution</td><td>7% (1/14)</td><td>0</td><td>14</td><td>$15k</td><td class='nm'>MDW - Script Transformation - Problem-Solution Lead - CIDKVZ6409 <span class='sub'>($12k)</span></td></tr>
+<tr><td>Proclamation</td><td>7% (1/14)</td><td>0</td><td>14</td><td>$36k</td><td class='nm'>MDW - Webinar Diagnosis - Proclamation Lead - CIDEIHX31G <span class='sub'>($34k, won)</span></td></tr>
+<tr><td>Other (fewer than 8 ads each)</td><td>1/3</td><td>0</td><td>3</td><td>$2,862</td><td class='nm'>MDW - Webinar Diagnosis - Story Lead - CIDSFEEIKB <span class='sub'>($1,125, won)</span></td></tr>
+</table></div>
+<h3>BRV</h3><div class='tw'><table><tr><th>Lead type</th><th>Win rate (all-time)</th><th>Current winners</th><th>Graded ads</th><th>Spend</th><th>Top spender</th></tr>
+<tr><td>Problem-Solution</td><td>0% (0/10)</td><td>0</td><td>10</td><td>$3,876</td><td class='nm'>DFY Business - Problem-Solution Lead - CID6S9ZKI7 <span class='sub'>($759)</span></td></tr>
+<tr><td>Proclamation</td><td>0% (0/8)</td><td>0</td><td>8</td><td>$9,207</td><td class='nm'>Become a Plumber - Proclamation Lead 3 - CIDHQF3YF2 <span class='sub'>($3,255)</span></td></tr>
+<tr><td>Other (fewer than 8 ads each)</td><td>0/3</td><td>0</td><td>3</td><td>$1,498</td><td class='nm'>DFY Business - Offer Lead - CID1LWG4Q9 <span class='sub'>($686)</span></td></tr>
+</table></div>
+<h2>What was varied</h2>
+<h3>VAM</h3><div class='tw'><table><tr><th>What was varied</th><th>Win rate (all-time)</th><th>Current winners</th><th>Graded ads</th><th>Spend</th><th>Top spender</th></tr>
+<tr><td>Body</td><td>15% (5/34)</td><td>0</td><td>34</td><td>$206k</td><td class='nm'>Real Trucks Real Prices - Problem-Solution Body 8 - CIDSLVVCE3 <span class='sub'>($114k, won)</span></td></tr>
+<tr><td>Visual</td><td>12% (7/57)</td><td>1</td><td>57</td><td>$239k</td><td class='nm'>VAM Crew Members - Organic Looking 1 - CIDQG45LVZ <span class='sub'>($38k, won)</span></td></tr>
+<tr><td>Pattern Interrupt</td><td>8% (2/25)</td><td>1</td><td>25</td><td>$47k</td><td class='nm'>Visual Comparison - Pattern Interrupt 2 - CID3QYMO2K <span class='sub'>($7,241)</span></td></tr>
+<tr><td>Lead</td><td>8% (31/404)</td><td>6</td><td>404</td><td>$2,511k</td><td class='nm'>Price Assumption Reframe - Promise Lead - CIDV9JSGZU <span class='sub'>($760k, won)</span></td></tr>
+<tr><td>Copy</td><td>4% (25/560)</td><td>5</td><td>560</td><td>$1,598k</td><td class='nm'>Moving Cost Clarity - Offer Lead 2 - CIDI9HB0RK <span class='sub'>($191k, won)</span></td></tr>
+<tr><td class='old'>Old tracker (not tagged)</td><td>5% (7/147)</td><td>0</td><td>147</td><td>$1,392k</td><td class='nm'>SC11_FlyingFunny | SV8_Gmail <span class='sub'>($343k)</span></td></tr>
+</table></div>
+<h3>NSR</h3><div class='tw'><table><tr><th>What was varied</th><th>Win rate (all-time)</th><th>Current winners</th><th>Graded ads</th><th>Spend</th><th>Top spender</th></tr>
+<tr><td>Copy</td><td>3% (3/111)</td><td>2</td><td>111</td><td>$238k</td><td class='nm'>NSR - DIY Cost Shock Revelation - Story Lead 2 - CIDWVWOQSV <span class='sub'>($45k)</span></td></tr>
+<tr><td>Lead</td><td>0% (0/94)</td><td>0</td><td>94</td><td>$71k</td><td class='nm'>NSR - Done For You - Problem-Solution Lead 5 - CIDJ1ZR5GA <span class='sub'>($7,536)</span></td></tr>
+<tr><td>Other (fewer than 8 ads each)</td><td>9% (1/11)</td><td>0</td><td>11</td><td>$39k</td><td class='nm'>NSR - Real Trucks Real Prices - Problem-Solution Body 1 - CIDT3AQ3ED <span class='sub'>($27k, won)</span></td></tr>
+</table></div>
+<h3>Case Source</h3><div class='tw'><table><tr><th>What was varied</th><th>Win rate (all-time)</th><th>Current winners</th><th>Graded ads</th><th>Spend</th><th>Top spender</th></tr>
+<tr><td>Pattern Interrupt</td><td>28% (5/18)</td><td>1</td><td>18</td><td>$62k</td><td class='nm'>Skipped Critical Step - Pattern Interrupt 3 - CIDQ1NRLA0 <span class='sub'>($20k, won)</span></td></tr>
+<tr><td>Lead</td><td>15% (31/207)</td><td>8</td><td>207</td><td>$1,750k</td><td class='nm'>Premature Settlement Risk - Promise Lead 6 - CID30CI81M <span class='sub'>($547k, won)</span></td></tr>
+<tr><td>Copy</td><td>11% (35/312)</td><td>12</td><td>312</td><td>$1,035k</td><td class='nm'>Payout Disparity - Offer Lead 3 - CIDV1DGFUC <span class='sub'>($116k, won)</span></td></tr>
+<tr><td>Body</td><td>11% (1/9)</td><td>0</td><td>9</td><td>$203k</td><td class='nm'>Premature Settlement Risk - Story Body 5 - CID8Q10FUY <span class='sub'>($190k, won)</span></td></tr>
+<tr><td>Visual</td><td>5% (1/22)</td><td>1</td><td>22</td><td>$54k</td><td class='nm'>Payout Disparity - Before/After Split 5 - CIDAGXJH06 <span class='sub'>($27k, won)</span></td></tr>
+</table></div>
+<h3>TCC</h3><div class='tw'><table><tr><th>What was varied</th><th>Win rate (all-time)</th><th>Current winners</th><th>Graded ads</th><th>Spend</th><th>Top spender</th></tr>
+<tr><td>Lead</td><td>21% (6/28)</td><td>2</td><td>28</td><td>$202k</td><td class='nm'>Animated - Try to Hire In House - Concrete Fail - 56 - Problem-Soluti… <span class='sub'>($60k, won)</span></td></tr>
+<tr><td>Body</td><td>21% (4/19)</td><td>0</td><td>19</td><td>$120k</td><td class='nm'>Spokesperson - WaterBomb - Foreman Walked - 73 - Problem-Solution Bod… <span class='sub'>($26k, won)</span></td></tr>
+<tr><td>Copy</td><td>7% (1/15)</td><td>0</td><td>15</td><td>$101k</td><td class='nm'>BlackText - Rejection &amp; Revelation - Construction - Offer Lead 4 - CI… <span class='sub'>($61k, won)</span></td></tr>
+<tr><td class='old'>Old tracker (not tagged)</td><td>11% (18/168)</td><td>13</td><td>168</td><td>$1,252k</td><td class='nm'>SC54_WereHiringSystem | SV18_BlackText <span class='sub'>($203k, won)</span></td></tr>
+<tr><td>Other (fewer than 8 ads each)</td><td>0/1</td><td>0</td><td>1</td><td>$6,617</td><td class='nm'>AI - YogaAd - 65 - Pattern Interrupt - CID02Q78LL <span class='sub'>($6,617)</span></td></tr>
+</table></div>
+<h3>Dan Henry</h3><div class='tw'><table><tr><th>What was varied</th><th>Win rate (all-time)</th><th>Current winners</th><th>Graded ads</th><th>Spend</th><th>Top spender</th></tr>
+<tr><td>Copy</td><td>15% (3/20)</td><td>0</td><td>20</td><td>$57k</td><td class='nm'>MDW - Webinar Diagnosis - Proclamation Lead - CIDEIHX31G <span class='sub'>($34k, won)</span></td></tr>
+<tr><td>Lead</td><td>13% (5/39)</td><td>0</td><td>39</td><td>$88k</td><td class='nm'>MDW - Webinar Diagnosis - Promise Lead - CID1IJPZRT <span class='sub'>($68k, won)</span></td></tr>
+</table></div>
+<h3>BRV</h3><div class='tw'><table><tr><th>What was varied</th><th>Win rate (all-time)</th><th>Current winners</th><th>Graded ads</th><th>Spend</th><th>Top spender</th></tr>
+<tr><td>Lead</td><td>0% (0/9)</td><td>0</td><td>9</td><td>$9,720</td><td class='nm'>Become a Plumber - Proclamation Lead 3 - CIDHQF3YF2 <span class='sub'>($3,255)</span></td></tr>
+<tr><td>Other (fewer than 8 ads each)</td><td>0% (0/12)</td><td>0</td><td>12</td><td>$4,861</td><td class='nm'>DFY Business - Problem-Solution Lead - CID6S9ZKI7 <span class='sub'>($759)</span></td></tr>
+</table></div>
+<h2>Static format</h2>
+<h3>VAM</h3><div class='tw'><table><tr><th>Static format</th><th>Win rate (all-time)</th><th>Current winners</th><th>Graded ads</th><th>Spend</th><th>Top spender</th></tr>
+<tr><td>Single Static</td><td>5% (32/616)</td><td>6</td><td>616</td><td>$1,835k</td><td class='nm'>Moving Cost Clarity - Offer Lead 2 - CIDI9HB0RK <span class='sub'>($191k, won)</span></td></tr>
+<tr><td class='old'>Old tracker (not tagged)</td><td>5% (6/118)</td><td>0</td><td>118</td><td>$1,367k</td><td class='nm'>SC11_FlyingFunny | SV8_Gmail <span class='sub'>($343k)</span></td></tr>
+<tr><td>Other (fewer than 8 ads each)</td><td>0/1</td><td>0</td><td>1</td><td>$2,061</td><td class='nm'>3BR Cross-Country Cost - Offer Lead 1 - CIDXFH8QT1 <span class='sub'>($2,061)</span></td></tr>
+</table></div>
+<h3>NSR</h3><div class='tw'><table><tr><th>Static format</th><th>Win rate (all-time)</th><th>Current winners</th><th>Graded ads</th><th>Spend</th><th>Top spender</th></tr>
+<tr><td>Single Static</td><td>3% (3/113)</td><td>2</td><td>113</td><td>$240k</td><td class='nm'>NSR - DIY Cost Shock Revelation - Story Lead 2 - CIDWVWOQSV <span class='sub'>($45k)</span></td></tr>
+</table></div>
+<h3>Case Source</h3><div class='tw'><table><tr><th>Static format</th><th>Win rate (all-time)</th><th>Current winners</th><th>Graded ads</th><th>Spend</th><th>Top spender</th></tr>
+<tr><td>(blank)</td><td>11% (1/9)</td><td>0</td><td>9</td><td>$17k</td><td class='nm'>Payout Disparity - Promise Lead 2 - CIDDMF2MYP <span class='sub'>($11k, won)</span></td></tr>
+<tr><td>Single Static</td><td>11% (35/325)</td><td>13</td><td>325</td><td>$1,071k</td><td class='nm'>Payout Disparity - Offer Lead 3 - CIDV1DGFUC <span class='sub'>($116k, won)</span></td></tr>
+</table></div>
+<h3>TCC</h3><div class='tw'><table><tr><th>Static format</th><th>Win rate (all-time)</th><th>Current winners</th><th>Graded ads</th><th>Spend</th><th>Top spender</th></tr>
+<tr><td>Single Static</td><td>7% (1/15)</td><td>0</td><td>15</td><td>$101k</td><td class='nm'>BlackText - Rejection &amp; Revelation - Construction - Offer Lead 4 - CI… <span class='sub'>($61k, won)</span></td></tr>
+<tr><td class='old'>Old tracker (not tagged)</td><td>6% (4/65)</td><td>3</td><td>65</td><td>$405k</td><td class='nm'>SC54_WereHiringSystem | SV18_BlackText <span class='sub'>($203k, won)</span></td></tr>
+</table></div>
+<h3>Dan Henry</h3><div class='tw'><table><tr><th>Static format</th><th>Win rate (all-time)</th><th>Current winners</th><th>Graded ads</th><th>Spend</th><th>Top spender</th></tr>
+<tr><td>Single Static</td><td>15% (3/20)</td><td>0</td><td>20</td><td>$57k</td><td class='nm'>MDW - Webinar Diagnosis - Proclamation Lead - CIDEIHX31G <span class='sub'>($34k, won)</span></td></tr>
+</table></div>
+<h3>BRV</h3><div class='tw'><table><tr><th>Static format</th><th>Win rate (all-time)</th><th>Current winners</th><th>Graded ads</th><th>Spend</th><th>Top spender</th></tr>
+<tr><td>Single Static</td><td>0% (0/12)</td><td>0</td><td>12</td><td>$4,861</td><td class='nm'>DFY Business - Problem-Solution Lead - CID6S9ZKI7 <span class='sub'>($759)</span></td></tr>
+</table></div>
+<h2>Static: image style</h2>
+<h3>VAM</h3><div class='tw'><table><tr><th>Static: image style</th><th>Win rate (all-time)</th><th>Current winners</th><th>Graded ads</th><th>Spend</th><th>Top spender</th></tr>
+<tr><td>TwitterDark</td><td>12% (4/32)</td><td>0</td><td>32</td><td>$131k</td><td class='nm'>Similar Customer Proof - Offer Lead 6 - CIDCXT73QZ <span class='sub'>($80k, won)</span></td></tr>
+<tr><td>Multi quote visual</td><td>12% (3/24)</td><td>0</td><td>24</td><td>$290k</td><td class='nm'>Moving Cost Clarity - Offer Lead 2 - CIDI9HB0RK <span class='sub'>($191k, won)</span></td></tr>
+<tr><td>GmailDark</td><td>9% (9/95)</td><td>3</td><td>95</td><td>$176k</td><td class='nm'>DIY Cost Shock Revelation - GmailDark 1 - CIDQ2ZZYP7 <span class='sub'>($33k, won)</span></td></tr>
+<tr><td>GmailLight</td><td>8% (10/119)</td><td>1</td><td>119</td><td>$384k</td><td class='nm'>DIY Cost Shock Revelation - Story Lead 11 - CIDEK9O6IN <span class='sub'>($88k)</span></td></tr>
+<tr><td>TwitterLight</td><td>6% (2/31)</td><td>0</td><td>31</td><td>$105k</td><td class='nm'>Similar Customer Proof - Offer Lead 14 - CIDU448QA6 <span class='sub'>($54k)</span></td></tr>
+<tr><td>Product/Service Checklist</td><td>5% (1/20)</td><td>1</td><td>20</td><td>$36k</td><td class='nm'>High-Value Move Qualifier Stack - Offer Lead 5 - CIDH838NLI <span class='sub'>($4,832)</span></td></tr>
+<tr><td>Price Transparency Visual</td><td>3% (1/35)</td><td>0</td><td>35</td><td>$171k</td><td class='nm'>Move Cost Clarity - Offer Lead 2 - CID3KEJUCG <span class='sub'>($139k, won)</span></td></tr>
+<tr><td>2-Zone Static</td><td>0% (0/20)</td><td>0</td><td>20</td><td>$11k</td><td class='nm'>Quiet Overwhelm - Offer Lead 1 - CIDG985JBO <span class='sub'>($4,520)</span></td></tr>
+<tr><td>Bold Text Card</td><td>0% (0/15)</td><td>0</td><td>15</td><td>$46k</td><td class='nm'>Moving Feature Stack - Offer Lead 2 - CIDRBNGL3Z <span class='sub'>($35k)</span></td></tr>
+<tr><td>Trust Badge Static</td><td>0% (0/15)</td><td>0</td><td>15</td><td>$7,383</td><td class='nm'>Confirmed Move Callout - Offer Lead 4 - CIDEMA3Q5N <span class='sub'>($2,189)</span></td></tr>
+<tr><td>RedditLight</td><td>0% (0/15)</td><td>0</td><td>15</td><td>$17k</td><td class='nm'>Cost Shock Revelation - Problem-Solution Lead 13 - CID6TYCDO6 <span class='sub'>($2,835)</span></td></tr>
+<tr><td>Apple Notes</td><td>0% (0/12)</td><td>0</td><td>12</td><td>$1,458</td><td class='nm'>Fee Exposure - Secret Lead 2 - CID142V24I <span class='sub'>($393)</span></td></tr>
+<tr><td>Bold Visual</td><td>0% (0/10)</td><td>0</td><td>10</td><td>$4,981</td><td class='nm'>Done For You - Promise Lead 6 - CIDSFJO2NL <span class='sub'>($1,513)</span></td></tr>
+<tr><td>Map/Route Visual</td><td>0% (0/10)</td><td>0</td><td>10</td><td>$14k</td><td class='nm'>Cold-State To Sun Belt Journey - Promise Lead 10 - CIDGGOQUOU <span class='sub'>($6,405)</span></td></tr>
+<tr><td>Headline graphic</td><td>0% (0/10)</td><td>0</td><td>10</td><td>$9,990</td><td class='nm'>Stop Overpaying - Proclamation Lead 2 - CIDMDJ0PLE <span class='sub'>($2,659)</span></td></tr>
+<tr><td>Lifestyle Photo</td><td>0% (0/9)</td><td>0</td><td>9</td><td>$1,196</td><td class='nm'>Stress-Free Exists - Proclamation Lead 2 - CIDKTY2Z1O <span class='sub'>($341)</span></td></tr>
+<tr><td>Before-After Split</td><td>0% (0/9)</td><td>0</td><td>9</td><td>$784</td><td class='nm'>Emotional Contrast - Problem-Solution Lead 4 - CID7JH61ZX <span class='sub'>($295)</span></td></tr>
+<tr><td class='old'>Old tracker (not tagged)</td><td>5% (6/118)</td><td>0</td><td>118</td><td>$1,367k</td><td class='nm'>SC11_FlyingFunny | SV8_Gmail <span class='sub'>($343k)</span></td></tr>
+<tr><td>Other (fewer than 8 ads each)</td><td>1% (2/136)</td><td>1</td><td>136</td><td>$430k</td><td class='nm'>Moving Cost Clarity - Offer Lead 7 - CIDSP6IW8O <span class='sub'>($147k)</span></td></tr>
+</table></div>
+<h3>NSR</h3><div class='tw'><table><tr><th>Static: image style</th><th>Win rate (all-time)</th><th>Current winners</th><th>Graded ads</th><th>Spend</th><th>Top spender</th></tr>
+<tr><td>GmailLight</td><td>7% (2/29)</td><td>2</td><td>29</td><td>$92k</td><td class='nm'>NSR - DIY Cost Shock Revelation - Story Lead 2 - CIDWVWOQSV <span class='sub'>($45k)</span></td></tr>
+<tr><td>Product/Service Checklist</td><td>6% (1/16)</td><td>0</td><td>16</td><td>$62k</td><td class='nm'>NSR - Done-For-You Retirement Move Stack - Promise Lead 4 - CIDD004NJM <span class='sub'>($44k, won)</span></td></tr>
+<tr><td>TwitterLight</td><td>0% (0/11)</td><td>0</td><td>11</td><td>$11k</td><td class='nm'>NSR - Similar Customer Proof - Offer Lead 14 - CID5212FW0 <span class='sub'>($4,150)</span></td></tr>
+<tr><td>GmailDark</td><td>0% (0/11)</td><td>0</td><td>11</td><td>$20k</td><td class='nm'>NSR - Stranger Danger Validation - Problem-Solution Lead 7 - CIDO3F1V… <span class='sub'>($5,859)</span></td></tr>
+<tr><td>TwitterDark</td><td>0% (0/10)</td><td>0</td><td>10</td><td>$8,594</td><td class='nm'>NSR - Similar Customer Proof - Offer Lead 19 - CIDKJTHP27 <span class='sub'>($4,191)</span></td></tr>
+<tr><td>Other (fewer than 8 ads each)</td><td>0% (0/36)</td><td>0</td><td>36</td><td>$46k</td><td class='nm'>NSR - City Prices - Offer Lead - CID0FC4YSG <span class='sub'>($10k)</span></td></tr>
+</table></div>
+<h3>Case Source</h3><div class='tw'><table><tr><th>Static: image style</th><th>Win rate (all-time)</th><th>Current winners</th><th>Graded ads</th><th>Spend</th><th>Top spender</th></tr>
+<tr><td>TwitterLightClientPOV</td><td>21% (6/28)</td><td>3</td><td>28</td><td>$205k</td><td class='nm'>Premature Settlement Risk - Story Lead 13 - CIDOGR5RWY <span class='sub'>($88k, won)</span></td></tr>
+<tr><td>Before/After Split</td><td>18% (10/57)</td><td>3</td><td>57</td><td>$322k</td><td class='nm'>Payout Disparity - Offer Lead 3 - CIDV1DGFUC <span class='sub'>($116k, won)</span></td></tr>
+<tr><td>Simple Checklist</td><td>16% (5/31)</td><td>2</td><td>31</td><td>$81k</td><td class='nm'>Qualification Check - Offer Lead 1 - CIDBIMCZKE <span class='sub'>($31k, won)</span></td></tr>
+<tr><td>Comparison Image</td><td>12% (1/8)</td><td>1</td><td>8</td><td>$16k</td><td class='nm'>Us vs Them - Proclamation Lead - CIDAZTHQ97 <span class='sub'>($9,729, won)</span></td></tr>
+<tr><td>RedditLightClientPOV</td><td>11% (4/36)</td><td>2</td><td>36</td><td>$137k</td><td class='nm'>Premature Settlement Risk - Secret Lead 1 - CID8S5N1KV <span class='sub'>($58k, won)</span></td></tr>
+<tr><td>GmailDarkClientPOV</td><td>11% (1/9)</td><td>0</td><td>9</td><td>$12k</td><td class='nm'>Premature Settlement Risk - Story Lead 8 - CIDEOWOCZQ <span class='sub'>($5,632)</span></td></tr>
+<tr><td>TwitterDarkClientPOV</td><td>7% (2/29)</td><td>0</td><td>29</td><td>$166k</td><td class='nm'>Premature Settlement Risk - Story Lead 14 - CIDFLCNRNJ <span class='sub'>($86k, won)</span></td></tr>
+<tr><td>Bold Text Card</td><td>3% (1/30)</td><td>1</td><td>30</td><td>$39k</td><td class='nm'>Payout Disparity - Story Lead 2 - CIDZBUN3BL <span class='sub'>($7,476)</span></td></tr>
+<tr><td>RedditDarkClientPOV</td><td>0% (0/34)</td><td>0</td><td>34</td><td>$7,806</td><td class='nm'>Premature Settlement Risk - Problem-Solution Lead 4 - CIDQ5VQD8R <span class='sub'>($1,480)</span></td></tr>
+<tr><td>Headline + image</td><td>0% (0/15)</td><td>0</td><td>15</td><td>$26k</td><td class='nm'>Settlement Tug War - Problem-Solution Lead - CIDUSB61L3 <span class='sub'>($14k)</span></td></tr>
+<tr><td>Breaking News Image</td><td>0% (0/10)</td><td>0</td><td>10</td><td>$4,152</td><td class='nm'>News Eligibility Alert - Offer Lead 2 - CIDR9HD06B <span class='sub'>($2,059)</span></td></tr>
+<tr><td>GmailLightClientPOV</td><td>0% (0/9)</td><td>0</td><td>9</td><td>$2,494</td><td class='nm'>Premature Settlement Risk - Story Lead 3 - CID22SOXSZ <span class='sub'>($1,068)</span></td></tr>
+<tr><td>Other (fewer than 8 ads each)</td><td>16% (6/38)</td><td>1</td><td>38</td><td>$70k</td><td class='nm'>Recent Accident Window - Secret Lead - CID2VYA7MD <span class='sub'>($8,512)</span></td></tr>
+</table></div>
+<h3>TCC</h3><div class='tw'><table><tr><th>Static: image style</th><th>Win rate (all-time)</th><th>Current winners</th><th>Graded ads</th><th>Spend</th><th>Top spender</th></tr>
+<tr><td class='old'>Old tracker (not tagged)</td><td>6% (4/65)</td><td>3</td><td>65</td><td>$405k</td><td class='nm'>SC54_WereHiringSystem | SV18_BlackText <span class='sub'>($203k, won)</span></td></tr>
+<tr><td>Other (fewer than 8 ads each)</td><td>7% (1/15)</td><td>0</td><td>15</td><td>$101k</td><td class='nm'>BlackText - Rejection &amp; Revelation - Construction - Offer Lead 4 - CI… <span class='sub'>($61k, won)</span></td></tr>
+</table></div>
+<h3>Dan Henry</h3><div class='tw'><table><tr><th>Static: image style</th><th>Win rate (all-time)</th><th>Current winners</th><th>Graded ads</th><th>Spend</th><th>Top spender</th></tr>
+<tr><td>Bold Text Card</td><td>13% (2/15)</td><td>0</td><td>15</td><td>$38k</td><td class='nm'>MDW - Webinar Diagnosis - Proclamation Lead - CIDEIHX31G <span class='sub'>($34k, won)</span></td></tr>
+<tr><td>Other (fewer than 8 ads each)</td><td>20% (1/5)</td><td>0</td><td>5</td><td>$20k</td><td class='nm'>MDW - Script Transformation - Problem-Solution Lead - CIDKVZ6409 <span class='sub'>($12k)</span></td></tr>
+</table></div>
+<h3>BRV</h3><div class='tw'><table><tr><th>Static: image style</th><th>Win rate (all-time)</th><th>Current winners</th><th>Graded ads</th><th>Spend</th><th>Top spender</th></tr>
+<tr><td>Headline + Image</td><td>0% (0/12)</td><td>0</td><td>12</td><td>$4,861</td><td class='nm'>DFY Business - Problem-Solution Lead - CID6S9ZKI7 <span class='sub'>($759)</span></td></tr>
+</table></div>
+<h2>Video: style</h2>
+<h3>VAM</h3><div class='tw'><table><tr><th>Video: style</th><th>Win rate (all-time)</th><th>Current winners</th><th>Graded ads</th><th>Spend</th><th>Top spender</th></tr>
+<tr><td>Multi quote animation</td><td>30% (3/10)</td><td>0</td><td>10</td><td>$52k</td><td class='nm'>Moving Cost Clarity - Offer Lead 5 - CIDR1PFKF9 <span class='sub'>($28k, won)</span></td></tr>
+<tr><td>AI UGC Greenscreen</td><td>20% (2/10)</td><td>1</td><td>10</td><td>$31k</td><td class='nm'>Twitter Price Contrast - Proclamation Lead - CIDU44PXFJ <span class='sub'>($12k, won)</span></td></tr>
+<tr><td>POV B-Roll TikTok</td><td>13% (2/15)</td><td>0</td><td>15</td><td>$63k</td><td class='nm'>POV Moving Day Reveal - Problem-Solution Lead 2 - CIDENVHCRP <span class='sub'>($24k, won)</span></td></tr>
+<tr><td>UGC AI</td><td>10% (11/115)</td><td>4</td><td>115</td><td>$383k</td><td class='nm'>Done For You - Problem-Solution Lead 5 - CID2V10TCW <span class='sub'>($72k, won)</span></td></tr>
+<tr><td>UGC</td><td>8% (11/130)</td><td>1</td><td>130</td><td>$1,663k</td><td class='nm'>Price Assumption Reframe - Promise Lead - CIDV9JSGZU <span class='sub'>($760k, won)</span></td></tr>
+<tr><td>Truck Footage-VO</td><td>4% (2/45)</td><td>0</td><td>45</td><td>$131k</td><td class='nm'>Real Trucks Real Prices - Problem-Solution Lead 3 - CID6Y68VWH <span class='sub'>($48k, won)</span></td></tr>
+<tr><td>Motion Graphic</td><td>0% (0/20)</td><td>0</td><td>20</td><td>$24k</td><td class='nm'>Show Features - Offer Lead - CIDP9EBZNH <span class='sub'>($5,149)</span></td></tr>
+<tr><td>UGC talking head</td><td>0% (0/18)</td><td>0</td><td>18</td><td>$43k</td><td class='nm'>CALC - Summer Sale - Offer Lead 2 - CIDFD4VKFZ <span class='sub'>($6,431)</span></td></tr>
+<tr><td>Meme Green Screen</td><td>0% (0/10)</td><td>0</td><td>10</td><td>$5,750</td><td class='nm'>The Without vs. With Contrast - Story Lead 3 - CIDXRQTLDB <span class='sub'>($2,096)</span></td></tr>
+<tr><td>Avatar Dancing</td><td>0% (0/10)</td><td>0</td><td>10</td><td>$20k</td><td class='nm'>Best Quote Celebration - Pattern Interrupt 7 - CID5QYGLPQ <span class='sub'>($6,760)</span></td></tr>
+<tr><td class='old'>Old tracker (not tagged)</td><td>3% (1/29)</td><td>0</td><td>29</td><td>$25k</td><td class='nm'>VHK24_IThoughtMyMove | VB7_LessThanWhatIBudgeted | VV12_UGC_SavingsAn… <span class='sub'>($8,914, won)</span></td></tr>
+<tr><td>Other (fewer than 8 ads each)</td><td>9% (7/80)</td><td>1</td><td>80</td><td>$349k</td><td class='nm'>Real Trucks Real Prices - Problem-Solution Body 8 - CIDSLVVCE3 <span class='sub'>($114k, won)</span></td></tr>
+</table></div>
+<h3>NSR</h3><div class='tw'><table><tr><th>Video: style</th><th>Win rate (all-time)</th><th>Current winners</th><th>Graded ads</th><th>Spend</th><th>Top spender</th></tr>
+<tr><td>UGC AI</td><td>0% (0/27)</td><td>0</td><td>27</td><td>$24k</td><td class='nm'>NSR - Done For You - Problem-Solution Lead 5 - CIDJ1ZR5GA <span class='sub'>($7,536)</span></td></tr>
+<tr><td>UGC</td><td>0% (0/21)</td><td>0</td><td>21</td><td>$18k</td><td class='nm'>NSR - Price Assumption Reframe - Promise Lead 2 - CIDI7M1SDJ <span class='sub'>($6,888)</span></td></tr>
+<tr><td>Text-on-Screen</td><td>0% (0/10)</td><td>0</td><td>10</td><td>$8,094</td><td class='nm'>NSR - The Checklist - Problem-Solution Lead - CIDCDEPUBL <span class='sub'>($2,287)</span></td></tr>
+<tr><td>POV B-roll TikTok</td><td>0% (0/10)</td><td>0</td><td>10</td><td>$7,860</td><td class='nm'>NSR - POV Moving Day Reveal - Promise Lead 10 - CIDTNKIXCP <span class='sub'>($2,613)</span></td></tr>
+<tr><td>Other (fewer than 8 ads each)</td><td>3% (1/35)</td><td>0</td><td>35</td><td>$50k</td><td class='nm'>NSR - Real Trucks Real Prices - Problem-Solution Body 1 - CIDT3AQ3ED <span class='sub'>($27k, won)</span></td></tr>
+</table></div>
+<h3>Case Source</h3><div class='tw'><table><tr><th>Video: style</th><th>Win rate (all-time)</th><th>Current winners</th><th>Graded ads</th><th>Spend</th><th>Top spender</th></tr>
+<tr><td>B-roll Heavy</td><td>40% (4/10)</td><td>0</td><td>10</td><td>$65k</td><td class='nm'>Premature Settlement Risk - Offer Lead - CIDFEI81IC <span class='sub'>($27k, won)</span></td></tr>
+<tr><td>Avatar Dancing</td><td>18% (2/11)</td><td>1</td><td>11</td><td>$578k</td><td class='nm'>Premature Settlement Risk - Promise Lead 6 - CID30CI81M <span class='sub'>($547k, won)</span></td></tr>
+<tr><td>UGC AI</td><td>17% (19/110)</td><td>4</td><td>110</td><td>$882k</td><td class='nm'>Premature Settlement Risk - Story Lead 15 - CID0ZVVMP8 <span class='sub'>($193k, won)</span></td></tr>
+<tr><td>UGC</td><td>13% (7/52)</td><td>2</td><td>52</td><td>$346k</td><td class='nm'>Premature Settlement Risk - Story Lead 41 - CIDG9BTN3A <span class='sub'>($177k, won)</span></td></tr>
+<tr><td>Motion Graphic</td><td>0% (0/15)</td><td>0</td><td>15</td><td>$15k</td><td class='nm'>Get Full Coverage - Problem-Solution Lead 2 - CID6TSKQ3Q <span class='sub'>($3,125)</span></td></tr>
+<tr><td>Other (fewer than 8 ads each)</td><td>14% (5/36)</td><td>2</td><td>36</td><td>$129k</td><td class='nm'>Premature Settlement Risk - Proclamation Lead 6 - CIDY233BVD <span class='sub'>($39k)</span></td></tr>
+</table></div>
+<h3>TCC</h3><div class='tw'><table><tr><th>Video: style</th><th>Win rate (all-time)</th><th>Current winners</th><th>Graded ads</th><th>Spend</th><th>Top spender</th></tr>
+<tr><td>Animated</td><td>33% (5/15)</td><td>1</td><td>15</td><td>$187k</td><td class='nm'>Animated - Try to Hire In House - Concrete Fail - 56 - Problem-Soluti… <span class='sub'>($60k, won)</span></td></tr>
+<tr><td>Spokesperson-F</td><td>9% (2/22)</td><td>1</td><td>22</td><td>$38k</td><td class='nm'>Spokesperson-F - 3RW-recycled - time&amp;money2026 - Problem-Solution Lea… <span class='sub'>($7,823)</span></td></tr>
+<tr><td class='old'>Old tracker (not tagged)</td><td>14% (14/103)</td><td>10</td><td>103</td><td>$847k</td><td class='nm'>VHK20_DidntYouSay | VB9_ControlReviewCandidates | VV8_EasierThanThat <span class='sub'>($120k)</span></td></tr>
+<tr><td>Other (fewer than 8 ads each)</td><td>27% (3/11)</td><td>0</td><td>11</td><td>$104k</td><td class='nm'>Spokesperson - WaterBomb - Foreman Walked - 73 - Problem-Solution Bod… <span class='sub'>($26k, won)</span></td></tr>
+</table></div>
+<h3>Dan Henry</h3><div class='tw'><table><tr><th>Video: style</th><th>Win rate (all-time)</th><th>Current winners</th><th>Graded ads</th><th>Spend</th><th>Top spender</th></tr>
+<tr><td>Marina Talking Head</td><td>36% (4/11)</td><td>0</td><td>11</td><td>$86k</td><td class='nm'>MDW - Webinar Diagnosis - Promise Lead - CID1IJPZRT <span class='sub'>($68k, won)</span></td></tr>
+<tr><td>Studio Talking Head</td><td>4% (1/23)</td><td>0</td><td>23</td><td>$967</td><td class='nm'>PB - Million Follower Sales Flop Comparison - Secret Lead 5 - CIDPZ43… <span class='sub'>($255)</span></td></tr>
+<tr><td>Other (fewer than 8 ads each)</td><td>0% (0/5)</td><td>0</td><td>5</td><td>$903</td><td class='nm'>PB - Million Follower Sales Flop Comparison - Promise Lead 4 - CIDIQX… <span class='sub'>($330)</span></td></tr>
+</table></div>
+<h3>BRV</h3><div class='tw'><table><tr><th>Video: style</th><th>Win rate (all-time)</th><th>Current winners</th><th>Graded ads</th><th>Spend</th><th>Top spender</th></tr>
+<tr><td>Talking head</td><td>0% (0/9)</td><td>0</td><td>9</td><td>$9,720</td><td class='nm'>Become a Plumber - Proclamation Lead 3 - CIDHQF3YF2 <span class='sub'>($3,255)</span></td></tr>
+</table></div>
+<h2>Video: talent</h2>
+<h3>VAM</h3><div class='tw'><table><tr><th>Video: talent</th><th>Win rate (all-time)</th><th>Current winners</th><th>Graded ads</th><th>Spend</th><th>Top spender</th></tr>
+<tr><td>AI-Women-Blond-American</td><td>27% (4/15)</td><td>0</td><td>15</td><td>$144k</td><td class='nm'>Done For You - Problem-Solution Lead 7 - CIDDG30R3P <span class='sub'>($54k, won)</span></td></tr>
+<tr><td>N/A</td><td>14% (9/63)</td><td>0</td><td>63</td><td>$363k</td><td class='nm'>Real Trucks Real Prices - Problem-Solution Body 8 - CIDSLVVCE3 <span class='sub'>($114k, won)</span></td></tr>
+<tr><td>Asian Woman</td><td>9% (1/11)</td><td>0</td><td>11</td><td>$6,838</td><td class='nm'>Overwhelmed Buyer Decision Story - Story Lead - CIDPYEPR45 <span class='sub'>($3,227, won)</span></td></tr>
+<tr><td>Kylie - Billo</td><td>8% (7/90)</td><td>0</td><td>90</td><td>$1,516k</td><td class='nm'>Price Assumption Reframe - Promise Lead - CIDV9JSGZU <span class='sub'>($760k, won)</span></td></tr>
+<tr><td>(blank)</td><td>5% (11/230)</td><td>4</td><td>230</td><td>$499k</td><td class='nm'>POV Moving Day Reveal - Problem-Solution Lead 2 - CIDENVHCRP <span class='sub'>($24k, won)</span></td></tr>
+<tr><td class='old'>Old tracker (not tagged)</td><td>3% (1/29)</td><td>0</td><td>29</td><td>$25k</td><td class='nm'>VHK24_IThoughtMyMove | VB7_LessThanWhatIBudgeted | VV12_UGC_SavingsAn… <span class='sub'>($8,914, won)</span></td></tr>
+<tr><td>Other (fewer than 8 ads each)</td><td>11% (6/54)</td><td>3</td><td>54</td><td>$235k</td><td class='nm'>Done For You - Problem-Solution Lead 5 - CID2V10TCW <span class='sub'>($72k, won)</span></td></tr>
+</table></div>
+<h3>NSR</h3><div class='tw'><table><tr><th>Video: talent</th><th>Win rate (all-time)</th><th>Current winners</th><th>Graded ads</th><th>Spend</th><th>Top spender</th></tr>
+<tr><td>(blank)</td><td>0% (0/75)</td><td>0</td><td>75</td><td>$44k</td><td class='nm'>NSR - POV Moving Day Reveal - Promise Lead 10 - CIDTNKIXCP <span class='sub'>($2,613)</span></td></tr>
+<tr><td>Kylie - Billo</td><td>0% (0/11)</td><td>0</td><td>11</td><td>$5,392</td><td class='nm'>NSR - Three Bedroom Cross-Country Callout - Offer Lead 3 - CIDG6M23FF <span class='sub'>($1,182)</span></td></tr>
+<tr><td>Belle B -Billo</td><td>0% (0/10)</td><td>0</td><td>10</td><td>$15k</td><td class='nm'>NSR - Price Assumption Reframe - Promise Lead 2 - CIDI7M1SDJ <span class='sub'>($6,888)</span></td></tr>
+<tr><td>Other (fewer than 8 ads each)</td><td>14% (1/7)</td><td>0</td><td>7</td><td>$44k</td><td class='nm'>NSR - Real Trucks Real Prices - Problem-Solution Body 1 - CIDT3AQ3ED <span class='sub'>($27k, won)</span></td></tr>
+</table></div>
+<h3>Case Source</h3><div class='tw'><table><tr><th>Video: talent</th><th>Win rate (all-time)</th><th>Current winners</th><th>Graded ads</th><th>Spend</th><th>Top spender</th></tr>
+<tr><td>AI-Woman</td><td>30% (7/23)</td><td>1</td><td>23</td><td>$86k</td><td class='nm'>Skipped Critical Step - Pattern Interrupt 3 - CIDQ1NRLA0 <span class='sub'>($20k, won)</span></td></tr>
+<tr><td>Dana - Billo</td><td>22% (4/18)</td><td>1</td><td>18</td><td>$248k</td><td class='nm'>Premature Settlement Risk - Story Lead 41 - CIDG9BTN3A <span class='sub'>($177k, won)</span></td></tr>
+<tr><td>(blank)</td><td>14% (23/159)</td><td>6</td><td>159</td><td>$1,582k</td><td class='nm'>Premature Settlement Risk - Promise Lead 6 - CID30CI81M <span class='sub'>($547k, won)</span></td></tr>
+<tr><td>Kylie - Billo</td><td>11% (2/19)</td><td>1</td><td>19</td><td>$72k</td><td class='nm'>Hidden Value - Proclamation Lead 7 - CID041FFIL <span class='sub'>($31k, won)</span></td></tr>
+<tr><td>Other (fewer than 8 ads each)</td><td>7% (1/15)</td><td>0</td><td>15</td><td>$26k</td><td class='nm'>Premature Settlement Risk - Problem-Solution Lead 7 - CIDG3FALSJ <span class='sub'>($4,258)</span></td></tr>
+</table></div>
+<h3>TCC</h3><div class='tw'><table><tr><th>Video: talent</th><th>Win rate (all-time)</th><th>Current winners</th><th>Graded ads</th><th>Spend</th><th>Top spender</th></tr>
+<tr><td>N/A</td><td>21% (10/47)</td><td>2</td><td>47</td><td>$321k</td><td class='nm'>Animated - Try to Hire In House - Concrete Fail - 56 - Problem-Soluti… <span class='sub'>($60k, won)</span></td></tr>
+<tr><td class='old'>Old tracker (not tagged)</td><td>14% (14/103)</td><td>10</td><td>103</td><td>$847k</td><td class='nm'>VHK20_DidntYouSay | VB9_ControlReviewCandidates | VV8_EasierThanThat <span class='sub'>($120k)</span></td></tr>
+<tr><td>Other (fewer than 8 ads each)</td><td>0/1</td><td>0</td><td>1</td><td>$7,823</td><td class='nm'>Spokesperson-F - 3RW-recycled - time&amp;money2026 - Problem-Solution Lea… <span class='sub'>($7,823)</span></td></tr>
+</table></div>
+<h3>Dan Henry</h3><div class='tw'><table><tr><th>Video: talent</th><th>Win rate (all-time)</th><th>Current winners</th><th>Graded ads</th><th>Spend</th><th>Top spender</th></tr>
+<tr><td>Dan Henry</td><td>13% (5/39)</td><td>0</td><td>39</td><td>$88k</td><td class='nm'>MDW - Webinar Diagnosis - Promise Lead - CID1IJPZRT <span class='sub'>($68k, won)</span></td></tr>
+</table></div>
+<h3>BRV</h3><div class='tw'><table><tr><th>Video: talent</th><th>Win rate (all-time)</th><th>Current winners</th><th>Graded ads</th><th>Spend</th><th>Top spender</th></tr>
+<tr><td>(blank)</td><td>0% (0/9)</td><td>0</td><td>9</td><td>$9,720</td><td class='nm'>Become a Plumber - Proclamation Lead 3 - CIDHQF3YF2 <span class='sub'>($3,255)</span></td></tr>
+</table></div>
+<h2>Video: length</h2>
+<h3>VAM</h3><div class='tw'><table><tr><th>Video: length</th><th>Win rate (all-time)</th><th>Current winners</th><th>Graded ads</th><th>Spend</th><th>Top spender</th></tr>
+<tr><td>42</td><td>33% (5/15)</td><td>1</td><td>15</td><td>$214k</td><td class='nm'>Done For You - Problem-Solution Lead 5 - CID2V10TCW <span class='sub'>($72k, won)</span></td></tr>
+<tr><td>(blank)</td><td>7% (32/443)</td><td>6</td><td>443</td><td>$2,524k</td><td class='nm'>Price Assumption Reframe - Promise Lead - CIDV9JSGZU <span class='sub'>($760k, won)</span></td></tr>
+<tr><td class='old'>Old tracker (not tagged)</td><td>3% (1/29)</td><td>0</td><td>29</td><td>$25k</td><td class='nm'>VHK24_IThoughtMyMove | VB7_LessThanWhatIBudgeted | VV12_UGC_SavingsAn… <span class='sub'>($8,914, won)</span></td></tr>
+<tr><td>Other (fewer than 8 ads each)</td><td>20% (1/5)</td><td>0</td><td>5</td><td>$26k</td><td class='nm'>Real Trucks Real Prices - Problem-Solution Body 4 - CID36IK0BH <span class='sub'>($23k, won)</span></td></tr>
+</table></div>
+<h3>NSR</h3><div class='tw'><table><tr><th>Video: length</th><th>Win rate (all-time)</th><th>Current winners</th><th>Graded ads</th><th>Spend</th><th>Top spender</th></tr>
+<tr><td>(blank)</td><td>1% (1/103)</td><td>0</td><td>103</td><td>$109k</td><td class='nm'>NSR - Real Trucks Real Prices - Problem-Solution Body 1 - CIDT3AQ3ED <span class='sub'>($27k, won)</span></td></tr>
+</table></div>
+<h3>Case Source</h3><div class='tw'><table><tr><th>Video: length</th><th>Win rate (all-time)</th><th>Current winners</th><th>Graded ads</th><th>Spend</th><th>Top spender</th></tr>
+<tr><td>(blank)</td><td>15% (35/229)</td><td>9</td><td>229</td><td>$2,000k</td><td class='nm'>Premature Settlement Risk - Promise Lead 6 - CID30CI81M <span class='sub'>($547k, won)</span></td></tr>
+<tr><td>Other (fewer than 8 ads each)</td><td>40% (2/5)</td><td>0</td><td>5</td><td>$14k</td><td class='nm'>Hidden Value - Proclamation Lead 4 - CID3DBUYMA <span class='sub'>($5,064, won)</span></td></tr>
+</table></div>
+<h3>TCC</h3><div class='tw'><table><tr><th>Video: length</th><th>Win rate (all-time)</th><th>Current winners</th><th>Graded ads</th><th>Spend</th><th>Top spender</th></tr>
+<tr><td class='old'>Old tracker (not tagged)</td><td>14% (14/103)</td><td>10</td><td>103</td><td>$847k</td><td class='nm'>VHK20_DidntYouSay | VB9_ControlReviewCandidates | VV8_EasierThanThat <span class='sub'>($120k)</span></td></tr>
+<tr><td>Other (fewer than 8 ads each)</td><td>21% (10/48)</td><td>2</td><td>48</td><td>$329k</td><td class='nm'>Animated - Try to Hire In House - Concrete Fail - 56 - Problem-Soluti… <span class='sub'>($60k, won)</span></td></tr>
+</table></div>
+<h3>Dan Henry</h3><div class='tw'><table><tr><th>Video: length</th><th>Win rate (all-time)</th><th>Current winners</th><th>Graded ads</th><th>Spend</th><th>Top spender</th></tr>
+<tr><td>Other (fewer than 8 ads each)</td><td>13% (5/39)</td><td>0</td><td>39</td><td>$88k</td><td class='nm'>MDW - Webinar Diagnosis - Promise Lead - CID1IJPZRT <span class='sub'>($68k, won)</span></td></tr>
+</table></div>
+<h3>BRV</h3><div class='tw'><table><tr><th>Video: length</th><th>Win rate (all-time)</th><th>Current winners</th><th>Graded ads</th><th>Spend</th><th>Top spender</th></tr>
+<tr><td>(blank)</td><td>0% (0/9)</td><td>0</td><td>9</td><td>$9,720</td><td class='nm'>Become a Plumber - Proclamation Lead 3 - CIDHQF3YF2 <span class='sub'>($3,255)</span></td></tr>
+</table></div>
+<h2>Copywriter</h2>
+<h3>VAM</h3><div class='tw'><table><tr><th>Copywriter</th><th>Win rate (all-time)</th><th>Current winners</th><th>Graded ads</th><th>Spend</th><th>Top spender</th></tr>
+<tr><td>Nate</td><td>9% (56/639)</td><td>9</td><td>639</td><td>$3,502k</td><td class='nm'>Price Assumption Reframe - Promise Lead - CIDV9JSGZU <span class='sub'>($760k, won)</span></td></tr>
+<tr><td>Nicolas Anguiano Videos</td><td>6% (6/109)</td><td>2</td><td>109</td><td>$393k</td><td class='nm'>CALC - Cheaper After Summer - Problem-Solution Lead - CIDZ9ZZPOC <span class='sub'>($59k)</span></td></tr>
+<tr><td>Nate Weeks  Videos</td><td>5% (4/80)</td><td>1</td><td>80</td><td>$257k</td><td class='nm'>Price Assumption Reframe - Promise Lead 10 - CID6IA08GU <span class='sub'>($82k, won)</span></td></tr>
+<tr><td>Nicolas Videos</td><td>5% (1/20)</td><td>0</td><td>20</td><td>$58k</td><td class='nm'>Contrasting Options - Story Lead 4 - CIDRS2GLZA <span class='sub'>($11k, won)</span></td></tr>
+<tr><td>Andrew</td><td>4% (1/25)</td><td>0</td><td>25</td><td>$110k</td><td class='nm'>VAM Crew Members - Organic Looking 1 - CIDQG45LVZ <span class='sub'>($38k, won)</span></td></tr>
+<tr><td>Nicolas Anguiano</td><td>1% (1/72)</td><td>1</td><td>72</td><td>$91k</td><td class='nm'>Organic shoutout - Offer Lead - CIDGUKSBWI <span class='sub'>($8,356)</span></td></tr>
+<tr><td>Nate Weeks</td><td>0% (0/105)</td><td>0</td><td>105</td><td>$128k</td><td class='nm'>Move Cost Clarity - Offer Lead 6 - CIDN2QQSV5 <span class='sub'>($7,773)</span></td></tr>
+<tr><td>Nicolas</td><td>0% (0/15)</td><td>0</td><td>15</td><td>$33k</td><td class='nm'>Low Price - Offer Lead - CIDC26T9CO <span class='sub'>($7,017)</span></td></tr>
+<tr><td class='old'>Old tracker (not tagged)</td><td>5% (7/147)</td><td>0</td><td>147</td><td>$1,392k</td><td class='nm'>SC11_FlyingFunny | SV8_Gmail <span class='sub'>($343k)</span></td></tr>
+<tr><td>Other (fewer than 8 ads each)</td><td>7% (1/15)</td><td>0</td><td>15</td><td>$29k</td><td class='nm'>Social Media Price Contrast - Story Lead 5 - CIDILKKKJQ <span class='sub'>($6,685, won)</span></td></tr>
+</table></div>
+<h3>NSR</h3><div class='tw'><table><tr><th>Copywriter</th><th>Win rate (all-time)</th><th>Current winners</th><th>Graded ads</th><th>Spend</th><th>Top spender</th></tr>
+<tr><td>Nate Weeks</td><td>3% (2/60)</td><td>1</td><td>60</td><td>$109k</td><td class='nm'>NSR - Done-For-You Retirement Move Stack - Promise Lead 4 - CIDD004NJM <span class='sub'>($44k, won)</span></td></tr>
+<tr><td>Nate</td><td>2% (2/81)</td><td>1</td><td>81</td><td>$179k</td><td class='nm'>NSR - DIY Cost Shock Revelation - Story Lead 2 - CIDWVWOQSV <span class='sub'>($45k)</span></td></tr>
+<tr><td>Nate Weeks  Videos</td><td>0% (0/45)</td><td>0</td><td>45</td><td>$24k</td><td class='nm'>NSR - POV Moving Day Reveal - Promise Lead 10 - CIDTNKIXCP <span class='sub'>($2,613)</span></td></tr>
+<tr><td>Nicolas Anguiano Videos</td><td>0% (0/20)</td><td>0</td><td>20</td><td>$22k</td><td class='nm'>NSR - Price Assumption Reframe - Promise Lead 2 - CIDI7M1SDJ <span class='sub'>($6,888)</span></td></tr>
+<tr><td>Nicolas Anguiano</td><td>0% (0/10)</td><td>0</td><td>10</td><td>$14k</td><td class='nm'>NSR - Hassle free moving - Proclamation Lead 4 - CIDOWB6USU <span class='sub'>($6,110)</span></td></tr>
+</table></div>
+<h3>Case Source</h3><div class='tw'><table><tr><th>Copywriter</th><th>Win rate (all-time)</th><th>Current winners</th><th>Graded ads</th><th>Spend</th><th>Top spender</th></tr>
+<tr><td>(blank)</td><td>30% (3/10)</td><td>1</td><td>10</td><td>$153k</td><td class='nm'>Premature Settlement Risk - Story Lead 13 - CIDOGR5RWY <span class='sub'>($88k, won)</span></td></tr>
+<tr><td>Marcus</td><td>23% (5/22)</td><td>1</td><td>22</td><td>$196k</td><td class='nm'>Premature Settlement Risk - Promise Lead - CIDW3SMPCW <span class='sub'>($74k, won)</span></td></tr>
+<tr><td>Nate Weeks  Videos</td><td>18% (4/22)</td><td>2</td><td>22</td><td>$813k</td><td class='nm'>Premature Settlement Risk - Promise Lead 6 - CID30CI81M <span class='sub'>($547k, won)</span></td></tr>
+<tr><td>Marcus West Videos</td><td>17% (2/12)</td><td>0</td><td>12</td><td>$43k</td><td class='nm'>AI Talking Cars - Secret Lead 1 - CID26F2AH0 <span class='sub'>($19k)</span></td></tr>
+<tr><td>Nate</td><td>16% (50/317)</td><td>13</td><td>317</td><td>$1,508k</td><td class='nm'>Premature Settlement Risk - Story Lead 15 - CID0ZVVMP8 <span class='sub'>($193k, won)</span></td></tr>
+<tr><td>Nicolas Anguiano Videos</td><td>13% (4/31)</td><td>2</td><td>31</td><td>$53k</td><td class='nm'>Premature Settlement Risk - Story Lead 50 - CID7E0LV21 <span class='sub'>($11k)</span></td></tr>
+<tr><td>Nicolas Anguiano</td><td>4% (2/45)</td><td>1</td><td>45</td><td>$73k</td><td class='nm'>Settlement Tug War - Problem-Solution Lead - CIDUSB61L3 <span class='sub'>($14k)</span></td></tr>
+<tr><td>Nate Weeks</td><td>3% (3/108)</td><td>2</td><td>108</td><td>$261k</td><td class='nm'>Premature Settlement Risk - Story Lead 14 - CIDFLCNRNJ <span class='sub'>($86k, won)</span></td></tr>
+<tr><td>Other (fewer than 8 ads each)</td><td>0/1</td><td>0</td><td>1</td><td>$3,186</td><td class='nm'>Breaking News - Story Body - CID5MFL5H6 <span class='sub'>($3,186)</span></td></tr>
+</table></div>
+<h3>TCC</h3><div class='tw'><table><tr><th>Copywriter</th><th>Win rate (all-time)</th><th>Current winners</th><th>Graded ads</th><th>Spend</th><th>Top spender</th></tr>
+<tr><td>TCC</td><td>21% (10/48)</td><td>2</td><td>48</td><td>$329k</td><td class='nm'>Animated - Try to Hire In House - Concrete Fail - 56 - Problem-Soluti… <span class='sub'>($60k, won)</span></td></tr>
+<tr><td>Nate</td><td>0% (0/10)</td><td>0</td><td>10</td><td>$1,115</td><td class='nm'>Job Cost Report - MarketSnapshot - This Data Fills - Offer Lead 3 - C… <span class='sub'>($436)</span></td></tr>
+<tr><td class='old'>Old tracker (not tagged)</td><td>11% (18/168)</td><td>13</td><td>168</td><td>$1,252k</td><td class='nm'>SC54_WereHiringSystem | SV18_BlackText <span class='sub'>($203k, won)</span></td></tr>
+<tr><td>Other (fewer than 8 ads each)</td><td>20% (1/5)</td><td>0</td><td>5</td><td>$100k</td><td class='nm'>BlackText - Rejection &amp; Revelation - Construction - Offer Lead 4 - CI… <span class='sub'>($61k, won)</span></td></tr>
+</table></div>
+<h3>Dan Henry</h3><div class='tw'><table><tr><th>Copywriter</th><th>Win rate (all-time)</th><th>Current winners</th><th>Graded ads</th><th>Spend</th><th>Top spender</th></tr>
+<tr><td>Nate Weeks</td><td>12% (7/58)</td><td>0</td><td>58</td><td>$133k</td><td class='nm'>MDW - Webinar Diagnosis - Promise Lead - CID1IJPZRT <span class='sub'>($68k, won)</span></td></tr>
+<tr><td>Other (fewer than 8 ads each)</td><td>1/1</td><td>0</td><td>1</td><td>$12k</td><td class='nm'>MDW - Expert Access Authority - Promise Lead - CIDDUY6U0W <span class='sub'>($12k, won)</span></td></tr>
+</table></div>
+<h3>BRV</h3><div class='tw'><table><tr><th>Copywriter</th><th>Win rate (all-time)</th><th>Current winners</th><th>Graded ads</th><th>Spend</th><th>Top spender</th></tr>
+<tr><td>Nicolas Anguiano</td><td>0% (0/12)</td><td>0</td><td>12</td><td>$4,861</td><td class='nm'>DFY Business - Problem-Solution Lead - CID6S9ZKI7 <span class='sub'>($759)</span></td></tr>
+<tr><td>Nicolas Anguiano Videos</td><td>0% (0/9)</td><td>0</td><td>9</td><td>$9,720</td><td class='nm'>Become a Plumber - Proclamation Lead 3 - CIDHQF3YF2 <span class='sub'>($3,255)</span></td></tr>
+</table></div>
+<h2>Hook name</h2>
+<h3>VAM</h3><div class='tw'><table><tr><th>Hook name</th><th>Win rate (all-time)</th><th>Current winners</th><th>Graded ads</th><th>Spend</th><th>Top spender</th></tr>
+<tr><td>(blank)</td><td>6% (70/1080)</td><td>13</td><td>1080</td><td>$4,601k</td><td class='nm'>Price Assumption Reframe - Promise Lead - CIDV9JSGZU <span class='sub'>($760k, won)</span></td></tr>
+<tr><td class='old'>Old tracker (not tagged)</td><td>5% (7/147)</td><td>0</td><td>147</td><td>$1,392k</td><td class='nm'>SC11_FlyingFunny | SV8_Gmail <span class='sub'>($343k)</span></td></tr>
+</table></div>
+<h3>NSR</h3><div class='tw'><table><tr><th>Hook name</th><th>Win rate (all-time)</th><th>Current winners</th><th>Graded ads</th><th>Spend</th><th>Top spender</th></tr>
+<tr><td>(blank)</td><td>2% (4/216)</td><td>2</td><td>216</td><td>$348k</td><td class='nm'>NSR - DIY Cost Shock Revelation - Story Lead 2 - CIDWVWOQSV <span class='sub'>($45k)</span></td></tr>
+</table></div>
+<h3>Case Source</h3><div class='tw'><table><tr><th>Hook name</th><th>Win rate (all-time)</th><th>Current winners</th><th>Graded ads</th><th>Spend</th><th>Top spender</th></tr>
+<tr><td>(blank)</td><td>13% (73/568)</td><td>22</td><td>568</td><td>$3,103k</td><td class='nm'>Premature Settlement Risk - Promise Lead 6 - CID30CI81M <span class='sub'>($547k, won)</span></td></tr>
+</table></div>
+<h3>TCC</h3><div class='tw'><table><tr><th>Hook name</th><th>Win rate (all-time)</th><th>Current winners</th><th>Graded ads</th><th>Spend</th><th>Top spender</th></tr>
+<tr><td class='old'>Old tracker (not tagged)</td><td>11% (18/168)</td><td>13</td><td>168</td><td>$1,252k</td><td class='nm'>SC54_WereHiringSystem | SV18_BlackText <span class='sub'>($203k, won)</span></td></tr>
+<tr><td>Other (fewer than 8 ads each)</td><td>17% (11/63)</td><td>2</td><td>63</td><td>$430k</td><td class='nm'>BlackText - Rejection &amp; Revelation - Construction - Offer Lead 4 - CI… <span class='sub'>($61k, won)</span></td></tr>
+</table></div>
+<h3>Dan Henry</h3><div class='tw'><table><tr><th>Hook name</th><th>Win rate (all-time)</th><th>Current winners</th><th>Graded ads</th><th>Spend</th><th>Top spender</th></tr>
+<tr><td>(blank)</td><td>14% (8/59)</td><td>0</td><td>59</td><td>$145k</td><td class='nm'>MDW - Webinar Diagnosis - Promise Lead - CID1IJPZRT <span class='sub'>($68k, won)</span></td></tr>
+</table></div>
+<h3>BRV</h3><div class='tw'><table><tr><th>Hook name</th><th>Win rate (all-time)</th><th>Current winners</th><th>Graded ads</th><th>Spend</th><th>Top spender</th></tr>
+<tr><td>(blank)</td><td>0% (0/21)</td><td>0</td><td>21</td><td>$15k</td><td class='nm'>Become a Plumber - Proclamation Lead 3 - CIDHQF3YF2 <span class='sub'>($3,255)</span></td></tr>
+</table></div>
+<h2>Idea names</h2><p>Ideas with 4+ graded ads and at least one win, plus ideas tested 10+ times that never won (new-tracker ads only).</p>
+<h3>VAM</h3>
+<p><b>Winning ideas:</b> VAM Crew Members 20% (1/5); Price Comparison 20% (1/5); Simple Quote Process 20% (1/5); Don’t Blindly Trust Any Mover 20% (1/5); Best Price Moves 20% (1/5); Cross Country Costs Less 20% (1/5); VAM is the best option 20% (1/5); Cross-Country Moves Cost Less Than You Think 18% (6/33); Affordable Moves 15% (6/39); Full Move Savings 15% (3/20); Stress-Free Moving 13% (8/60); DIY Moves Cost More 13% (6/45)</p>
+<p><b>Most tested, never won:</b> Interstate Move Stress (0/33); Emotional Intensity Test (0/20); Now It’s The Best Time To Move (0/20); Moving Stress Is Optional (0/15); Fate Rate Calls Now (0/15); Hidden Fee Profits (0/12); Customer Success (0/10); Save on 3BR (0/10)</p>
+<h3>NSR</h3>
+<p><b>Winning ideas:</b> Cost Transparency 1/4; DIY Moves Cost More 12% (1/8); Can’t Trust Movers 8% (1/12); Your Last Move Should Be Easy 7% (1/15)</p>
+<p><b>Most tested, never won:</b> Full Home Moves Are Different (0/30); Heirlooms Made The Trip (0/15); Stress-Free Moving (0/13); Out Of State Moving Is Stressful (0/12); Full Move Savings (0/11); Irreplacables Survive The Move (0/10); Moving Is Hard (0/10); Don’t Blindly Trust Any Mover (0/10)</p>
+<h3>Case Source</h3>
+<p><b>Winning ideas:</b> You May Qualify 40% (4/10); Don’t Sign Away Thousands 40% (4/10); Rising Injury Costs 33% (2/6); Low First Offer 33% (2/6); Insurance Underpays 24% (6/25); Protect Settlement Value 20% (2/10); Second Opinions Create Leverage 20% (2/10); Same Injury Different Checks 20% (1/5); Don&#x27;t Sign Until You See This 20% (1/5); Accident Victims Don&#x27;t Know Help Is Available 20% (2/10); Free Case Check 19% (3/16); Owed More Than You Know 19% (3/16)</p>
+<p><b>Most tested, never won:</b> Don’t Settle Your Case Too Soon (0/10); Insurance Lowball Offers Cost Victims Thousands (0/10)</p>
+<h3>TCC</h3>
+<p><b>Winning ideas:</b> Better Hiring System 45% (5/11); TCC Is Not A Recruiter 20% (1/5); Hiring Isn&#x27;t Your Job 19% (3/16)</p>
+<p><b>Most tested, never won:</b> Open Roles Cost (0/10); TCC Makes Spring Hiring Easy (0/10)</p>
+<h3>Dan Henry</h3>
+<p><b>Winning ideas:</b> The Script is The Business 40% (6/15); Followers Aren&#x27;t Buyers 2% (1/43)</p>
+</body></html>
