@@ -112,7 +112,7 @@ table.wr.calc th:last-child{background:#123049}
 </style></head>
 <body>
 <header><h1>D1 P4 Pod — Creative Updates</h1>
-<div class="sub">Computed live from the Creative Trackers &amp; Raw Data. Summary &amp; Notes filled in after. · <a href="winrates.html">Win rates dashboard: persona, awareness &amp; format →</a></div></header>
+<div class="sub">Computed live from the Creative Trackers &amp; Raw Data. Summary &amp; Notes filled in after.</div></header>
 <nav class="tabs"><span class="wk-lab">Week</span><button class="wk-nav" id="wkPrev" title="Older week">&#8249;</button><select class="wk-sel" id="wkSel"><option value="0" selected>10/16/26</option><option value="1">10/9/26</option><option value="2">10/2/26</option><option value="3">9/25/26</option><option value="4">9/18/26</option><option value="5">9/11/26</option><option value="6">9/4/26</option><option value="7">8/31/26</option><option value="8">8/21/26</option><option value="9">8/15/26</option><option value="10">8/7/26</option><option value="11">7/31/26</option><option value="12">7/28/26</option><option value="13">7/25/26</option><option value="14">7/17/26</option><option value="15">7/10/26</option><option value="16">7/3/26</option><option value="17">6/29/26</option><option value="18">6/22/26</option><option value="19">6/15/26</option><option value="20">6/8/26</option><option value="21">6/1/26</option><option value="22">5/27/26</option><option value="23">5/22/26</option><option value="24">5/15/26</option><option value="25">5/8/26</option><option value="26">4/27/26</option><option value="27">4/20/26</option><option value="28">4/13/26</option><option value="29">4/6/26</option><option value="30">3/31/26</option><option value="31">3/25/26</option><option value="32">3/18/26</option><option value="33">3/11/26</option><option value="34">3/4/26</option><option value="35">2/25/26</option><option value="36">2/19/26</option><option value="37">2/12/26</option><option value="38">2/5/26</option><option value="39">1/28/26</option><option value="40">1/23/26</option><option value="41">1/16/26</option><option value="42">1/9/26</option><option value="43">1/2/26</option><option value="44">12/19/25</option></select><button class="wk-nav" id="wkNext" title="Newer week">&#8250;</button><span class="wk-pos" id="wkPos"></span></nav>
 <main><section class="week" id="week-0" 
   data-date="10/16/26" data-calc-defaults-version="c3dd6e7062"
@@ -1051,7 +1051,7 @@ table.wr.calc th:last-child{background:#123049}
 #swipe .sw-copy:hover{border-color:var(--acc)}
 #swipe .sw-card.sw-focus{outline:3px solid var(--warn);outline-offset:2px;box-shadow:0 0 0 6px rgba(245,183,61,.18)}
 #swipe .sw-foot{color:var(--mut);font-size:12px;margin-top:18px}
-</style><section id="swipe" hidden></section><!--SWIPE-TAB-END-->
+</style><section id="swipe" hidden></section><section id="winrates" hidden><iframe id="wrFrame" title="Creative win rates" style="width:100%;height:calc(100vh - var(--navH,56px));border:0;display:block"></iframe></section><!--SWIPE-TAB-END-->
 <script>
 const weeks=[...document.querySelectorAll('.week')];
 const wkSel=document.getElementById('wkSel'),wkPrev=document.getElementById('wkPrev'),
@@ -1167,18 +1167,21 @@ document.querySelectorAll('.week').forEach(function(sec){
  var weekCtl=[].slice.call(nav.children);
  var bar=document.createElement('span'); bar.style.display='contents';
  bar.innerHTML='<button class="view-btn active" data-view="weeks">Weekly Updates</button>'+
-   '<button class="view-btn" data-view="swipe">Swipe File</button><span class="view-sep"></span>';
+   '<button class="view-btn" data-view="swipe">Swipe File</button>'+
+   '<button class="view-btn" data-view="winrates">Win Rates</button><span class="view-sep"></span>';
  nav.insertBefore(bar,nav.firstChild);
- var main=document.querySelector('main'),sw=document.getElementById('swipe'),loaded=false;
+ var main=document.querySelector('main'),sw=document.getElementById('swipe'),wr=document.getElementById('winrates'),loaded=false;
  function show(v){
   [].slice.call(nav.querySelectorAll('.view-btn')).forEach(function(b){b.classList.toggle('active',b.dataset.view===v);});
-  var s=(v==='swipe');
-  main.hidden=s; sw.hidden=!s;
-  weekCtl.forEach(function(el){el.style.display=s?'none':'';});
+  var s=(v==='swipe'),w=(v==='winrates');
+  main.hidden=s||w; sw.hidden=!s; if(wr) wr.hidden=!w;
+  weekCtl.forEach(function(el){el.style.display=(s||w)?'none':'';});
   if(s&&!loaded){loaded=true;load();}
+  if(w){var f=document.getElementById('wrFrame'); if(f&&!f.src) f.src='winrates.html';
+   if(location.hash!=='#winrates') history.replaceState(null,'','#winrates');}
   // Keep a #swipe/<niche> deep link intact; renderNiche() sets the niche part.
   if(s&&location.hash.indexOf('#swipe')!==0) history.replaceState(null,'','#swipe');
-  if(!s&&location.hash) history.replaceState(null,'',location.pathname+location.search);
+  if(!s&&!w&&location.hash) history.replaceState(null,'',location.pathname+location.search);
   window.scrollTo({top:0});
  }
  nav.addEventListener('click',function(e){var b=e.target.closest('.view-btn'); if(b) show(b.dataset.view);});
@@ -1276,5 +1279,6 @@ document.querySelectorAll('.week').forEach(function(sec){
    [].slice.call(body.querySelectorAll('video')).forEach(function(v){io.observe(v);});}
  }
  if(location.hash.indexOf('#swipe')===0) show('swipe');
+ else if(location.hash==='#winrates') show('winrates');
 })();
 </script><!--SWIPE-TAB-END--></body></html>
