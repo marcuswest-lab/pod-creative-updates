@@ -29,7 +29,7 @@ tr.ex td{background:var(--bg)}.exs{display:grid;grid-template-columns:repeat(aut
 .exc{background:var(--surf);border:1px solid var(--line);border-radius:8px;padding:8px 10px}.en{font-size:12.5px;margin-bottom:5px;word-break:break-word}
 .em{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:12px;color:var(--mut)}
 .bd{border:1px solid var(--line);border-radius:999px;padding:1px 8px;font-size:11px}.bd.w{background:rgba(62,207,142,.2);color:var(--good);border-color:transparent}.bd.p{background:rgba(78,161,255,.18);color:var(--acc);border-color:transparent}
-</style></head><body><header><div class='sub'><a href='index.html' target='_top'>← Pod creative updates</a></div><h1>Creative Win Rates</h1><div class='sub'>D1 POD 4 · updated October 20, 2026 · all graded ads, all time · pick a client ↓</div></header><nav class='tabs'><button class='tab on' data-c='vam'>VAM</button><button class='tab' data-c='nsr'>NSR</button><button class='tab' data-c='case-source'>Case Source</button><button class='tab' data-c='tcc'>TCC</button><button class='tab' data-c='dan-henry'>Dan Henry</button><button class='tab' data-c='brv'>BRV</button></nav><main>
+</style></head><body><header><div class='sub' id='back'><a href='index.html' target='_top'>← Pod creative updates</a></div><h1>Creative Win Rates</h1><div class='sub'>D1 POD 4 · updated October 20, 2026 · all graded ads, all time · pick a client ↓</div></header><nav class='tabs'><button class='tab on' data-c='vam'>VAM</button><button class='tab' data-c='nsr'>NSR</button><button class='tab' data-c='case-source'>Case Source</button><button class='tab' data-c='tcc'>TCC</button><button class='tab' data-c='dan-henry'>Dan Henry</button><button class='tab' data-c='brv'>BRV</button></nav><main>
 <section class='client' data-c='vam'>
 <div class='kpis'><div class='kpi'><div class='v bad'>6%</div><div class='l'>All-time win rate (77/1227) · goal 10%</div></div><div class='kpi'><div class='v'>13</div><div class='l'>Current winners</div></div><div class='kpi'><div class='v'>1227</div><div class='l'>Graded ads</div></div><div class='kpi'><div class='v'>$6.0M</div><div class='l'>Spend on graded ads</div></div><div class='kpi'><div class='v'>5% / 8%</div><div class='l'>Static / video win rate</div></div><div class='kpi'><div class='v'>$43k</div><div class='l'>Avg spend per winner</div></div><div class='kpi'><div class='v'>$2,686</div><div class='l'>Win score (win rate × avg $ per winner)</div></div></div>
 <div class='cards'>
@@ -95,6 +95,7 @@ tr.ex td{background:var(--bg)}.exs{display:grid;grid-template-columns:repeat(aut
 </main><script>
 document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('on',x===t));
  document.querySelectorAll('.client').forEach(s=>s.hidden=s.dataset.c!==t.dataset.c);window.scrollTo({top:0});});
+if(window.top!==window){const b=document.getElementById('back');if(b)b.hidden=true;}
 document.querySelectorAll('tr.row').forEach(r=>r.onclick=()=>{const e=r.nextElementSibling;if(e&&e.classList.contains('ex')){e.hidden=!e.hidden;r.classList.toggle('open',!e.hidden);}});
 document.querySelectorAll('.pill').forEach(p=>p.onclick=()=>{document.querySelectorAll(`.pill[data-g="${p.dataset.g}"]`).forEach(x=>{x.classList.toggle('on',x===p);
  document.getElementById(x.dataset.t).hidden=x!==p;});});
